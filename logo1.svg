@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <!-- Sun -->
+    <circle cx="100" cy="100" r="40" fill="#FFB800"/>
+    <!-- Sun Rays -->
+    <g transform="translate(100 100)">
+        <!-- 8 rays at 45-degree intervals -->
+        <polygon points="0,-70 5,-55 -5,-55" fill="#FFB800" transform="rotate(0)"/>
+        <polygon points="0,-70 5,-55 -5,-55" fill="#FFB800" transform="rotate(45)"/>
+        <polygon points="0,-70 5,-55 -5,-55" fill="#FFB800" transform="rotate(90)"/>
+        <polygon points="0,-70 5,-55 -5,-55" fill="#FFB800" transform="rotate(135)"/>
+        <polygon points="0,-70 5,-55 -5,-55" fill="#FFB800" transform="rotate(180)"/>
+        <polygon points="0,-70 5,-55 -5,-55" fill="#FFB800" transform="rotate(225)"/>
+        <polygon points="0,-70 5,-55 -5,-55" fill="#FFB800" transform="rotate(270)"/>
+        <polygon points="0,-70 5,-55 -5,-55" fill="#FFB800" transform="rotate(315)"/>
+    </g>
+    <!-- Cloud -->
+    <path d="M140,120 C160,120 170,110 170,100 C170,90 160,80 150,80 C150,70 140,60 130,60 C120,60 110,70 110,80 C100,75 90,80 90,90 C90,100 100,110 110,110 L140,120 Z" fill="#D8E1E9"/>
+</svg>
