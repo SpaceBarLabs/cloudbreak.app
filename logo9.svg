@@ -7,8 +7,8 @@
             <stop offset="100%" style="stop-color:#D8E1E9"/>
         </linearGradient>
     </defs>
-    <!-- Large cloud - made larger and adjusted position -->
-    <path d="M170,140 Q195,140 195,115 Q195,90 170,90 Q170,65 145,65 Q120,65 120,90 Q95,90 95,115 Q95,140 130,140 Z" fill="url(#cloudGradient)"/>
-    <!-- Small cloud - made larger and adjusted position -->
-    <path d="M100,115 Q115,115 115,100 Q115,85 100,85 Q100,70 85,70 Q70,70 70,85 Q55,85 55,100 Q55,115 75,115 Z" fill="#D8E1E9"/>
+    <!-- Large cloud - moved to left side -->
+    <path d="M105,140 Q130,140 130,115 Q130,90 105,90 Q105,65 80,65 Q55,65 55,90 Q30,90 30,115 Q30,140 65,140 Z" fill="url(#cloudGradient)"/>
+    <!-- Small cloud - moved to right side -->
+    <path d="M145,115 Q160,115 160,100 Q160,85 145,85 Q145,70 130,70 Q115,70 115,85 Q100,85 100,100 Q100,115 120,115 Z" fill="#D8E1E9"/>
 </svg>
