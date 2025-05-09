@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <!-- Large cloud with gradient -->
+    <defs>
+        <linearGradient id="cloudGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#E8F0F8"/>
+            <stop offset="100%" style="stop-color:#D8E1E9"/>
+        </linearGradient>
+    </defs>
+    <!-- Large cloud -->
+    <path d="M160,130 Q180,130 180,110 Q180,90 160,90 Q160,70 140,70 Q120,70 120,90 Q100,90 100,110 Q100,130 130,130 Z" fill="url(#cloudGradient)"/>
+    <!-- Small cloud -->
+    <path d="M90,100 Q100,100 100,90 Q100,80 90,80 Q90,70 80,70 Q70,70 70,80 Q60,80 60,90 Q60,100 75,100 Z" fill="#D8E1E9"/>
+</svg>
