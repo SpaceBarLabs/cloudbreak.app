@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <!-- Most minimal version -->
+    <!-- Larger sun -->
+    <circle cx="100" cy="100" r="40" fill="#FFB800"/>
+    <!-- 8 short, wide rays -->
+    <g transform="translate(100 100)">
+        <rect x="-6" y="-60" width="12" height="15" fill="#FFB800" transform="rotate(0)"/>
+        <rect x="-6" y="-60" width="12" height="15" fill="#FFB800" transform="rotate(45)"/>
+        <rect x="-6" y="-60" width="12" height="15" fill="#FFB800" transform="rotate(90)"/>
+        <rect x="-6" y="-60" width="12" height="15" fill="#FFB800" transform="rotate(135)"/>
+        <rect x="-6" y="-60" width="12" height="15" fill="#FFB800" transform="rotate(180)"/>
+        <rect x="-6" y="-60" width="12" height="15" fill="#FFB800" transform="rotate(225)"/>
+        <rect x="-6" y="-60" width="12" height="15" fill="#FFB800" transform="rotate(270)"/>
+        <rect x="-6" y="-60" width="12" height="15" fill="#FFB800" transform="rotate(315)"/>
+    </g>
+    <!-- Super simple cloud -->
+    <path d="M160,140 Q180,140 180,120 Q180,100 160,100 Q160,80 140,80 Q120,80 120,100 Q100,100 100,120 Q100,140 130,140 Z" fill="#D8E1E9"/>
+</svg>
