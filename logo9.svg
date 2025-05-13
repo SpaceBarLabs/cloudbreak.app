@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="200" height="200" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<svg width="200" height="200" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="cloudbreak-title cloudbreak-desc">
+    <title id="cloudbreak-title">CloudBreak Logo - Privacy-Focused Cloud Services</title>
+    <desc id="cloudbreak-desc">Cloud-shaped logo representing ethical alternative to big tech services</desc>
     <!-- Large cloud with gradient -->
     <defs>
         <linearGradient id="cloudGradient" x1="0%" y1="0%" x2="100%" y2="100%">
