@@ -9,6 +9,30 @@
     <meta name="revisit-after" content="7 days">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Analytics Consent Mode -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      
+      // Default consent settings - respect privacy
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'wait_for_update': 500
+      });
+      
+      // Function to update consent
+      function updateConsent(consent) {
+        gtag('consent', 'update', consent);
+      }
+      
+      // Check for saved consent
+      if (localStorage.getItem('analytics_consent') === 'granted') {
+        updateConsent({
+          'analytics_storage': 'granted'
+        });
+      }
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1RRDV39YN"></script>
     <script>
@@ -16,7 +40,13 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-C1RRDV39YN');
+      gtag('config', 'G-C1RRDV39YN', {
+        'user_properties': {
+          'visitor_type': 'new_visitor'
+        },
+        'page_title': document.title,
+        'send_page_view': true
+      });
     </script>
     <title>RSS Hosting: Privacy-Focused Alternatives | CloudBreak</title>
     <meta name="title" content="RSS Hosting: Privacy-Focused Alternatives | CloudBreak">
@@ -181,6 +211,48 @@
   </script>
 </head>
   <body>
+    <!-- Consent Banner -->
+    <div id="consent-banner" class="notification is-info is-light" style="display: none; position: fixed; bottom: 0; width: 100%; z-index: 100; margin: 0; border-radius: 0;">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column">
+            <p>We use analytics to improve our services. This data is anonymous and helps us understand how visitors use our site.</p>
+          </div>
+          <div class="column is-narrow">
+            <button class="button is-small is-link" onclick="acceptConsent()">Accept</button>
+            <button class="button is-small" onclick="rejectConsent()">Reject</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      // Show banner if consent not already set
+      document.addEventListener('DOMContentLoaded', function() {
+        if (!localStorage.getItem('analytics_consent')) {
+          document.getElementById('consent-banner').style.display = 'block';
+        }
+      });
+      
+      function acceptConsent() {
+        localStorage.setItem('analytics_consent', 'granted');
+        updateConsent({
+          'analytics_storage': 'granted'
+        });
+        document.getElementById('consent-banner').style.display = 'none';
+        gtag('event', 'consent_update', {
+          'status': 'accepted'
+        });
+      }
+      
+      function rejectConsent() {
+        localStorage.setItem('analytics_consent', 'denied');
+        document.getElementById('consent-banner').style.display = 'none';
+        gtag('event', 'consent_update', {
+          'status': 'rejected'
+        });
+      }
+    </script>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM2BGK4N" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
@@ -309,5 +381,39 @@
         <span><a href="https://spacebarlabs.com/privacy-policy/" rel="nofollow">Privacy Policy</a> | <a href="https://spacebarlabs.com/terms-of-service/" rel="nofollow">Terms of Service</a></span>
       </div>
     </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Service selection tracking
+        const serviceButtons = document.querySelectorAll('a[href="/freshrss/"], a[href="/feedbin-mini/"]');
+        serviceButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            gtag('event', 'service_selection', {
+              'service_name': this.closest('.box').querySelector('h3').innerText,
+              'location': 'services_section'
+            });
+          });
+        });
+        
+        // FAQ engagement tracking
+        const faqBoxes = document.querySelectorAll('#faq .box');
+        faqBoxes.forEach(box => {
+          box.addEventListener('click', function() {
+            gtag('event', 'faq_engagement', {
+              'faq_question': this.querySelector('h3').innerText
+            });
+          });
+        });
+        
+        // Request service button tracking
+        const requestButton = document.querySelector('a[href*="docs.google.com/forms"]');
+        if (requestButton) {
+          requestButton.addEventListener('click', function() {
+            gtag('event', 'service_request', {
+              'action': 'form_click'
+            });
+          });
+        }
+      });
+    </script>
   </body>
 </html>

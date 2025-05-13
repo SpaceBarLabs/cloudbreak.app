@@ -5,6 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="canonical" href="https://cloudbreak.example.com/freshrss/faq/">
+    <!-- Google Analytics Consent Mode -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      
+      // Default consent settings - respect privacy
+      gtag('consent', 'default', {
+        'analytics_storage': 'denied',
+        'ad_storage': 'denied',
+        'wait_for_update': 500
+      });
+      
+      // Function to update consent
+      function updateConsent(consent) {
+        gtag('consent', 'update', consent);
+      }
+      
+      // Check for saved consent
+      if (localStorage.getItem('analytics_consent') === 'granted') {
+        updateConsent({
+          'analytics_storage': 'granted'
+        });
+      }
+    </script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1RRDV39YN"></script>
     <script>
@@ -12,7 +36,15 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-C1RRDV39YN');
+      gtag('config', 'G-C1RRDV39YN', {
+        'user_properties': {
+          'visitor_type': 'new_visitor',
+          'page_type': 'faq',
+          'service_page': 'freshrss'
+        },
+        'page_title': document.title,
+        'send_page_view': true
+      });
     </script>
     <title>FreshRSS FAQ: Features, Mobile Apps & Setup | CloudBreak</title>
     <meta name="description" content="Everything you need to know about FreshRSS hosting. Learn about pricing, features, mobile app setup, and how to get started with our privacy-focused RSS reader.">
@@ -127,6 +159,48 @@
     </script>
   </head>
   <body>
+    <!-- Consent Banner -->
+    <div id="consent-banner" class="notification is-info is-light" style="display: none; position: fixed; bottom: 0; width: 100%; z-index: 100; margin: 0; border-radius: 0;">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column">
+            <p>We use analytics to improve our services. This data is anonymous and helps us understand how visitors use our site.</p>
+          </div>
+          <div class="column is-narrow">
+            <button class="button is-small is-link" onclick="acceptConsent()">Accept</button>
+            <button class="button is-small" onclick="rejectConsent()">Reject</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      // Show banner if consent not already set
+      document.addEventListener('DOMContentLoaded', function() {
+        if (!localStorage.getItem('analytics_consent')) {
+          document.getElementById('consent-banner').style.display = 'block';
+        }
+      });
+      
+      function acceptConsent() {
+        localStorage.setItem('analytics_consent', 'granted');
+        updateConsent({
+          'analytics_storage': 'granted'
+        });
+        document.getElementById('consent-banner').style.display = 'none';
+        gtag('event', 'consent_update', {
+          'status': 'accepted'
+        });
+      }
+      
+      function rejectConsent() {
+        localStorage.setItem('analytics_consent', 'denied');
+        document.getElementById('consent-banner').style.display = 'none';
+        gtag('event', 'consent_update', {
+          'status': 'rejected'
+        });
+      }
+    </script>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM2BGK4N" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
@@ -188,5 +262,29 @@
         <span><a href="https://spacebarlabs.com/privacy-policy/">Privacy Policy</a> <a href="https://spacebarlabs.com/terms-of-service/">Terms of Service</a></span>
       </div>
     </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // FAQ question tracking
+        const faqHeadings = document.querySelectorAll('h2.subtitle');
+        faqHeadings.forEach(heading => {
+          heading.addEventListener('click', function() {
+            gtag('event', 'faq_question_view', {
+              'service': 'freshrss',
+              'question': this.innerText
+            });
+          });
+        });
+        
+        // Feature request button tracking
+        const requestButton = document.querySelector('a[href*="docs.google.com/forms"]');
+        if (requestButton) {
+          requestButton.addEventListener('click', function() {
+            gtag('event', 'feature_request', {
+              'service': 'freshrss'
+            });
+          });
+        }
+      });
+    </script>
   </body>
 </html>
