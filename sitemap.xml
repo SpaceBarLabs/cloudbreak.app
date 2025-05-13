@@ -1,29 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://cloudbreak.example.com/</loc>
     <lastmod>2025-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.example.com/"/>
   </url>
   <url>
     <loc>https://cloudbreak.example.com/freshrss/</loc>
     <lastmod>2025-05-13</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.example.com/freshrss/"/>
   </url>
   <url>
     <loc>https://cloudbreak.example.com/feedbin-mini/</loc>
     <lastmod>2025-05-13</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.example.com/feedbin-mini/"/>
   </url>
   <url>
     <loc>https://cloudbreak.example.com/freshrss/faq/</loc>
     <lastmod>2025-05-13</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.example.com/freshrss/faq/"/>
   </url>
   <url>
     <loc>https://cloudbreak.example.com/feedbin-mini/faq/</loc>
     <lastmod>2025-05-13</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.example.com/feedbin-mini/faq/"/>
   </url>
 </urlset>
