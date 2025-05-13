@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#3273dc">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Google tag (gtag.js) -->
@@ -25,6 +27,7 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
     <link rel="icon" href="/favicon.png" type="image/png">
     <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="manifest" href="/manifest.json">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
     <style>
@@ -43,6 +46,8 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cloudbreak.example.com/">
   <meta property="og:image" content="https://cloudbreak.example.com/screenshot.webp">
+  <meta property="og:site_name" content="CloudBreak">
+  <meta property="og:locale" content="en_US">
     
   <!-- Twitter Card tags -->
   <meta name="twitter:card" content="summary_large_image">
@@ -50,6 +55,7 @@
   <meta name="twitter:title" content="RSS Hosting: Privacy-Focused Alternatives | CloudBreak">
   <meta name="twitter:description" content="Take control of your news with CloudBreak's ethical RSS hosting. Privacy-first features, full data ownership, and reliable alternatives to Google Reader and Feedly. Start today!">
   <meta name="twitter:image" content="https://cloudbreak.example.com/screenshot.webp">
+  <meta name="twitter:creator" content="@cloud_break">
     
   <!-- Schema.org structured data -->
   <script type="application/ld+json">
@@ -198,20 +204,23 @@
       <div class="container">
         <div class="columns is-centered">
           <div class="column is-8">
-            <div class="content has-text-centered">
-              <h2 class="title is-3">Why Choose CloudBreak?</h2>
+            <div class="content has-text-centered" itemscope itemtype="https://schema.org/ItemList">
+              <h2 class="title is-3" itemprop="name">Why Choose CloudBreak?</h2>
               <div class="columns">
-                <div class="column">
-                  <h4 class="title is-5">Privacy First</h4>
-                  <p>Your data belongs to you. We don't track, analyze, or sell your information.</p>
+                <div class="column" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                  <meta itemprop="position" content="1">
+                  <h4 class="title is-5" itemprop="name">Privacy First</h4>
+                  <p itemprop="description">Your data belongs to you. We don't track, analyze, or sell your information.</p>
                 </div>
-                <div class="column">
-                  <h4 class="title is-5">Open Source</h4>
-                  <p>We use and support trusted open source software, giving back to the community.</p>
+                <div class="column" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                  <meta itemprop="position" content="2">
+                  <h4 class="title is-5" itemprop="name">Open Source</h4>
+                  <p itemprop="description">We use and support trusted open source software, giving back to the community.</p>
                 </div>
-                <div class="column">
-                  <h4 class="title is-5">Reliable Service</h4>
-                  <p>Professional hosting with regular updates and maintenance included.</p>
+                <div class="column" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                  <meta itemprop="position" content="3">
+                  <h4 class="title is-5" itemprop="name">Reliable Service</h4>
+                  <p itemprop="description">Professional hosting with regular updates and maintenance included.</p>
                 </div>
               </div>
             </div>
