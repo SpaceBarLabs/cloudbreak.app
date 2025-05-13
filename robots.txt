@@ -1,3 +1,18 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+# Allow search engines to crawl all content
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: Slurp
+Allow: /
+User-agent: DuckDuckBot
+Allow: /
+
+# Sitemap location
 Sitemap: https://cloudbreak.example.com/sitemap.xml

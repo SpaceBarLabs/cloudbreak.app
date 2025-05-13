@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://cloudbreak.example.com/</loc>
     <lastmod>2025-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.example.com/"/>
+    <image:image>
+      <image:loc>https://cloudbreak.example.com/screenshot.webp</image:loc>
+      <image:title>CloudBreak RSS Hosting Screenshot</image:title>
+      <image:caption>Privacy-focused RSS hosting service interface</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://cloudbreak.example.com/freshrss/</loc>

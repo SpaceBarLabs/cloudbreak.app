@@ -1,7 +1,7 @@
 {
   "name": "CloudBreak - Privacy-Focused RSS Hosting",
   "short_name": "CloudBreak",
-  "description": "Ethical RSS hosting with privacy-first features and full data ownership",
+  "description": "Ethical RSS hosting with privacy-first features and full data ownership. No tracking, no algorithms - just your content.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
