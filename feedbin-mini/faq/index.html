@@ -28,6 +28,92 @@
         margin-left: 0.5rem;
       }
     </style>
+    
+    <!-- Breadcrumb structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cloudbreak.example.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Feedbin Mini",
+          "item": "https://cloudbreak.example.com/feedbin-mini/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "FAQ",
+          "item": "https://cloudbreak.example.com/feedbin-mini/faq/"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- FAQ Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Feedbin Mini?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Feedbin Mini is a modern, fast RSS feed reader that lets you follow your favorite websites and blogs in one place. We host and maintain Feedbin Mini for you, so you don't have to worry about server management or updates."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What makes it \"mini\"?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Feedbin Mini is a simplified version of the full Feedbin service. It includes the core features of Feedbin, but excludes some advanced features like newsletters, full content extraction, preview image cropping, and the like. This makes it a more affordable option for users who only need the essentials, but still appreciate the design and function of Feedbin, as well as its native app compatibility."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does it cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Please visit our main page for current pricing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What apps do you recommend for reading Feedbin Mini?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For Apple platforms (Mac, iOS, iPad), we recommend NetNewsWire. For Android users, we recommend Capy Reader. For Windows users, we recommend Fluent Reader. For Linux desktop users, NewsFlash is an excellent choice. These apps work great with Feedbin and offer a smooth reading experience. Any compatible app should work as expected."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What kind of support do you provide?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We focus on providing a reliable, high-uptime Feedbin hosting service. Our support is mostly limited to the information provided in this FAQ. While we maintain and update the Feedbin installation, we do not provide technical support or tutorials for using Feedbin itself - for that, please refer to the official Feedbin documentation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I get started?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Visit our main page to subscribe and get started with Feedbin Mini today!"
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->

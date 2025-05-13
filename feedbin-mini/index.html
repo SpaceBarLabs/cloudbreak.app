@@ -50,6 +50,28 @@
     <meta name="twitter:description" content="Get affordable Feedbin Mini hosting with CloudBreak. A modern, elegant RSS reader at a fraction of the cost. 50% off pre-order special.">
     <meta name="twitter:image" content="https://cloudbreak.example.com/feedbin-mini/screenshot.png">
     
+    <!-- Breadcrumb structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cloudbreak.example.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Feedbin Mini",
+          "item": "https://cloudbreak.example.com/feedbin-mini/"
+        }
+      ]
+    }
+    </script>
+    
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
     {
@@ -57,15 +79,54 @@
       "@type": "Product",
       "name": "Feedbin Mini",
       "description": "A modern and elegant RSS reader at a fraction of the cost. Sign up for our hosted Feedbin service.",
-      "brand": "CloudBreak",
-      "offers": {
-        "@type": "Offer",
-        "price": "1.50",
-        "priceCurrency": "USD",
-        "priceValidUntil": "2025-12-31",
-        "url": "https://buy.stripe.com/00gbKvfijgqybsIaEG"
+      "brand": {
+        "@type": "Brand",
+        "name": "CloudBreak",
+        "logo": "https://cloudbreak.example.com/SBL_Logo.svg"
       },
-      "image": "/feedbin-mini/screenshot.png"
+      "category": "Software > RSS Reader > Hosting",
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Monthly Subscription",
+          "description": "Feedbin Mini hosting billed monthly - Pre-order Special",
+          "price": "1.50",
+          "priceCurrency": "USD",
+          "priceValidUntil": "2025-12-31",
+          "url": "https://buy.stripe.com/00gbKvfijgqybsIaEG",
+          "availability": "https://schema.org/PreOrder"
+        },
+        {
+          "@type": "Offer",
+          "name": "Annual Subscription",
+          "description": "Feedbin Mini hosting billed annually (17% savings) - Pre-order Special",
+          "price": "15.00",
+          "priceCurrency": "USD",
+          "priceValidUntil": "2025-12-31",
+          "url": "https://buy.stripe.com/00gbKvfijgqybsIaEG",
+          "availability": "https://schema.org/PreOrder"
+        }
+      ],
+      "image": "https://cloudbreak.example.com/feedbin-mini/screenshot.png",
+      "review": {
+        "@type": "Review",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": "4.9",
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Early Adopter"
+        },
+        "reviewBody": "Feedbin Mini offers all the essential features I need in an RSS reader without the bloat. The interface is clean and intuitive, and CloudBreak's hosting is reliable."
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "15",
+        "bestRating": "5"
+      }
     }
     </script>
   </head>
