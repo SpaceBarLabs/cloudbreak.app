@@ -1,5 +1,6 @@
 inbox.md
 .aider*
+private
 
 # Dev config - only add if you want to keep it out of the repo
 # _config_development.yml
