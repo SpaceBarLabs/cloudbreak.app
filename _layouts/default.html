@@ -63,7 +63,7 @@
         </div>
       </div>
     </div>
-    
+
     <script>
       // Show banner if consent not already set
       document.addEventListener('DOMContentLoaded', function() {
@@ -71,7 +71,7 @@
           document.getElementById('consent-banner').style.display = 'block';
         }
       });
-      
+
       function acceptConsent() {
         localStorage.setItem('analytics_consent', 'granted');
         updateConsent({
@@ -82,7 +82,7 @@
           'status': 'accepted'
         });
       }
-      
+
       function rejectConsent() {
         localStorage.setItem('analytics_consent', 'denied');
         document.getElementById('consent-banner').style.display = 'none';
@@ -99,7 +99,7 @@
       <div class="container">
         <div class="navbar-brand">
           <a class="navbar-item" href="/">
-            <img src="/SBL_Logo.svg" alt="CloudBreak">
+            <img src="/SBL_Logo_only.svg" alt="CloudBreak">
             <span class="logo-text has-text-weight-bold">CloudBreak</span>
           </a>
         </div>
