@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="200" height="200" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
-    <!-- Large cloud -->
-    <path d="M160,140 Q180,140 180,120 Q180,100 160,100 Q160,80 140,80 Q120,80 120,100 Q100,100 100,120 Q100,140 130,140 Z" fill="#D8E1E9"/>
-    <!-- Small cloud -->
-    <path d="M90,110 Q105,110 105,95 Q105,80 90,80 Q90,70 80,70 Q70,70 70,80 Q60,80 60,95 Q60,110 75,110 Z" fill="#D8E1E9"/>
-</svg>
