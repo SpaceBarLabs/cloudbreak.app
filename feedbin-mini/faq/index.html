@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
   <head>
@@ -5,47 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="canonical" href="https://cloudbreak.example.com/feedbin-mini/faq/">
-    <!-- Google Analytics Consent Mode -->
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      
-      // Default consent settings - respect privacy
-      gtag('consent', 'default', {
-        'analytics_storage': 'denied',
-        'ad_storage': 'denied',
-        'wait_for_update': 500
-      });
-      
-      // Function to update consent
-      function updateConsent(consent) {
-        gtag('consent', 'update', consent);
-      }
-      
-      // Check for saved consent
-      if (localStorage.getItem('analytics_consent') === 'granted') {
-        updateConsent({
-          'analytics_storage': 'granted'
-        });
-      }
-    </script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-C1RRDV39YN"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-C1RRDV39YN', {
-        'user_properties': {
-          'visitor_type': 'new_visitor',
-          'page_type': 'faq',
-          'service_page': 'feedbin_mini'
-        },
-        'page_title': document.title,
-        'send_page_view': true
-      });
-    </script>
+    {% if site.google_analytics %}
+    {% include google-analytics.html %}
+    {% endif %}
     <title>Feedbin Mini FAQ: Features, Apps & Pricing | CloudBreak</title>
     <meta name="description" content="Answers to common questions about Feedbin Mini hosting. Learn about features, pricing, compatible apps, and how our simplified RSS reader works. Get started today!">
     <meta name="keywords" content="Feedbin Mini FAQ, RSS reader questions, Feedbin apps, affordable RSS hosting">

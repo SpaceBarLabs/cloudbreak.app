@@ -1,0 +1,52 @@
+<!-- Google Analytics Consent Mode -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  
+  // Default consent settings - respect privacy
+  gtag('consent', 'default', {
+    'analytics_storage': 'denied',
+    'ad_storage': 'denied',
+    'wait_for_update': 500
+  });
+  
+  // Function to update consent
+  function updateConsent(consent) {
+    gtag('consent', 'update', consent);
+  }
+  
+  // Check for saved consent
+  if (localStorage.getItem('analytics_consent') === 'granted') {
+    updateConsent({
+      'analytics_storage': 'granted'
+    });
+  }
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  // Determine page-specific user properties
+  var userProperties = { 'visitor_type': 'new_visitor' };
+  
+  {% if page.url contains 'freshrss' and page.url contains 'faq' %}
+    userProperties.service_page = 'freshrss';
+    userProperties.page_type = 'faq';
+  {% elsif page.url contains 'freshrss' %}
+    userProperties.service_page = 'freshrss';
+  {% elsif page.url contains 'feedbin-mini' and page.url contains 'faq' %}
+    userProperties.service_page = 'feedbin_mini';
+    userProperties.page_type = 'faq';
+  {% elsif page.url contains 'feedbin-mini' %}
+    userProperties.service_page = 'feedbin_mini';
+  {% endif %}
+
+  gtag('config', '{{ site.google_analytics }}', {
+    'user_properties': userProperties,
+    'page_title': document.title,
+    'send_page_view': true
+  });
+</script>
