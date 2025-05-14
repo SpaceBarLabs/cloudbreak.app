@@ -2,7 +2,7 @@
 layout: default
 title: "Choose Small Tech Over Big Tech | CloudBreak"
 description: "Take control of your news with CloudBreak's ethical RSS hosting. Privacy-first features, full data ownership, and reliable alternatives to Google Reader and Feedly. No tracking, no algorithms - just your content."
-keywords: "RSS hosting, Feedbin hosting, FreshRSS hosting, privacy-focused RSS, open source alternatives, Google Reader alternative, Feedly alternative, self-hosted RSS, ethical tech, RSS reader, news aggregator, content curation"
+keywords: "RSS hosting, Feedbin hosting, FreshRSS hosting, privacy-focused RSS, open source alternatives, Google Reader alternative, Feedly alternative, self-hosted RSS, self-hostable RSS, ethical tech, RSS reader, news aggregator, content curation"
 head_content: |
   <!-- Open Graph tags -->
   <meta property="og:title" content="Choose Small Tech Over Big Tech | CloudBreak">
@@ -112,7 +112,7 @@ head_content: |
         "name": "What services does CloudBreak offer?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "CloudBreak currently offers FreshRSS and Feedbin Mini hosting services, with more options potentially coming in the future based on user requests."
+          "text": "CloudBreak currently offers FreshRSS and Feedbin Mini hosting services, with more options potentially coming in the future based on user requests. We also maintain a list of alternative RSS readers that you might be interested in."
         }
       },
       {
@@ -120,7 +120,7 @@ head_content: |
         "name": "Why choose CloudBreak over other services?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "CloudBreak prioritizes privacy, uses open source software, and provides reliable service with regular updates and maintenance included."
+          "text": "CloudBreak prioritizes privacy, uses open source software, and provides reliable service with regular updates and maintenance included. We don't track your reading habits or sell your data."
         }
       }
     ]
@@ -179,9 +179,12 @@ head_content: |
   </div>
 
   <div class="container mt-6 has-text-centered">
-    <p>You can request new services through our <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNEFwFRUTbWAjDvHvrh6tCMlBDGDAAsiH9OHkxveLzmpEsRA/viewform" aria-label="Feature request form" rel="nofollow">feature request form</a>. We regularly review these requests and may add popular requests in the future.</p>
+    <p>You can request new services through our <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNEFwFRUTbWAjDvHvrh6tCMlBDGDAAsiH9OHkxveLzmpEsRA/viewform" aria-label="Feature request form" rel="nofollow">feature request form</a> or browse our <a href="/alternatives/">alternative RSS readers</a>. We regularly review these requests and may add popular requests in the future.</p>
 
-    <a class="button is-link mt-4" href="https://docs.google.com/forms/d/e/1FAIpQLSeNEFwFRUTbWAjDvHvrh6tCMlBDGDAAsiH9OHkxveLzmpEsRA/viewform" aria-label="Request a new service" rel="nofollow">Request a New Service</a>
+    <div class="buttons is-centered mt-4">
+      <a class="button is-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeNEFwFRUTbWAjDvHvrh6tCMlBDGDAAsiH9OHkxveLzmpEsRA/viewform" aria-label="Request a new service" rel="nofollow">Request a New Service</a>
+      <a class="button is-info" href="/alternatives/rss/">Browse Alternatives</a>
+    </div>
   </div>
 
   <!-- Add FAQ section for better SEO -->
@@ -190,7 +193,7 @@ head_content: |
     <div class="content">
       <div class="box">
         <h3 class="title is-5">What services does CloudBreak offer?</h3>
-        <p>CloudBreak currently offers FreshRSS and Feedbin Mini hosting services, with more options potentially coming in the future based on user requests.</p>
+        <p>CloudBreak currently offers FreshRSS and Feedbin Mini hosting services, with more options potentially coming in the future based on user requests. We also maintain a list of alternative RSS readers that you might be interested in.</p>
       </div>
       <div class="box">
         <h3 class="title is-5">Why choose CloudBreak over other services?</h3>
@@ -252,14 +255,28 @@ head_content: |
       });
     });
 
-    // Request service button tracking
-    const requestButton = document.querySelector('a[href*="docs.google.com/forms"]');
-    if (requestButton) {
-      requestButton.addEventListener('click', function() {
+    // Request service button and alternatives link tracking
+    const requestButtons = document.querySelectorAll('a[href*="docs.google.com/forms"]');
+    const alternativesButtons = document.querySelectorAll('a[href="/alternatives/rss/"]');
+
+    requestButtons.forEach(button => {
+      button.addEventListener('click', function() {
         gtag('event', 'service_request', {
-          'action': 'form_click'
+          'action': 'form_click',
+          'location': this.classList.contains('button') ? 'button' : 'text_link'
         });
       });
-    }
+    });
+
+    alternativesButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        gtag('event', 'navigation', {
+          'destination': 'alternatives_page',
+          'location': this.classList.contains('button') ? 'button' : 'text_link'
+        });
+      });
+    });
   });
 </script>
+
+</initial_code>

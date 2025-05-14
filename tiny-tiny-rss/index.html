@@ -1,0 +1,113 @@
+---
+layout: default
+title: "Tiny Tiny RSS Hosting | CloudBreak"
+description: "Join the waitlist for Tiny Tiny RSS hosting with CloudBreak. A powerful, self-hostable RSS reader with a strong community. Express your interest today!"
+keywords: "Tiny Tiny RSS hosting, TTRSS hosting, self hostable RSS reader, self hosted RSS reader"
+head_content: |
+  <!-- Open Graph tags -->
+  <meta property="og:title" content="Tiny Tiny RSS Hosting | CloudBreak">
+  <meta property="og:description" content="Join the waitlist for Tiny Tiny RSS hosting with CloudBreak. A powerful, self-hostable RSS reader with a strong community. Express your interest today!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cloudbreak.example.com/tiny-tiny-rss/">
+
+  <!-- Twitter Card tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@cloud_break">
+  <meta name="twitter:title" content="Tiny Tiny RSS Hosting | CloudBreak">
+  <meta name="twitter:description" content="Join the waitlist for Tiny Tiny RSS hosting with CloudBreak. A powerful, self-hostable RSS reader with a strong community. Express your interest today!">
+
+  <!-- Breadcrumb structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://cloudbreak.example.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Tiny Tiny RSS",
+        "item": "https://cloudbreak.example.com/tiny-tiny-rss/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Tiny Tiny RSS Hosting",
+    "description": "Professional hosting for Tiny Tiny RSS, a powerful self-hostable RSS reader.",
+    "brand": {
+      "@type": "Brand",
+      "name": "CloudBreak",
+      "logo": "https://cloudbreak.example.com/logo9.svg"
+    },
+    "category": "Software > RSS Reader > Hosting"
+  }
+  </script>
+---
+<section class="hero is-medium is-bold">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">Tiny Tiny RSS</h1>
+      <p class="m-3">Sign up for our hosted <a href="https://tt-rss.org/" target="_blank" rel="noopener noreferrer">Tiny Tiny RSS</a>, a powerful, self-hostable RSS reader with a strong community.</p>
+
+      <div class="content mt-6">
+        <p>We're exploring the possibility of offering Tiny Tiny RSS hosting. Join our waitlist to express your interest and help us gauge demand.</p>
+
+        <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeNEFwFRUTbWAjDvHvrh6tCMlBDGDAAsiH9OHkxveLzmpEsRA/viewform" class="button is-primary mt-4" target="_blank" rel="noopener noreferrer">Join Waitlist</a></p>
+
+        <p class="mt-6">Or consider:</p>
+        <div class="buttons is-centered mt-3">
+          <a href="/freshrss/" class="button is-info">FreshRSS</a>
+          <a href="/feedbin-mini/" class="button is-info">Feedbin Mini</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Project link tracking
+    const projectLink = document.querySelector('a[href="https://tt-rss.org/"]');
+    if (projectLink) {
+      projectLink.addEventListener('click', function() {
+        gtag('event', 'external_link', {
+          'destination': 'tt_rss_project',
+          'location': 'ttrss_page'
+        });
+      });
+    }
+
+    // Waitlist signup tracking
+    const waitlistButton = document.querySelector('a[href*="docs.google.com/forms"]');
+    if (waitlistButton) {
+      waitlistButton.addEventListener('click', function() {
+        gtag('event', 'waitlist_signup', {
+          'service': 'tiny_tiny_rss',
+          'location': 'ttrss_page'
+        });
+      });
+    }
+
+    // Alternative service selection tracking
+    const serviceButtons = document.querySelectorAll('a[href="/freshrss/"], a[href="/feedbin-mini/"]');
+    serviceButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        gtag('event', 'service_selection', {
+          'from_page': 'tiny_tiny_rss',
+          'service': this.href.includes('freshrss') ? 'freshrss' : 'feedbin_mini'
+        });
+      });
+    });
+  });
+</script>

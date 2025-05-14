@@ -42,4 +42,18 @@
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.example.com/feedbin-mini/faq/"/>
   </url>
+  <url>
+    <loc>https://cloudbreak.example.com/alternatives/rss/</loc>
+    <lastmod>2025-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.example.com/alternatives/rss/"/>
+  </url>
+  <url>
+    <loc>https://cloudbreak.example.com/tiny-tiny-rss/</loc>
+    <lastmod>2025-05-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.example.com/tiny-tiny-rss/"/>
+  </url>
 </urlset>
