@@ -1,50 +1,9 @@
 ---
----
-<!DOCTYPE html>
-<html lang="en" data-theme="light">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#3273dc">
-    <meta name="robots" content="index, follow">
-    <meta name="revisit-after" content="7 days">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    {% if site.google_analytics %}
-    {% include google-analytics.html %}
-    {% endif %}
-    <title>RSS Hosting: Privacy-Focused Alternatives | CloudBreak</title>
-    <meta name="title" content="RSS Hosting: Privacy-Focused Alternatives | CloudBreak">
-    <meta name="description" content="Take control of your news with CloudBreak's ethical RSS hosting. Privacy-first features, full data ownership, and reliable alternatives to Google Reader and Feedly. No tracking, no algorithms - just your content.">
-    <meta name="keywords" content="RSS hosting, Feedbin hosting, FreshRSS hosting, privacy-focused RSS, open source alternatives, Google Reader alternative, Feedly alternative, self-hosted RSS, ethical tech, RSS reader, news aggregator, content curation">
-    <meta name="author" content="Space Bar Labs">
-    <link rel="canonical" href="https://cloudbreak.example.com/">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="icon" href="/favicon.png" type="image/png">
-    <link rel="apple-touch-icon" href="/favicon.png">
-    <link rel="manifest" href="/manifest.json">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
-    <style>
-      .feature-icon {
-        width: 64px;
-        height: 64px;
-        margin-bottom: 1rem;
-      }
-      .logo-text {
-        margin-left: 0.5rem;
-      }
-      /* Improve accessibility and SEO with focus styles */
-      a:focus, button:focus {
-        outline: 2px solid #3273dc;
-        outline-offset: 2px;
-      }
-      /* Add smooth scrolling for better UX */
-      html {
-        scroll-behavior: smooth;
-      }
-    </style>
+layout: default
+title: "RSS Hosting: Privacy-Focused Alternatives | CloudBreak"
+description: "Take control of your news with CloudBreak's ethical RSS hosting. Privacy-first features, full data ownership, and reliable alternatives to Google Reader and Feedly. No tracking, no algorithms - just your content."
+keywords: "RSS hosting, Feedbin hosting, FreshRSS hosting, privacy-focused RSS, open source alternatives, Google Reader alternative, Feedly alternative, self-hosted RSS, ethical tech, RSS reader, news aggregator, content curation"
+head_content: |
   <!-- Open Graph tags -->
   <meta property="og:title" content="RSS Hosting: Privacy-Focused Alternatives | CloudBreak">
   <meta property="og:description" content="Take control of your news with CloudBreak's ethical RSS hosting. Privacy-first features, full data ownership, and reliable alternatives to Google Reader and Feedly. Start today!">
@@ -167,207 +126,147 @@
     ]
   }
   </script>
-</head>
-  <body>
-    <!-- Consent Banner -->
-    <div id="consent-banner" class="notification is-info is-light" style="display: none; position: fixed; bottom: 0; width: 100%; z-index: 100; margin: 0; border-radius: 0;">
-      <div class="container">
-        <div class="columns is-vcentered">
-          <div class="column">
-            <p>We use analytics to improve our services. This data is anonymous and helps us understand how visitors use our site.</p>
-          </div>
-          <div class="column is-narrow">
-            <button class="button is-small is-link" onclick="acceptConsent()">Accept</button>
-            <button class="button is-small" onclick="rejectConsent()">Reject</button>
-          </div>
+---
+<section class="hero is-medium has-background-dark" role="banner">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title is-1 has-text-centered has-text-white">
+        Take Back Control of Your Digital Life
+      </h1>
+      <p class="subtitle has-text-centered is-4 mt-4 has-text-grey-light">
+        CloudBreak provides reliable, privacy-focused "small tech" alternatives to big tech services
+      </p>
+
+      <p class="has-text-centered">
+        <a href="#our-services" class="button is-link is-rounded is-size-4 mt-3">
+          Choose a Service
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section" role="main">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p class="is-size-5">
+            CloudBreak offers something that big tech can't: <strong>data portability</strong>. If you don't like our service, you can take your data and go somewhere else and still use the same apps. We believe in giving you the power to choose without giving up the convenience of the cloud.
+          </p>
         </div>
       </div>
     </div>
 
-    <script>
-      // Show banner if consent not already set
-      document.addEventListener('DOMContentLoaded', function() {
-        if (!localStorage.getItem('analytics_consent')) {
-          document.getElementById('consent-banner').style.display = 'block';
-        }
+    <h2 class="title has-text-centered is-2 mt-6" id="our-services"><a href="#our-services" class="has-text-dark" aria-label="Our Services section">Our Services</a></h2>
+
+    <div class="columns mt-3 is-centered" id="service-options">
+      <div class="column is-4" itemscope itemtype="https://schema.org/Product">
+        <div class="box has-text-centered">
+          <h3 class="title is-4" itemprop="name">FreshRSS</h3>
+          <p itemprop="description">Take control of your news feed with our hosted RSS reader service. No algorithms, no tracking - just the content you choose.</p>
+          <a href="/freshrss/" class="button is-info mt-4" itemprop="url" rel="nofollow">Learn More</a>
+        </div>
+      </div>
+      <div class="column is-4" itemscope itemtype="https://schema.org/Product">
+        <div class="box has-text-centered">
+          <h3 class="title is-4" itemprop="name">Feedbin Mini</h3>
+          <p itemprop="description">A modern, fast RSS reader with a clean interface. Perfect for keeping up with your favorite blogs and news sites.</p>
+          <a href="/feedbin-mini/" class="button is-info mt-4" itemprop="url" rel="nofollow">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mt-6 has-text-centered">
+    <p>You can request new services through our <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNEFwFRUTbWAjDvHvrh6tCMlBDGDAAsiH9OHkxveLzmpEsRA/viewform" aria-label="Feature request form" rel="nofollow">feature request form</a>. We regularly review these requests and may add popular requests in the future.</p>
+
+    <a class="button is-link mt-4" href="https://docs.google.com/forms/d/e/1FAIpQLSeNEFwFRUTbWAjDvHvrh6tCMlBDGDAAsiH9OHkxveLzmpEsRA/viewform" aria-label="Request a new service" rel="nofollow">Request a New Service</a>
+  </div>
+
+  <!-- Add FAQ section for better SEO -->
+  <div class="container mt-6">
+    <h2 class="title has-text-centered is-3" id="faq">Frequently Asked Questions</h2>
+    <div class="content">
+      <div class="box">
+        <h3 class="title is-5">What services does CloudBreak offer?</h3>
+        <p>CloudBreak currently offers FreshRSS and Feedbin Mini hosting services, with more options potentially coming in the future based on user requests.</p>
+      </div>
+      <div class="box">
+        <h3 class="title is-5">Why choose CloudBreak over other services?</h3>
+        <p>CloudBreak prioritizes privacy, uses open source software, and provides reliable service with regular updates and maintenance included. We don't track your reading habits or sell your data.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section has-background-light" role="complementary">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered" itemscope itemtype="https://schema.org/ItemList">
+          <h2 class="title is-3" itemprop="name">Why Choose CloudBreak?</h2>
+          <div class="columns">
+            <div class="column" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <meta itemprop="position" content="1">
+              <h4 class="title is-5" itemprop="name">Privacy First</h4>
+              <p itemprop="description">Your data belongs to you. We don't track, analyze, or sell your information.</p>
+            </div>
+            <div class="column" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <meta itemprop="position" content="2">
+              <h4 class="title is-5" itemprop="name">Open Source</h4>
+              <p itemprop="description">We use and support trusted open source software, giving back to the community.</p>
+            </div>
+            <div class="column" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <meta itemprop="position" content="3">
+              <h4 class="title is-5" itemprop="name">Reliable Service</h4>
+              <p itemprop="description">Professional hosting with regular updates and maintenance included.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" role="contentinfo">
+  <div class="content has-text-centered is-size-7">
+    <img src="/SBL_Logo.svg" alt="Space Bar Labs Logo"><br>
+    <span>&copy; space bar labs 2025</span><br>
+    <span><a href="https://spacebarlabs.com/privacy-policy/" rel="nofollow">Privacy Policy</a> | <a href="https://spacebarlabs.com/terms-of-service/" rel="nofollow">Terms of Service</a></span>
+  </div>
+</footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Service selection tracking
+    const serviceButtons = document.querySelectorAll('a[href="/freshrss/"], a[href="/feedbin-mini/"]');
+    serviceButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        gtag('event', 'service_selection', {
+          'service_name': this.closest('.box').querySelector('h3').innerText,
+          'location': 'services_section'
+        });
       });
+    });
 
-      function acceptConsent() {
-        localStorage.setItem('analytics_consent', 'granted');
-        updateConsent({
-          'analytics_storage': 'granted'
+    // FAQ engagement tracking
+    const faqBoxes = document.querySelectorAll('#faq .box');
+    faqBoxes.forEach(box => {
+      box.addEventListener('click', function() {
+        gtag('event', 'faq_engagement', {
+          'faq_question': this.querySelector('h3').innerText
         });
-        document.getElementById('consent-banner').style.display = 'none';
-        gtag('event', 'consent_update', {
-          'status': 'accepted'
-        });
-      }
-
-      function rejectConsent() {
-        localStorage.setItem('analytics_consent', 'denied');
-        document.getElementById('consent-banner').style.display = 'none';
-        gtag('event', 'consent_update', {
-          'status': 'rejected'
-        });
-      }
-    </script>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM2BGK4N" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-    <nav class="navbar">
-      <div class="container">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="/">
-            <img src="/SBL_Logo_only.svg" alt="CloudBreak" width="32" height="32">
-            <span class="logo-text has-text-weight-bold">CloudBreak</span>
-          </a>
-        </div>
-      </div>
-    </nav>
-
-    <section class="hero is-medium has-background-dark" role="banner">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title is-1 has-text-centered has-text-white">
-            Take Back Control of Your Digital Life
-          </h1>
-          <p class="subtitle has-text-centered is-4 mt-4 has-text-grey-light">
-            CloudBreak provides reliable, privacy-focused "small tech" alternatives to big tech services
-          </p>
-
-          <p class="has-text-centered">
-            <a href="#our-services" class="button is-link is-rounded is-size-4 mt-3">
-              Choose a Service
-            </a>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" role="main">
-      <div class="container">
-        <div class="columns is-centered">
-          <div class="column is-8">
-            <div class="content has-text-centered">
-              <p class="is-size-5">
-                CloudBreak offers something that big tech can't: <strong>data portability</strong>. If you don't like our service, you can take your data and go somewhere else and still use the same apps. We believe in giving you the power to choose without giving up the convenience of the cloud.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <h2 class="title has-text-centered is-2 mt-6" id="our-services"><a href="#our-services" class="has-text-dark" aria-label="Our Services section">Our Services</a></h2>
-
-        <div class="columns mt-3 is-centered" id="service-options">
-          <div class="column is-4" itemscope itemtype="https://schema.org/Product">
-            <div class="box has-text-centered">
-              <h3 class="title is-4" itemprop="name">FreshRSS</h3>
-              <p itemprop="description">Take control of your news feed with our hosted RSS reader service. No algorithms, no tracking - just the content you choose.</p>
-              <a href="/freshrss/" class="button is-info mt-4" itemprop="url" rel="nofollow">Learn More</a>
-            </div>
-          </div>
-          <div class="column is-4" itemscope itemtype="https://schema.org/Product">
-            <div class="box has-text-centered">
-              <h3 class="title is-4" itemprop="name">Feedbin Mini</h3>
-              <p itemprop="description">A modern, fast RSS reader with a clean interface. Perfect for keeping up with your favorite blogs and news sites.</p>
-              <a href="/feedbin-mini/" class="button is-info mt-4" itemprop="url" rel="nofollow">Learn More</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="container mt-6 has-text-centered">
-        <p>You can request new services through our <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNEFwFRUTbWAjDvHvrh6tCMlBDGDAAsiH9OHkxveLzmpEsRA/viewform" aria-label="Feature request form" rel="nofollow">feature request form</a>. We regularly review these requests and may add popular requests in the future.</p>
-
-        <a class="button is-link mt-4" href="https://docs.google.com/forms/d/e/1FAIpQLSeNEFwFRUTbWAjDvHvrh6tCMlBDGDAAsiH9OHkxveLzmpEsRA/viewform" aria-label="Request a new service" rel="nofollow">Request a New Service</a>
-      </div>
-
-      <!-- Add FAQ section for better SEO -->
-      <div class="container mt-6">
-        <h2 class="title has-text-centered is-3" id="faq">Frequently Asked Questions</h2>
-        <div class="content">
-          <div class="box">
-            <h3 class="title is-5">What services does CloudBreak offer?</h3>
-            <p>CloudBreak currently offers FreshRSS and Feedbin Mini hosting services, with more options potentially coming in the future based on user requests.</p>
-          </div>
-          <div class="box">
-            <h3 class="title is-5">Why choose CloudBreak over other services?</h3>
-            <p>CloudBreak prioritizes privacy, uses open source software, and provides reliable service with regular updates and maintenance included. We don't track your reading habits or sell your data.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section has-background-light" role="complementary">
-      <div class="container">
-        <div class="columns is-centered">
-          <div class="column is-8">
-            <div class="content has-text-centered" itemscope itemtype="https://schema.org/ItemList">
-              <h2 class="title is-3" itemprop="name">Why Choose CloudBreak?</h2>
-              <div class="columns">
-                <div class="column" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                  <meta itemprop="position" content="1">
-                  <h4 class="title is-5" itemprop="name">Privacy First</h4>
-                  <p itemprop="description">Your data belongs to you. We don't track, analyze, or sell your information.</p>
-                </div>
-                <div class="column" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                  <meta itemprop="position" content="2">
-                  <h4 class="title is-5" itemprop="name">Open Source</h4>
-                  <p itemprop="description">We use and support trusted open source software, giving back to the community.</p>
-                </div>
-                <div class="column" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                  <meta itemprop="position" content="3">
-                  <h4 class="title is-5" itemprop="name">Reliable Service</h4>
-                  <p itemprop="description">Professional hosting with regular updates and maintenance included.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer" role="contentinfo">
-      <div class="content has-text-centered is-size-7">
-        <img src="/SBL_Logo.svg" alt="Space Bar Labs Logo"><br>
-        <span>&copy; space bar labs 2025</span><br>
-        <span><a href="https://spacebarlabs.com/privacy-policy/" rel="nofollow">Privacy Policy</a> | <a href="https://spacebarlabs.com/terms-of-service/" rel="nofollow">Terms of Service</a></span>
-      </div>
-    </footer>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // Service selection tracking
-        const serviceButtons = document.querySelectorAll('a[href="/freshrss/"], a[href="/feedbin-mini/"]');
-        serviceButtons.forEach(button => {
-          button.addEventListener('click', function() {
-            gtag('event', 'service_selection', {
-              'service_name': this.closest('.box').querySelector('h3').innerText,
-              'location': 'services_section'
-            });
-          });
-        });
-
-        // FAQ engagement tracking
-        const faqBoxes = document.querySelectorAll('#faq .box');
-        faqBoxes.forEach(box => {
-          box.addEventListener('click', function() {
-            gtag('event', 'faq_engagement', {
-              'faq_question': this.querySelector('h3').innerText
-            });
-          });
-        });
-
-        // Request service button tracking
-        const requestButton = document.querySelector('a[href*="docs.google.com/forms"]');
-        if (requestButton) {
-          requestButton.addEventListener('click', function() {
-            gtag('event', 'service_request', {
-              'action': 'form_click'
-            });
-          });
-        }
       });
-    </script>
-  </body>
-</html>
+    });
+
+    // Request service button tracking
+    const requestButton = document.querySelector('a[href*="docs.google.com/forms"]');
+    if (requestButton) {
+      requestButton.addEventListener('click', function() {
+        gtag('event', 'service_request', {
+          'action': 'form_click'
+        });
+      });
+    }
+  });
+</script>

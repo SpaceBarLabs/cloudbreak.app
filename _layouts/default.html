@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#3273dc">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    {% if site.google_analytics %}
+    {% include google-analytics.html %}
+    {% endif %}
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}">
+    <meta name="keywords" content="{{ page.keywords }}">
+    <meta name="author" content="Space Bar Labs">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="manifest" href="/manifest.json">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <style>
+      .logo-text {
+        margin-left: 0.5rem;
+      }
+      .screenshot-link {
+        display: block;
+        max-width: 100%;
+      }
+      .screenshot-link img {
+        max-width: 100%;
+        height: auto;
+      }
+      /* Improve accessibility and SEO with focus styles */
+      a:focus, button:focus {
+        outline: 2px solid #3273dc;
+        outline-offset: 2px;
+      }
+      /* Add smooth scrolling for better UX */
+      html {
+        scroll-behavior: smooth;
+      }
+      {% if page.custom_css %}{{ page.custom_css }}{% endif %}
+    </style>
+    {{ page.head_content }}
+  </head>
+  <body>
+    <!-- Consent Banner -->
+    <div id="consent-banner" class="notification is-info is-light" style="display: none; position: fixed; bottom: 0; width: 100%; z-index: 100; margin: 0; border-radius: 0;">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column">
+            <p>We use analytics to improve our services. This data is anonymous and helps us understand how visitors use our site.</p>
+          </div>
+          <div class="column is-narrow">
+            <button class="button is-small is-link" onclick="acceptConsent()">Accept</button>
+            <button class="button is-small" onclick="rejectConsent()">Reject</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      // Show banner if consent not already set
+      document.addEventListener('DOMContentLoaded', function() {
+        if (!localStorage.getItem('analytics_consent')) {
+          document.getElementById('consent-banner').style.display = 'block';
+        }
+      });
+      
+      function acceptConsent() {
+        localStorage.setItem('analytics_consent', 'granted');
+        updateConsent({
+          'analytics_storage': 'granted'
+        });
+        document.getElementById('consent-banner').style.display = 'none';
+        gtag('event', 'consent_update', {
+          'status': 'accepted'
+        });
+      }
+      
+      function rejectConsent() {
+        localStorage.setItem('analytics_consent', 'denied');
+        document.getElementById('consent-banner').style.display = 'none';
+        gtag('event', 'consent_update', {
+          'status': 'rejected'
+        });
+      }
+    </script>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM2BGK4N" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+            <img src="/SBL_Logo.svg" alt="CloudBreak">
+            <span class="logo-text has-text-weight-bold">CloudBreak</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    {{ content }}
+
+    <footer class="footer">
+      <div class="content has-text-centered is-size-7">
+        <img src="/SBL_Logo.svg" alt="Space Bar Labs Logo"><br>
+        <span>&copy; space bar labs 2025</span><br>
+        <span><a href="https://spacebarlabs.com/privacy-policy/">Privacy Policy</a> | <a href="https://spacebarlabs.com/terms-of-service/">Terms of Service</a></span>
+      </div>
+    </footer>
+    {{ page.body_scripts }}
+  </body>
+</html>
