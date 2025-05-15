@@ -3,57 +3,57 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://cloudbreak.example.com/</loc>
+    <loc>https://cloudbreak.app/</loc>
     <lastmod>2025-05-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.example.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.app/"/>
     <image:image>
-      <image:loc>https://cloudbreak.example.com/screenshot.webp</image:loc>
+      <image:loc>https://cloudbreak.app/screenshot.webp</image:loc>
       <image:title>CloudBreak RSS Hosting Screenshot</image:title>
       <image:caption>Privacy-focused RSS hosting service interface</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://cloudbreak.example.com/freshrss/</loc>
+    <loc>https://cloudbreak.app/freshrss/</loc>
     <lastmod>2025-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.example.com/freshrss/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.app/freshrss/"/>
   </url>
   <url>
-    <loc>https://cloudbreak.example.com/feedbin-mini/</loc>
+    <loc>https://cloudbreak.app/feedbin-mini/</loc>
     <lastmod>2025-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.example.com/feedbin-mini/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.app/feedbin-mini/"/>
   </url>
   <url>
-    <loc>https://cloudbreak.example.com/freshrss/faq/</loc>
+    <loc>https://cloudbreak.app/freshrss/faq/</loc>
     <lastmod>2025-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.example.com/freshrss/faq/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.app/freshrss/faq/"/>
   </url>
   <url>
-    <loc>https://cloudbreak.example.com/feedbin-mini/faq/</loc>
+    <loc>https://cloudbreak.app/feedbin-mini/faq/</loc>
     <lastmod>2025-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.example.com/feedbin-mini/faq/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.app/feedbin-mini/faq/"/>
   </url>
   <url>
-    <loc>https://cloudbreak.example.com/alternatives/rss/</loc>
+    <loc>https://cloudbreak.app/alternatives/rss/</loc>
     <lastmod>2025-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.example.com/alternatives/rss/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.app/alternatives/rss/"/>
   </url>
   <url>
-    <loc>https://cloudbreak.example.com/tiny-tiny-rss/</loc>
+    <loc>https://cloudbreak.app/tiny-tiny-rss/</loc>
     <lastmod>2025-05-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.example.com/tiny-tiny-rss/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.app/tiny-tiny-rss/"/>
   </url>
 </urlset>

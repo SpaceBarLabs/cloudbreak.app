@@ -1,7 +1,7 @@
 # Site settings
 title: CloudBreak - Privacy-Focused RSS Hosting
 description: Take control of your news with CloudBreak's ethical RSS hosting
-url: https://cloudbreak.example.com
+url: https://cloudbreak.app
 baseurl: ""
 
 # Google Analytics

@@ -15,4 +15,4 @@ User-agent: DuckDuckBot
 Allow: /
 
 # Sitemap location
-Sitemap: https://cloudbreak.example.com/sitemap.xml
+Sitemap: https://cloudbreak.app/sitemap.xml
