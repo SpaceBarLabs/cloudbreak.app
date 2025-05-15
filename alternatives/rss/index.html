@@ -34,6 +34,12 @@ head_content: |
         <p>While we focus on <a href="/freshrss">FreshRSS</a> and <a href="/feedbin-mini">Feedbin Mini</a> as our primary offerings, we're exploring support for other popular RSS readers based on user interest.</p>
 
         <div class="box mt-6">
+          <h2 class="title is-4">Miniflux</h2>
+          <p>A minimalist and opinionated feed reader.</p>
+          <a href="/miniflux/" class="button is-info mt-3">Learn More</a>
+        </div>
+
+        <div class="box mt-6">
           <h2 class="title is-4">Tiny Tiny RSS</h2>
           <p>A powerful, self-hostable RSS reader with a strong community.</p>
           <a href="/tiny-tiny-rss/" class="button is-info mt-3">Learn More</a>
@@ -45,6 +51,17 @@ head_content: |
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    // Track clicks to Miniflux page
+    const minifluxLink = document.querySelector('a[href="/miniflux/"]');
+    if (minifluxLink) {
+      minifluxLink.addEventListener('click', function() {
+        gtag('event', 'alternative_selection', {
+          'reader': 'miniflux',
+          'location': 'alternatives_page'
+        });
+      });
+    }
+
     // Track clicks to TTRSS page
     const ttrssLink = document.querySelector('a[href="/tiny-tiny-rss/"]');
     if (ttrssLink) {
