@@ -1,0 +1,134 @@
+---
+layout: default
+title: "Matomo Nano: Affordable Analytics Hosting | Pre-Order"
+description: "Get affordable Matomo Nano hosting with CloudBreak. A modern, elegant analytics platform at a fraction of the cost. Pre-order today!"
+keywords: "Matomo hosting, analytics hosting, Matomo nano, affordable analytics hosting"
+head_content: |
+  <!-- Open Graph tags -->
+  <meta property="og:title" content="Matomo Nano: Affordable Analytics Hosting | Pre-Order">
+  <meta property="og:description" content="Get affordable Matomo hosting with CloudBreak. A modern, elegant analytics platform at a fraction of the cost. Pre-order today!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cloudbreak.app/matomo-nano/">
+
+  <!-- Breadcrumb structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://cloudbreak.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Matomo Nano",
+        "item": "https://cloudbreak.app/matomo-nano/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Matomo Nano",
+    "description": "Get affordable Matomo Nano hosting with CloudBreak. A modern, elegant analytics platform at a fraction of the cost. Pre-order today!"
+    "brand": {
+      "@type": "Brand",
+      "name": "CloudBreak",
+      "logo": "https://cloudbreak.app/logo.svg"
+    },
+    "category": "Software > Analytics > Hosting",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Monthly Subscription",
+        "description": "Matomo Nano hosting billed monthly",
+        "price": "5",
+        "priceCurrency": "USD",
+        // "priceValidUntil": "2025-12-31",
+        "url": "https://buy.stripe.com/8x29AT7K9cbU2ZB0JG0Ba03",
+        "availability": "https://schema.org/PreOrder"
+      },
+      {
+        "@type": "Offer",
+        "name": "Annual Subscription",
+        "description": "Matomo Nano hosting billed annually (10% savings)",
+        "price": "50.00",
+        "priceCurrency": "USD",
+        // "priceValidUntil": "2025-12-31",
+        "url": "https://buy.stripe.com/00w3cv0hHb7Q43Fbok0Ba04",
+        "availability": "https://schema.org/PreOrder"
+      }
+    ],
+    // "image": "https://cloudbreak.app/feedbin-mini/screenshot.png",
+    // "review": {
+    //   "@type": "Review",
+    //   "reviewRating": {
+    //     "@type": "Rating",
+    //     "ratingValue": "4.9",
+    //     "bestRating": "5"
+    //   },
+    //   "author": {
+    //     "@type": "Person",
+    //     "name": "Early Adopter"
+    //   },
+    //   "reviewBody": "Feedbin Mini offers all the essential features I need in an RSS reader without the bloat. The interface is clean and intuitive, and CloudBreak's hosting is reliable."
+    // },
+    // "aggregateRating": {
+    //   "@type": "AggregateRating",
+    //   "ratingValue": "4.8",
+    //   "reviewCount": "15",
+    //   "bestRating": "5"
+    // }
+  }
+  </script>
+---
+<section class="hero is-medium is-bold">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">Matomo Nano</h1>
+      <p class="m-3">Sign up for our hosted <a target="_blank" href="https://matomo.org/">Matomo</a>, a modern analytics platform formerly known as Piwik, comparable with Google Analytics.</p>
+      <p class="m-3 has-text-weight-bold">A tiny Matomo at a fraction of the cost.</p>
+      <!-- <p class="m-3 has-text-weight-bold">Your data. Your users. Not Google's.</p> -->
+      <p>This Nano offering is perfect for a small blog, shop, or other website.  It is limited to <i>10k pageviews per month, and 1 site</i>.  This Nano offering is perfect for a small blog, shop, or other website.</p>
+      <p class="m-3 has-text-weight-bold">$5 / month or<br>$50 / year (save 10% over monthly)</p>
+      <p><a href="https://buy.stripe.com/8x29AT7K9cbU2ZB0JG0Ba03" class="m-3 button is-primary">Pre-order (monthly)</a></p>
+      <p><a href="https://buy.stripe.com/00w3cv0hHb7Q43Fbok0Ba04" class="m-3 button is-primary">Pre-order (yearly)</a></p>
+      <p class="help mb-3">Cancel anytime, no questions asked</p>
+      <p>Or get notified when we launch:</p>
+      <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSf0jKoaF23HOziTJwCr4PPqjYCsqa-yKsv1D4LgKTBSKMSd_A/viewform?usp=dialog" class="m-3 button is-info">Sign up</a></p>
+      <p class="help">Google Analytics is a trademark of Google LLC.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Pre-order button tracking
+    const preorderButton = document.querySelector('a[href*="buy.stripe.com"]');
+    if (preorderButton) {
+      preorderButton.addEventListener('click', function() {
+        gtag('event', 'preorder_click', {
+          'service': 'matomo_nano'
+        });
+      });
+    }
+
+    // Sign up button tracking
+    const signupButton = document.querySelector('a[href*="docs.google.com/forms"]');
+    if (signupButton) {
+      signupButton.addEventListener('click', function() {
+        gtag('event', 'signup_notification', {
+          'service': 'matomo_nano'
+        });
+      });
+    }
+  });
+</script>

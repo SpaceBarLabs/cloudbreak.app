@@ -176,6 +176,13 @@ head_content: |
           <a href="/feedbin-mini/" class="button is-info mt-4" itemprop="url" rel="nofollow">Learn More</a>
         </div>
       </div>
+      <div class="column is-4" itemscope itemtype="https://schema.org/Product">
+        <div class="box has-text-centered">
+          <h3 class="title is-4" itemprop="name">Matomo Nano</h3>
+          <p itemprop="description">A modern analytics platform formerly known as Piwik, comparable with Google Analytics.  This Nano offering is perfect for a small blog, shop, or other website.</p>
+          <a href="/matomo-nano/" class="button is-info mt-4" itemprop="url" rel="nofollow">Learn More</a>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -236,7 +243,7 @@ head_content: |
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     // Service selection tracking
-    const serviceButtons = document.querySelectorAll('a[href="/freshrss/"], a[href="/feedbin-mini/"]');
+    const serviceButtons = document.querySelectorAll('a[href="/freshrss/"], a[href="/feedbin-mini/"], a[href="/matomo-nano/"]');
     serviceButtons.forEach(button => {
       button.addEventListener('click', function() {
         gtag('event', 'service_selection', {
@@ -279,5 +286,3 @@ head_content: |
     });
   });
 </script>
-
-</initial_code>
