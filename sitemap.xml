@@ -70,4 +70,11 @@
     <priority>0.6</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.app/tiny-tiny-rss/"/>
   </url>
+  <url>
+    <loc>https://cloudbreak.app/wallabag/</loc>
+    <lastmod>2025-05-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.app/wallabag/"/>
+  </url>
 </urlset>
