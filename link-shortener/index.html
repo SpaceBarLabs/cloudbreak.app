@@ -95,6 +95,9 @@ head_content: |
       <p class="help mb-1">Cancel anytime, no questions asked</p>
       <p class="help mb-3">Please note that we are currently only accepting customers in the United States and Canada</p>
       
+      <p>Or get notified when we launch:</p>
+      <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeNEFwFRUTbWAjDvHvrh6tCMlBDGDAAsiH9OHkxveLzmpEsRA/viewform" class="m-3 button is-info">Sign up</a></p>
+      
       <p class="m-3">Or consider:</p>
       <p><a href="/matomo-nano/" class="button is-info">Matomo Nano</a></p>
     </div>
@@ -112,7 +115,15 @@ head_content: |
         });
       });
     }
+
+    // Sign up button tracking
+    const signupButton = document.querySelector('a[href*="docs.google.com/forms"]');
+    if (signupButton) {
+      signupButton.addEventListener('click', function() {
+        gtag('event', 'signup_notification', {
+          'service': 'link_shortener'
+        });
+      });
+    }
   });
 </script>
-
-</initial_code>
