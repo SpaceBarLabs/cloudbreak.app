@@ -77,7 +77,8 @@ head_content: |
       </div>
 
       <p class="m-3 has-text-weight-bold">$4 / year</p>
-      <p class="help">Includes hosting, maintenance, and regular updates</p>
+      <p class="help">Light usage plan - includes hosting, maintenance, and regular updates</p>
+      <p class="help mb-3">Perfect for personal use, small projects, or occasional link shortening</p>
 
       <p><a href="https://buy.stripe.com/PLACEHOLDER_LINK" class="m-3 button is-primary">Pre-order</a></p>
       <p class="help mb-1">Cancel anytime, no questions asked</p>
@@ -105,6 +106,17 @@ head_content: |
       });
     }
 
+    // Google blog link tracking
+    const googleBlogLink = document.querySelector('a[href*="developers.googleblog.com"]');
+    if (googleBlogLink) {
+      googleBlogLink.addEventListener('click', function() {
+        gtag('event', 'external_link', {
+          'destination': 'google_blog',
+          'location': 'shlink_page'
+        });
+      });
+    }
+
     // Pre-order button tracking
     const preorderButton = document.querySelector('a[href*="buy.stripe.com"]');
     if (preorderButton) {
@@ -126,3 +138,5 @@ head_content: |
     }
   });
 </script>
+
+</initial_code>
