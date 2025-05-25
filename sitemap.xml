@@ -85,11 +85,11 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.app/readeck/"/>
   </url>
   <url>
-    <loc>https://cloudbreak.app/shlink/</loc>
+    <loc>https://cloudbreak.app/shlink-nano/</loc>
     <lastmod>2025-01-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.app/shlink/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.app/shlink-nano/"/>
   </url>
   <url>
     <loc>https://cloudbreak.app/link-shortener/</loc>
