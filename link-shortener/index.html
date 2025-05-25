@@ -53,7 +53,7 @@ head_content: |
         "price": "12.00",
         "priceCurrency": "USD",
         "priceValidUntil": "2025-12-31",
-        "url": "https://docs.google.com/forms/d/e/1FAIpQLSeNEFwFRUTbWAjDvHvrh6tCMlBDGDAAsiH9OHkxveLzmpEsRA/viewform",
+        "url": "https://buy.stripe.com/PLACEHOLDER_LINK",
         "availability": "https://schema.org/PreOrder"
       }
     ]
@@ -88,46 +88,31 @@ head_content: |
         </ul>
       </div>
 
-      <p class="m-3 has-text-weight-bold">Estimated pricing: $12 / year</p>
+      <p class="m-3 has-text-weight-bold">$12 / year</p>
       <p class="help">Final pricing and features will depend on the implementation we choose</p>
       
-      <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeNEFwFRUTbWAjDvHvrh6tCMlBDGDAAsiH9OHkxveLzmpEsRA/viewform" class="m-3 button is-primary">Express Interest</a></p>
-      <p class="help mb-1">Help us gauge demand and choose the best implementation</p>
+      <p><a href="https://buy.stripe.com/PLACEHOLDER_LINK" class="m-3 button is-primary">Pre-order</a></p>
+      <p class="help mb-1">Cancel anytime, no questions asked</p>
       <p class="help mb-3">Please note that we are currently only accepting customers in the United States and Canada</p>
       
-      <p class="m-3">Or consider our other services:</p>
-      <div class="buttons is-centered mt-3">
-        <a href="/freshrss/" class="button is-info">FreshRSS</a>
-        <a href="/feedbin-mini/" class="button is-info">Feedbin Mini</a>
-        <a href="/readeck/" class="button is-info">Readeck</a>
-        <a href="/wallabag/" class="button is-info">Wallabag</a>
-      </div>
+      <p class="m-3">Or consider:</p>
+      <p><a href="/matomo-nano/" class="button is-info">Matomo Nano</a></p>
     </div>
   </div>
 </section>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    // Interest form tracking
-    const interestButton = document.querySelector('a[href*="docs.google.com/forms"]');
-    if (interestButton) {
-      interestButton.addEventListener('click', function() {
-        gtag('event', 'interest_expression', {
+    // Pre-order button tracking
+    const preorderButton = document.querySelector('a[href*="buy.stripe.com"]');
+    if (preorderButton) {
+      preorderButton.addEventListener('click', function() {
+        gtag('event', 'preorder_click', {
           'service': 'link_shortener'
         });
       });
     }
-
-    // Alternative service selection tracking
-    const serviceButtons = document.querySelectorAll('a[href="/freshrss/"], a[href="/feedbin-mini/"], a[href="/readeck/"], a[href="/wallabag/"]');
-    serviceButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        const serviceName = this.href.split('/').filter(Boolean).pop();
-        gtag('event', 'service_selection', {
-          'from_page': 'link_shortener',
-          'service': serviceName
-        });
-      });
-    });
   });
 </script>
+
+</initial_code>
