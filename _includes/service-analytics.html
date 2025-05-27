@@ -1,0 +1,72 @@
+{% assign service = site.data.services.services[include.service_key] %}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    {% if service.status == 'available' %}
+    // Subscription button tracking
+    const subscribeButtons = document.querySelectorAll('a[href*="buy.stripe.com"]');
+    subscribeButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        gtag('event', 'subscription_click', {
+          'service': '{{ service.analytics_service }}',
+          'plan': this.innerText.includes('year') ? 'annual' : 'monthly'
+        });
+      });
+    });
+    {% elsif service.status == 'preorder' %}
+    // Pre-order button tracking
+    const preorderButton = document.querySelector('a[href*="buy.stripe.com"]');
+    if (preorderButton) {
+      preorderButton.addEventListener('click', function() {
+        gtag('event', 'preorder_click', {
+          'service': '{{ service.analytics_service }}'
+        });
+      });
+    }
+    {% elsif service.status == 'waitlist' %}
+    // Waitlist signup tracking
+    const waitlistButton = document.querySelector('a[href*="docs.google.com/forms"]');
+    if (waitlistButton) {
+      waitlistButton.addEventListener('click', function() {
+        gtag('event', 'waitlist_signup', {
+          'service': '{{ service.analytics_service }}',
+          'location': '{{ include.service_key }}_page'
+        });
+      });
+    }
+    {% endif %}
+
+    // Sign up button tracking
+    const signupButton = document.querySelector('a[href*="docs.google.com/forms"]');
+    if (signupButton) {
+      signupButton.addEventListener('click', function() {
+        gtag('event', 'signup_notification', {
+          'service': '{{ service.analytics_service }}'
+        });
+      });
+    }
+
+    {% if service.has_faq %}
+    // FAQ link tracking
+    const faqLink = document.querySelector('a[href="/{{ include.service_key }}/faq/"]');
+    if (faqLink) {
+      faqLink.addEventListener('click', function() {
+        gtag('event', 'navigation', {
+          'destination': '{{ service.analytics_service }}_faq'
+        });
+      });
+    }
+    {% endif %}
+
+    // Cross-service navigation tracking
+    const serviceButtons = document.querySelectorAll('a[href^="/"][href$="/"]');
+    serviceButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        const serviceName = this.getAttribute('href').replace(/\//g, '') || 'unknown';
+        gtag('event', 'cross_service_navigation', {
+          'from_service': '{{ service.analytics_service }}',
+          'to_service': serviceName
+        });
+      });
+    });
+  });
+</script>

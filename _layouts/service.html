@@ -1,0 +1,86 @@
+---
+layout: default
+---
+{% assign service = site.data.services.services[page.service_key] %}
+{% assign common = site.data.services.common %}
+
+<section class="hero is-medium is-bold">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">{{ service.name }}</h1>
+      {% if service.subtitle %}
+        <h2 class="subtitle">{{ service.subtitle }}</h2>
+      {% endif %}
+      
+      <p class="m-3">
+        Sign up for our hosted 
+        <a target="_blank" href="{{ service.project_url }}">{{ service.name }}</a>{% if service.subtitle %}, {{ service.subtitle }}{% endif %}.
+      </p>
+      
+      {% if service.short_description %}
+        <p class="m-3 has-text-weight-bold">{{ service.short_description }}</p>
+      {% endif %}
+
+      {% if service.pricing %}
+        {% if service.pricing.sale_text %}
+          <p class="m-3 has-text-weight-bold has-text-danger">{{ service.pricing.sale_text }}</p>
+        {% endif %}
+        
+        <p>
+          {% if service.pricing.regular_price != service.pricing.sale_price %}
+            <del>${{ service.pricing.regular_price }}</del> 
+          {% endif %}
+          ${{ service.pricing.sale_price }} / {{ service.pricing.billing }}
+        </p>
+        
+        {% if service.profit_sharing %}
+          <p class="help">{{ service.profit_sharing.percentage }}% of profits are paid to 
+            {% if service.profit_sharing.recipient_url %}
+              <a href="{{ service.profit_sharing.recipient_url }}">{{ service.profit_sharing.recipient }}</a>
+            {% else %}
+              {{ service.profit_sharing.recipient }}
+            {% endif %}
+          </p>
+        {% endif %}
+        
+        {% if service.status == 'available' %}
+          <p><a href="{{ service.pricing.purchase_url }}" class="m-3 button is-link">Subscribe</a></p>
+        {% elsif service.status == 'preorder' %}
+          <p><a href="{{ service.pricing.purchase_url }}" class="mt-3 button is-primary">Pre-order</a></p>
+        {% endif %}
+      {% endif %}
+
+      {% if service.limits %}
+        <p>{{ service.limits }}</p>
+      {% endif %}
+
+      {% if service.launch_deadline %}
+        <p class="help mb-1">Expected to launch prior to {{ service.launch_deadline }}, {{ service.launch_reason }}</p>
+      {% endif %}
+
+      <p class="help mb-1">{{ common.cancellation_policy }}</p>
+      <p class="help mb-3">{{ common.geographic_restriction }}</p>
+
+      {% if service.notification_form %}
+        <p>Or get notified when we launch:</p>
+        <p><a href="{{ service.notification_form }}" class="m-3 button is-info">Sign up</a></p>
+      {% endif %}
+
+      {% if service.has_faq %}
+        <p class="m-3">Please also see our <a href="/{{ page.service_key }}/faq/">FAQ</a>.</p>
+      {% endif %}
+
+      {% if service.screenshot %}
+        <a href="{{ service.screenshot }}" target="_blank" class="screenshot-link">
+          <img src="{{ service.screenshot }}"
+               alt="{{ service.screenshot_alt }}"
+               class="image m-6"
+               loading="lazy"
+               decoding="async">
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{{ content }}

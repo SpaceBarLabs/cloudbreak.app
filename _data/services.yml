@@ -1,0 +1,178 @@
+services:
+  freshrss:
+    name: "FreshRSS"
+    subtitle: "a feed reader app"
+    description: "Take control of your news feed with our hosted RSS reader service. No algorithms, no tracking - just the content you choose."
+    short_description: "A fast, private RSS reader with no tracking. 50% off limited-time sale. 10% of profits support the FreshRSS project."
+    project_url: "https://freshrss.org/"
+    github_url: "https://github.com/FreshRSS/FreshRSS"
+    category: "RSS Reader"
+    status: "available"
+    pricing:
+      regular_price: 24
+      sale_price: 12
+      currency: "USD"
+      billing: "year"
+      sale_text: "Sale ending soon! GET 50% OFF"
+      purchase_url: "https://buy.stripe.com/7sI7ufgmn0rAdAQ9AA"
+    profit_sharing:
+      percentage: 10
+      recipient: "FreshRSS"
+      recipient_url: "https://liberapay.com/FreshRSS/"
+    screenshot: "/screenshot.webp"
+    screenshot_alt: "FreshRSS web interface with category navigation and unread counts"
+    has_faq: true
+    analytics_service: "freshrss"
+    
+  feedbin-mini:
+    name: "Feedbin Mini"
+    subtitle: "a feed reader app"
+    description: "A modern, fast news feed reader with a clean interface. Perfect for keeping up with your favorite blogs and news sites."
+    short_description: "The essentials of Feedbin, at a fraction of the cost."
+    project_url: "https://github.com/feedbin/feedbin"
+    category: "RSS Reader"
+    status: "preorder"
+    pricing:
+      regular_price: 30
+      sale_price: 15
+      currency: "USD"
+      billing: "year"
+      sale_text: "Launch Special!<br>Get 50% off when you pre-order"
+      purchase_url: "https://buy.stripe.com/00gbKvfijgqybsIaEG"
+    screenshot: "screenshot.png"
+    screenshot_alt: "Feedbin Mini RSS reader interface showing article list and reading pane"
+    has_faq: true
+    analytics_service: "feedbin_mini"
+    notification_form: "https://docs.google.com/forms/d/e/1FAIpQLSdA84mi74Bz1es0OXy8sbiBq6Mozqsa6mpUL7ZX1im9FRIBbQ/viewform?usp=dialog"
+
+  linkding:
+    name: "Linkding"
+    subtitle: "a bookmark manager"
+    description: "A minimal, fast bookmark manager designed for self-hosting. Privacy-focused alternative to commercial bookmark services."
+    short_description: "Take control of your bookmarks with privacy-first design."
+    project_url: "https://github.com/sissbruecker/linkding"
+    category: "Bookmark Manager"
+    status: "preorder"
+    pricing:
+      regular_price: 24
+      sale_price: 12
+      currency: "USD"
+      billing: "year"
+      sale_text: "Launch Special!<br>Get 50% off when you pre-order"
+      purchase_url: "https://buy.stripe.com/14AdR97K98ZIas38c80Ba08"
+    profit_sharing:
+      percentage: 10
+      recipient: "Linkding project"
+    screenshot: "linkding-screenshot.png"
+    screenshot_alt: "Linkding interface"
+    analytics_service: "linkding"
+    notification_form: "https://docs.google.com/forms/d/e/1FAIpQLSciGalzi3fwa3lKrbWpxsESVQ9V5-6LHQEGraqb2KQp5ijvaw/viewform?usp=dialog"
+    launch_deadline: "July 8th 2025"
+    launch_reason: "when Pocket officially shuts down"
+
+  wallabag:
+    name: "Wallabag"
+    subtitle: "a read-it-later app"
+    description: "A classic read-it-later serivce, comparable with Instapaper or Pocket. A great pair with an RSS reader."
+    project_url: "https://github.com/wallabag/wallabag"
+    category: "Read-It-Later"
+    status: "preorder"
+    pricing:
+      regular_price: 12
+      sale_price: 10
+      currency: "USD"
+      billing: "year"
+      sale_text: "Launch Special!<br>Get 17% off when you pre-order"
+      purchase_url: "https://buy.stripe.com/14AdR94xX1xg57J3VS0Ba05"
+    profit_sharing:
+      percentage: 10
+      recipient: "Wallabag"
+      recipient_url: "https://liberapay.com/wallabag"
+    screenshot: "screenshot.png"
+    screenshot_alt: "Wallabag interface"
+    analytics_service: "wallabag"
+    notification_form: "https://docs.google.com/forms/d/e/1FAIpQLScmsYUmFaJ1R4mUxT7K7MX8_VMbHcaDc_d5MrTvasF8x0pCDQ/viewform?usp=dialog"
+    launch_deadline: "July 8th 2025"
+    launch_reason: "when Pocket officially shuts down"
+
+  readeck:
+    name: "Readeck"
+    subtitle: "a read-it-later app"
+    description: "A modern read-it-later serivce, comparable with Instapaper or Pocket. A great pair with an RSS reader."
+    project_url: "https://codeberg.org/readeck/readeck"
+    category: "Read-It-Later"
+    status: "preorder"
+    pricing:
+      regular_price: 12
+      sale_price: 10
+      currency: "USD"
+      billing: "year"
+      sale_text: "Launch Special!<br>Get 17% off when you pre-order"
+      purchase_url: "https://buy.stripe.com/fZueVdd4t2Bk0Rt8c80Ba06"
+    screenshot: null
+    analytics_service: "readeck"
+    notification_form: "https://docs.google.com/forms/d/e/1FAIpQLSf8t0L90DVXWo36s-adLnJyj98vsdoRdfESTSpQeP_ke1z_Zw/viewform?usp=header"
+    launch_deadline: "July 8th 2025"
+    launch_reason: "when Pocket officially shuts down"
+
+  matomo-nano:
+    name: "Matomo Nano"
+    subtitle: "an analytics app"
+    description: "A modern analytics platform formerly known as Piwik, comparable with Google Analytics. This Nano offering is perfect for a small blog, shop, or other website."
+    project_url: "https://matomo.org/"
+    category: "Analytics"
+    status: "preorder"
+    pricing:
+      regular_price: 50
+      sale_price: 50
+      currency: "USD"
+      billing: "year"
+      purchase_url: "https://buy.stripe.com/00w3cv0hHb7Q43Fbok0Ba04"
+    limits: "10k pageviews per month, and 1 site"
+    analytics_service: "matomo_nano"
+    notification_form: "https://docs.google.com/forms/d/e/1FAIpQLSf0jKoaF23HOziTJwCr4PPqjYCsqa-yKsv1D4LgKTBSKMSd_A/viewform?usp=dialog"
+
+  shlink-nano:
+    name: "Shlink Nano"
+    subtitle: "a URL shortener"
+    description: "A modern, self-hosted URL shortener with analytics and API. Privacy-focused alternative to commercial link shorteners."
+    project_url: "https://shlink.io/"
+    category: "URL Shortener"
+    status: "preorder"
+    pricing:
+      regular_price: 6
+      sale_price: 4
+      currency: "USD"
+      billing: "year"
+      sale_text: "Launch Special!<br>Get 33% off when you pre-order"
+      purchase_url: "https://buy.stripe.com/5kQ4gz6G5cbUgQrfEA0Ba07"
+    analytics_service: "shlink_nano"
+    notification_form: "https://docs.google.com/forms/d/e/1FAIpQLSf0jKoaF23HOziTJwCr4PPqjYCsqa-yKsv1D4LgKTBSKMSd_A/viewform"
+
+  miniflux:
+    name: "Miniflux"
+    subtitle: null
+    description: "A minimalist and opinionated feed reader."
+    project_url: "https://miniflux.app/"
+    category: "RSS Reader"
+    status: "waitlist"
+    analytics_service: "miniflux"
+
+  tiny-tiny-rss:
+    name: "Tiny Tiny RSS"
+    subtitle: null
+    description: "A powerful, self-hostable RSS reader with a strong community."
+    project_url: "https://tt-rss.org/"
+    category: "RSS Reader"
+    status: "waitlist"
+    analytics_service: "tiny_tiny_rss"
+
+# Common configuration
+common:
+  geographic_restriction: "Please note that we are currently only accepting customers in the United States and Canada"
+  cancellation_policy: "Cancel anytime, no questions asked"
+  feature_request_form: "https://docs.google.com/forms/d/e/1FAIpQLSeNEFwFRUTbWAjDvHvrh6tCMlBDGDAAsiH9OHkxveLzmpEsRA/viewform"
+  trademarks:
+    - "Google Analytics is a trademark of Google LLC."
+    - "Instapaper is a trademark of Instant Paper, Inc."
+    - "Pocket is a trademark of Mozilla Corporation."

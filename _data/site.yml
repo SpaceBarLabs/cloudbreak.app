@@ -1,0 +1,52 @@
+# Site-wide configuration
+site:
+  title: "CloudBreak - Privacy-Focused RSS Hosting"
+  tagline: "Take Back Control of Your Digital Life"
+  subtitle: "CloudBreak provides reliable, privacy-focused \"small tech\" alternatives to big tech services"
+  description: "Take control of your news with CloudBreak's ethical RSS hosting"
+  
+  hero:
+    title: "Take Back Control of Your Digital Life"
+    subtitle: "CloudBreak provides reliable, privacy-focused \"small tech\" alternatives to big tech services"
+    cta_text: "Choose a Service"
+    cta_target: "#our-services"
+
+  value_proposition: "CloudBreak offers something that big tech can't: **data portability**. If you don't like our service, you can take your data and go somewhere else and still use the same apps. We believe in giving you the power to choose without giving up the convenience of the cloud."
+
+  why_choose:
+    title: "Why Choose CloudBreak?"
+    features:
+      - title: "Privacy First"
+        description: "Your data belongs to you. We don't track, analyze, or sell your information."
+      - title: "Open Source"
+        description: "We use and support trusted open source software, giving back to the community."
+      - title: "Reliable Service"
+        description: "Professional hosting with regular updates and maintenance included."
+
+  faq:
+    title: "Frequently Asked Questions"
+    questions:
+      - question: "What services does CloudBreak offer?"
+        answer: "CloudBreak currently offers FreshRSS and Feedbin Mini hosting services, with more options potentially coming in the future based on user requests. We also maintain a list of alternative RSS readers that you might be interested in."
+      - question: "Why choose CloudBreak over other services?"
+        answer: "CloudBreak prioritizes privacy, uses open source software, and provides reliable service with regular updates and maintenance included. We don't track your reading habits or sell your data."
+
+  footer_text: "You can request new services through our feature request form or browse our alternative RSS readers. We regularly review these requests and may add popular requests in the future."
+
+  contact:
+    feature_request_form: "https://docs.google.com/forms/d/e/1FAIpQLSeNEFwFRUTbWAjDvHvrh6tCMlBDGDAAsiH9OHkxveLzmpEsRA/viewform"
+    alternatives_page: "/alternatives/rss/"
+
+# Service groupings for the homepage
+service_groups:
+  primary:
+    - "feedbin-mini"
+    - "freshrss"
+  secondary:
+    - "linkding"
+    - "readeck"
+  tertiary:
+    - "wallabag"
+  tools:
+    - "matomo-nano"
+    - "shlink-nano"

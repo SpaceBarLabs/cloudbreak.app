@@ -16,15 +16,6 @@ head_content: |
   <meta property="og:image:height" content="630">
   <link rel="alternate" hreflang="en" href="https://cloudbreak.app/">
 
-  <!-- Twitter Card tags
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@cloud_break">
-  <meta name="twitter:title" content="Choose Small Tech Over Big Tech | CloudBreak">
-  <meta name="twitter:description" content="Take control of your news with CloudBreak's ethical RSS hosting. Privacy-first features, full data ownership, and reliable alternatives to Google Reader and Feedly. Start today!">
-  <meta name="twitter:image" content="https://cloudbreak.app/screenshot.webp">
-  <meta name="twitter:creator" content="@cloud_break">
-  -->
-
   <!-- Schema.org structured data -->
   <script type="application/ld+json">
   {
@@ -108,39 +99,37 @@ head_content: |
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
+      {% for faq in site.data.site.site.faq.questions %}
       {
         "@type": "Question",
-        "name": "What services does CloudBreak offer?",
+        "name": "{{ faq.question }}",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "CloudBreak currently offers FreshRSS and Feedbin Mini hosting services, with more options potentially coming in the future based on user requests. We also maintain a list of alternative RSS readers that you might be interested in."
+          "text": "{{ faq.answer }}"
         }
-      },
-      {
-        "@type": "Question",
-        "name": "Why choose CloudBreak over other services?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "CloudBreak prioritizes privacy, uses open source software, and provides reliable service with regular updates and maintenance included. We don't track your reading habits or sell your data."
-        }
-      }
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
     ]
   }
   </script>
 ---
+{% assign site_data = site.data.site.site %}
+{% assign services = site.data.services.services %}
+{% assign service_groups = site.data.site.service_groups %}
+
 <section class="hero is-medium has-background-dark" role="banner">
   <div class="hero-body">
     <div class="container">
       <h1 class="title is-1 has-text-centered has-text-white">
-        Take Back Control of Your Digital Life
+        {{ site_data.hero.title }}
       </h1>
       <p class="subtitle has-text-centered is-4 mt-4 has-text-grey-light">
-        CloudBreak provides reliable, privacy-focused "small tech" alternatives to big tech services
+        {{ site_data.hero.subtitle }}
       </p>
 
       <p class="has-text-centered">
-        <a href="#our-services" class="button is-link is-rounded is-size-4 mt-3">
-          Choose a Service
+        <a href="{{ site_data.hero.cta_target }}" class="button is-link is-rounded is-size-4 mt-3">
+          {{ site_data.hero.cta_text }}
         </a>
       </p>
     </div>
@@ -153,7 +142,7 @@ head_content: |
       <div class="column is-8">
         <div class="content has-text-centered">
           <p class="is-size-5">
-            CloudBreak offers something that big tech can't: <strong>data portability</strong>. If you don't like our service, you can take your data and go somewhere else and still use the same apps. We believe in giving you the power to choose without giving up the convenience of the cloud.
+            {{ site_data.value_proposition | markdownify }}
           </p>
         </div>
       </div>
@@ -162,89 +151,57 @@ head_content: |
     <h2 class="title has-text-centered is-2 mt-6" id="our-services"><a href="#our-services" class="has-text-dark" aria-label="Our Services section">Our Services</a></h2>
 
     <div class="columns mt-3 is-centered" id="service-options">
-      <div class="column is-4" itemscope itemtype="https://schema.org/Product">
-        <div class="box has-text-centered">
-          <h3 class="title is-4" itemprop="name">Feedbin Mini</h3>
-          <p itemprop="description">A modern, fast news feed reader with a clean interface. Perfect for keeping up with your favorite blogs and news sites.</p>
-          <a href="/feedbin-mini/" class="button is-info mt-4" itemprop="url">Learn More</a>
-        </div>
-      </div>
-      <div class="column is-4" itemscope itemtype="https://schema.org/Product">
-        <div class="box has-text-centered">
-          <h3 class="title is-4" itemprop="name">FreshRSS</h3>
-          <p itemprop="description">Take control of your news feed with our hosted RSS reader service. No algorithms, no tracking - just the content you choose.</p>
-          <a href="/freshrss/" class="button is-info mt-4" itemprop="url">Learn More</a>
-        </div>
-      </div>
+      {% for service_key in service_groups.primary %}
+        {% include service-card.html service_key=service_key %}
+      {% endfor %}
     </div>
+    
     <div class="columns mt-3 is-centered" id="service-options">
-      <div class="column is-4" itemscope itemtype="https://schema.org/Product">
-        <div class="box has-text-centered">
-          <h3 class="title is-4" itemprop="name">Linkding</h3>
-          <p itemprop="description">A minimal, fast bookmark manager designed for self-hosting. Privacy-focused alternative to commercial bookmark services.</p>
-          <a href="/linkding/" class="button is-info mt-4" itemprop="url">Learn More</a>
-        </div>
-      </div>
-      <div class="column is-4" itemscope itemtype="https://schema.org/Product">
-        <div class="box has-text-centered">
-          <h3 class="title is-4" itemprop="name">Readeck</h3>
-          <p itemprop="description">A modern read-it-later serivce, comparable with Instapaper or Pocket.  A great pair with an RSS reader.</p>
-          <a href="/readeck/" class="button is-info mt-4" itemprop="url">Learn More</a>
-        </div>
-      </div>
+      {% for service_key in service_groups.secondary %}
+        {% include service-card.html service_key=service_key %}
+      {% endfor %}
     </div>
+    
     <div class="columns mt-3 is-centered" id="service-options">
-      <div class="column is-4" itemscope itemtype="https://schema.org/Product">
-        <div class="box has-text-centered">
-          <h3 class="title is-4" itemprop="name">Wallabag</h3>
-          <p itemprop="description">A classic read-it-later serivce, comparable with Instapaper or Pocket.  A great pair with an RSS reader.</p>
-          <a href="/wallabag/" class="button is-info mt-4" itemprop="url">Learn More</a>
-        </div>
-      </div>
+      {% for service_key in service_groups.tertiary %}
+        {% include service-card.html service_key=service_key %}
+      {% endfor %}
     </div>
+    
     <div class="columns mt-3 is-centered" id="service-options">
-      <div class="column is-4" itemscope itemtype="https://schema.org/Product">
-        <div class="box has-text-centered">
-          <h3 class="title is-4" itemprop="name">Matomo Nano</h3>
-          <p itemprop="description">A modern analytics platform formerly known as Piwik, comparable with Google Analytics.  This Nano offering is perfect for a small blog, shop, or other website.</p>
-          <a href="/matomo-nano/" class="button is-info mt-4" itemprop="url">Learn More</a>
-        </div>
-      </div>
-      <div class="column is-4" itemscope itemtype="https://schema.org/Product">
-        <div class="box has-text-centered">
-          <h3 class="title is-4" itemprop="name">Shlink Nano</h3>
-          <p itemprop="description">A modern, self-hosted URL shortener with analytics and API. Privacy-focused alternative to commercial link shorteners.</p>
-          <a href="/shlink-nano/" class="button is-info mt-4" itemprop="url">Learn More</a>
-        </div>
-      </div>
+      {% for service_key in service_groups.tools %}
+        {% include service-card.html service_key=service_key %}
+      {% endfor %}
     </div>
   </div>
 
   <div class="container has-text-centered mt-6">
-    <p class="help">Google Analytics is a trademark of Google LLC.  Instapaper is a trademark of Instant Paper, Inc.  Pocket is a trademark of Mozilla Corporation.</p>
+    <p class="help">
+      {% for trademark in site.data.services.common.trademarks %}
+        {{ trademark }}{% unless forloop.last %} {% endunless %}
+      {% endfor %}
+    </p>
   </div>
 
   <div class="container mt-6 has-text-centered">
-    <p>You can request new services through our <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNEFwFRUTbWAjDvHvrh6tCMlBDGDAAsiH9OHkxveLzmpEsRA/viewform" aria-label="Feature request form">feature request form</a> or browse our <a href="/alternatives/">alternative RSS readers</a>. We regularly review these requests and may add popular requests in the future.</p>
+    <p>{{ site_data.footer_text }}</p>
 
     <div class="buttons is-centered mt-4">
-      <a class="button is-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeNEFwFRUTbWAjDvHvrh6tCMlBDGDAAsiH9OHkxveLzmpEsRA/viewform" aria-label="Request a new service">Request a New Service</a>
-      <a class="button is-info" href="/alternatives/rss/">Browse Alternatives</a>
+      <a class="button is-link" href="{{ site_data.contact.feature_request_form }}" aria-label="Request a new service">Request a New Service</a>
+      <a class="button is-info" href="{{ site_data.contact.alternatives_page }}">Browse Alternatives</a>
     </div>
   </div>
 
-  <!-- Add FAQ section for better SEO -->
+  <!-- FAQ section -->
   <div class="container mt-6">
-    <h2 class="title has-text-centered is-3" id="faq">Frequently Asked Questions</h2>
+    <h2 class="title has-text-centered is-3" id="faq">{{ site_data.faq.title }}</h2>
     <div class="content">
+      {% for faq in site_data.faq.questions %}
       <div class="box">
-        <h3 class="title is-5">What services does CloudBreak offer?</h3>
-        <p>CloudBreak currently offers FreshRSS and Feedbin Mini hosting services, with more options potentially coming in the future based on user requests. We also maintain a list of alternative RSS readers that you might be interested in.</p>
+        <h3 class="title is-5">{{ faq.question }}</h3>
+        <p>{{ faq.answer }}</p>
       </div>
-      <div class="box">
-        <h3 class="title is-5">Why choose CloudBreak over other services?</h3>
-        <p>CloudBreak prioritizes privacy, uses open source software, and provides reliable service with regular updates and maintenance included. We don't track your reading habits or sell your data.</p>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -254,23 +211,15 @@ head_content: |
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content has-text-centered" itemscope itemtype="https://schema.org/ItemList">
-          <h2 class="title is-3" itemprop="name">Why Choose CloudBreak?</h2>
+          <h2 class="title is-3" itemprop="name">{{ site_data.why_choose.title }}</h2>
           <div class="columns">
+            {% for feature in site_data.why_choose.features %}
             <div class="column" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-              <meta itemprop="position" content="1">
-              <h4 class="title is-5" itemprop="name">Privacy First</h4>
-              <p itemprop="description">Your data belongs to you. We don't track, analyze, or sell your information.</p>
+              <meta itemprop="position" content="{{ forloop.index }}">
+              <h4 class="title is-5" itemprop="name">{{ feature.title }}</h4>
+              <p itemprop="description">{{ feature.description }}</p>
             </div>
-            <div class="column" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-              <meta itemprop="position" content="2">
-              <h4 class="title is-5" itemprop="name">Open Source</h4>
-              <p itemprop="description">We use and support trusted open source software, giving back to the community.</p>
-            </div>
-            <div class="column" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-              <meta itemprop="position" content="3">
-              <h4 class="title is-5" itemprop="name">Reliable Service</h4>
-              <p itemprop="description">Professional hosting with regular updates and maintenance included.</p>
-            </div>
+            {% endfor %}
           </div>
         </div>
       </div>
@@ -324,5 +273,3 @@ head_content: |
     });
   });
 </script>
-
-</initial_code>
