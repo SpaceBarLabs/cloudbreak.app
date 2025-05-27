@@ -29,6 +29,13 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.app/feedbin-mini/"/>
   </url>
   <url>
+    <loc>https://cloudbreak.app/linkding/</loc>
+    <lastmod>2025-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cloudbreak.app/linkding/"/>
+  </url>
+  <url>
     <loc>https://cloudbreak.app/freshrss/faq/</loc>
     <lastmod>2025-05-13</lastmod>
     <changefreq>monthly</changefreq>
