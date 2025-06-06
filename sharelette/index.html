@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharelette</title>
+    <style>
+        :root {
+            --brand-blue: #007bff;
+            --code-bg: #f3f4f6;
+            --code-text: #333;
+            --border-color: #e5e7eb;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Vertically centers on desktop */
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+            padding: 2rem 1rem;
+            box-sizing: border-box;
+        }
+        .container {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+        .header {
+            margin-bottom: 1.5rem;
+        }
+        .logo {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 0 auto;
+            display: block;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .attribution {
+            margin: 0.25rem 0 0 0;
+            font-size: 0.9rem;
+        }
+        .attribution a {
+            color: #555;
+            text-decoration: none;
+        }
+        .attribution a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            margin: 1.5rem 0 2rem 0;
+            background: #f9f9f9;
+            padding: 1rem;
+            border-radius: 0.25rem;
+        }
+        .content p {
+            margin: 0;
+            word-wrap: break-word;
+        }
+        .share-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 0.25rem;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #fff;
+            cursor: pointer;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+        .share-btn:hover {
+            opacity: 0.9;
+        }
+        .share-btn svg {
+            width: 1.25em;
+            height: 1.25em;
+            fill: currentColor;
+        }
+
+        /* Brand Colors */
+        .facebook { background-color: #1877f2; }
+        .twitter { background-color: #000000; }
+        .linkedin { background-color: #0a66c2; }
+        .reddit { background-color: #FF4500; }
+        .mastodon { background-color: #6364FF; }
+        .lemmy { background-color: #00C161; }
+        .discord { background-color: #5865F2; }
+        .email { background-color: #7d7d7d; }
+        .sms { background-color: #4CAF50; }
+
+        /* Action Buttons */
+        .native-share, .copy {
+            width: 100%;
+            margin-top: 1rem;
+        }
+        .native-share { background-color: #25d366; }
+        .copy { background-color: #ffc107; color: black; }
+        
+        /* --- How-to-Use Section --- */
+        .how-to-use {
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            text-align: left;
+        }
+        .how-to-use h2 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            text-align: center;
+        }
+        .how-to-use p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: var(--code-text);
+        }
+        .code-block-container {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+        .copy-code-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background-color: #d1d5db;
+            color: #1f2937;
+            border: none;
+            border-radius: 4px;
+            padding: 0.25rem 0.6rem;
+            font-size: 0.8rem;
+            cursor: pointer;
+        }
+        .copy-code-btn:hover {
+            background-color: #9ca3af;
+        }
+        pre {
+            background-color: var(--code-bg);
+            padding: 1em;
+            border-radius: 4px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            color: var(--code-text);
+        }
+        code {
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+            font-size: 0.9em;
+        }
+        .code-tag { color: #9d174d; }
+        .code-attr { color: #92400e; }
+        .code-value { color: #1d4ed8; }
+
+        /* Link Generator Form */
+        .link-generator {
+            background-color: var(--code-bg);
+            padding: 1.5rem;
+            border-radius: 4px;
+            border: 1px solid var(--border-color);
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--code-text);
+        }
+        .form-group input {
+            width: 100%;
+            padding: 0.6rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .generate-btn {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: var(--brand-blue);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .generate-btn:hover {
+            opacity: 0.9;
+        }
+        #output-area {
+            margin-top: 1.5rem;
+            display: none; /* Hidden by default */
+        }
+        .output-group {
+            display: flex;
+            gap: 0.5rem;
+        }
+        #generated-link-output {
+            flex-grow: 1;
+            background-color: #fff;
+            color: #555;
+        }
+        #copy-generated-link-btn {
+            padding: 0 1rem;
+            background-color: #6b7280;
+            color: white;
+            border-radius: 4px;
+            border: none;
+            cursor: pointer;
+        }
+        #copy-generated-link-btn:hover {
+            background-color: #4b5563;
+        }
+
+        /* --- MOBILE OPTIMIZATION --- */
+        @media (max-width: 600px) {
+            body {
+                align-items: flex-start;
+                padding: 1rem;
+            }
+            .container { padding: 1.5rem; }
+            h1 { font-size: 2rem; }
+            .logo { width: 180px; height: 180px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="sharelette.jpeg" alt="Sharelette Logo" class="logo">
+            <h1>Sharelette</h1>
+            <p class="attribution">
+                <a href="https://cloudbreak.app" target="_blank" rel="noopener noreferrer">from CloudBreak</a>
+            </p>
+        </div>
+        <div class="content">
+            <p id="textContent">Your content will appear here.</p>
+        </div>
+        <div class="share-buttons">
+            <a href="#" id="facebook-share" class="share-btn facebook" target="_blank">Facebook</a>
+            <a href="#" id="twitter-share" class="share-btn twitter" target="_blank">Twitter</a>
+            <a href="#" id="linkedin-share" class="share-btn linkedin" target="_blank">LinkedIn</a>
+            <a href="#" id="reddit-share" class="share-btn reddit" target="_blank">Reddit</a>
+            <a href="#" id="mastodon-share" class="share-btn mastodon" target="_blank">Mastodon</a>
+            <a href="#" id="lemmy-share" class="share-btn lemmy" target="_blank">Lemmy</a>
+            <button id="discord-share" class="share-btn discord">Discord</button>
+            <a href="#" id="email-share" class="share-btn email">Email</a>
+            <a href="#" id="sms-share" class="share-btn sms">SMS</a>
+        </div>
+        <button id="native-share" class="share-btn native-share" style="display: none;">Share...</button>
+        <button id="copy-btn" class="share-btn copy">
+            <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+            <span>Copy Text & Link</span>
+        </button>
+
+        <div class="how-to-use">
+            <h2>Use This Tool for Free</h2>
+            <p>You don't need to download anything! Just create a link to our free, hosted service and add what you want to share.</p>
+            
+            <p>Here’s the HTML to add a "Share" link on your site. Just change the URL and text to your own.</p>
+            <div class="code-block-container">
+                <button class="copy-code-btn" id="copy-html-btn" data-feedback-text="Copied HTML!">Copy</button>
+                <pre><code id="html-code-sample">&lt;<span class="code-tag">a</span> <span class="code-attr">href</span>=<span class="code-value">"https://cloudbreak.app/sharelette/?url=https%3A%2F%2Fcloudbreak.app&text=Check%20out%20CloudBreak!"</span>&gt;
+  Share this on social media
+&lt;/<span class="code-tag">a</span>&gt;</code></pre>
+            </div>
+
+            <h3>Generate Your Own Link</h3>
+            <div class="link-generator">
+                <form id="link-generator-form">
+                    <div class="form-group">
+                        <label for="input-url">URL to share</label>
+                        <input type="text" id="input-url" placeholder="https://your-website.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="input-text">Text to share</label>
+                        <input type="text" id="input-text" placeholder="Check out this awesome site!">
+                    </div>
+                    <button type="button" class="generate-btn" id="generate-link-btn">Generate Link</button>
+                </form>
+                <div id="output-area">
+                     <label for="generated-link-output">Your Sharelette Link</label>
+                    <div class="output-group">
+                        <input type="text" id="generated-link-output" readonly>
+                        <button id="copy-generated-link-btn" data-feedback-text="Copied Link!">Copy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const url = params.get('url') || 'https://cloudbreak.app/sharelette';
+            const text = params.get('text') || 'Check out Sharelette!';
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            document.getElementById('textContent').textContent = text;
+            const encodedUrl = encodeURIComponent(url);
+            const encodedText = encodeURIComponent(text);
+
+            // Set hrefs for all share links
+            document.getElementById('facebook-share').href = `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
+            document.getElementById('twitter-share').href = `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedText}`;
+            document.getElementById('linkedin-share').href = `https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedText}`;
+            document.getElementById('reddit-share').href = `https://www.reddit.com/submit?url=${encodedUrl}&title=${encodedText}`;
+            document.getElementById('mastodon-share').href = `https://mastodon.social/share?text=${encodedText}%20${encodedUrl}`;
+            document.getElementById('lemmy-share').href = `https://lemmy.world/create_post?title=${encodedText}&url=${encodedUrl}`;
+            document.getElementById('email-share').href = `mailto:?subject=${encodedText}&body=${text}%20${url}`;
+            
+            let smsLink;
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                smsLink = `sms:?&body=${encodedText}%20${encodedUrl}`;
+            } else {
+                smsLink = `sms:?body=${encodedText}%20${encodedUrl}`;
+            }
+            document.getElementById('sms-share').href = smsLink;
+
+            // --- Generic Copy Function ---
+            const setupCopyButton = (buttonId, targetElement, isInput = false, feedbackText = 'Copied!') => {
+                const button = document.getElementById(buttonId);
+                if (!button) return;
+                const originalText = button.textContent;
+                button.addEventListener('click', () => {
+                    const textToCopy = isInput ? targetElement.value : targetElement.innerText;
+                    navigator.clipboard.writeText(textToCopy).then(() => {
+                        button.textContent = feedbackText;
+                        setTimeout(() => {
+                            button.textContent = originalText;
+                        }, 2000);
+                    }).catch(err => {
+                        console.error('Failed to copy: ', err);
+                        alert('Failed to copy text.');
+                    });
+                });
+            };
+
+            // Main "Copy Text & Link" button
+            const copyBtn = document.getElementById('copy-btn');
+            copyBtn.addEventListener('click', () => {
+                const combinedText = `${text}\n${url}`;
+                const textHolder = copyBtn.querySelector('span');
+                const originalText = textHolder.textContent;
+                navigator.clipboard.writeText(combinedText).then(() => {
+                    textHolder.textContent = 'Copied!';
+                    setTimeout(() => {
+                        textHolder.textContent = originalText;
+                    }, 2000);
+                });
+            });
+
+            // Discord Button
+            const discordBtn = document.getElementById('discord-share');
+            discordBtn.addEventListener('click', () => {
+                const combinedText = `${text}\n${url}`;
+                const originalText = discordBtn.textContent;
+                navigator.clipboard.writeText(combinedText).then(() => {
+                    discordBtn.textContent = 'Copied!';
+                    setTimeout(() => {
+                        discordBtn.textContent = originalText;
+                    }, 2000);
+                });
+            });
+
+            // Native Share
+            const nativeShareBtn = document.getElementById('native-share');
+            if (navigator.share) {
+                nativeShareBtn.style.display = 'inline-flex';
+                nativeShareBtn.addEventListener('click', async () => {
+                    try {
+                        await navigator.share({ title: text, text: text, url: url });
+                    } catch (err) {
+                        console.info("Navigator.share dialog info:", err);
+                    }
+                });
+            }
+
+            // --- "How to Use" Section Logic ---
+            // Copy HTML Sample Button
+            setupCopyButton('copy-html-btn', document.getElementById('html-code-sample'), false, 'Copied!');
+
+            // Link Generator Form
+            const generateBtn = document.getElementById('generate-link-btn');
+            const outputArea = document.getElementById('output-area');
+            const outputInput = document.getElementById('generated-link-output');
+
+            generateBtn.addEventListener('click', () => {
+                const urlToShare = document.getElementById('input-url').value;
+                const textToShare = document.getElementById('input-text').value;
+
+                if (!urlToShare) {
+                    alert('Please enter a URL to share.');
+                    return;
+                }
+
+                const encodedUrlParam = encodeURIComponent(urlToShare);
+                const encodedTextParam = encodeURIComponent(textToShare);
+                const finalLink = `https://cloudbreak.app/sharelette/?url=${encodedUrlParam}&text=${encodedTextParam}`;
+                
+                outputInput.value = finalLink;
+                outputArea.style.display = 'block';
+            });
+
+            // Copy Generated Link Button
+            setupCopyButton('copy-generated-link-btn', outputInput, true, 'Copied!');
+        });
+    </script>
+</body>
+</html>
