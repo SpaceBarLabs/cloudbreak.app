@@ -7,5 +7,7 @@ baseurl: ""
 # Google Analytics
 google_analytics: G-C1RRDV39YN
 
+cancel_policy: "Cancel within 30 days and get your money back, no questions asked"
+
 # Build settings
 markdown: kramdown
