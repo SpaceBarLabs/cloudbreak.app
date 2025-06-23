@@ -1,5 +1,6 @@
 - name: Feedbin Mini
-  description: "A modern, elegant RSS reader and read-it-later service."
+  description: "A modern, fast news feed reader with a clean interface. Perfect for
+    keeping up with your favorite blogs and news sites."
   category: "rss"
   action: "pre-order"
   normal_price: 30
@@ -8,9 +9,11 @@
   subscribe_url:
   faq_path: "/products/feedbin-mini/faq/"
   scm_url: "https://github.com/feedbin/feedbin"
+  featured: true
 
 - name: FreshRSS
-  description: "A feed reader app."
+  description: "Take control of your news feed with our hosted RSS reader service.
+    No algorithms, no tracking - just the content you choose."
   category: "rss"
   action: "subscribe"
   normal_price: 24
@@ -19,9 +22,11 @@
   subscribe_url: "https://buy.stripe.com/7sI7ufgmn0rAdAQ9AA"
   faq_path: "/products/freshrss/faq/"
   scm_url: "https://freshrss.org/"
+  featured: true
 
 - name: Linkding
-  description: "A bookmark manager."
+  description: "A minimal, fast bookmark manager designed for self-hosting. Privacy-focused
+    alternative to commercial bookmark services."
   category: "read-it-later"
   action: "pre-order"
   normal_price: 24
@@ -30,9 +35,12 @@
   subscribe_url:
   faq_path:
   scm_url: "https://github.com/sissbruecker/linkding"
+  featured: true
 
 - name: Matomo Nano
-  description: "An analytics app."
+  description: "A modern analytics platform formerly known as Piwik, comparable
+    with Google Analytics.  This Nano offering is perfect for a small blog, shop,
+    or other website."
   category: "analytics"
   action: "pre-order"
   normal_price:
@@ -41,6 +49,7 @@
   subscribe_url:
   faq_path:
   scm_url: "https://matomo.org/"
+  featured: true
 
 - name: Miniflux
   description: "A minimalist and opinionated feed reader."
@@ -52,9 +61,11 @@
   subscribe_url:
   faq_path:
   scm_url: "https://miniflux.app/"
+  featured: false
 
 - name: Readeck
-  description: "A read-it-later app."
+  description: "A modern read-it-later serivce, comparable with Instapaper or Pocket.
+    \ A great pair with an RSS reader."
   category: "read-it-later"
   action: "pre-order"
   normal_price: 12
@@ -63,9 +74,11 @@
   subscribe_url:
   faq_path:
   scm_url: "https://codeberg.org/readeck/readeck"
+  featured: true
 
 - name: Shlink Nano
-  description: "A URL shortener."
+  description: "A modern, self-hosted URL shortener with analytics and API. Privacy-focused
+    alternative to commercial link shorteners."
   category: "url-shortener"
   action: "pre-order"
   normal_price: 6
@@ -74,6 +87,7 @@
   subscribe_url:
   faq_path:
   scm_url: "https://shlink.io/"
+  featured: true
 
 - name: Tiny Tiny RSS
   description: "A powerful, self-hostable RSS reader with a strong community."
@@ -85,9 +99,11 @@
   subscribe_url:
   faq_path:
   scm_url: "https://tt-rss.org/"
+  featured: false
 
 - name: Wallabag
-  description: "A read-it-later app."
+  description: "A classic read-it-later serivce, comparable with Instapaper or
+    Pocket.  A great pair with an RSS reader."
   category: "read-it-later"
   action: "subscribe"
   normal_price: 12
@@ -96,3 +112,4 @@
   subscribe_url: "https://buy.stripe.com/14AdR94xX1xg57J3VS0Ba05"
   faq_path:
   scm_url: "https://github.com/wallabag/wallabag"
+  featured: true

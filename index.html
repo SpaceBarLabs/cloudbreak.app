@@ -147,62 +147,17 @@ head_content: |
 
     <h2 class="title has-text-centered is-2 mt-6" id="our-services"><a href="#our-services" class="has-text-dark" aria-label="Our Services section">Our Services</a></h2>
 
-    <div class="columns mt-3 is-centered" id="service-options">
+    <div class="columns mt-3 is-centered is-multiline" id="service-options">
+      {% assign featured_products = site.data.products | where: "featured", true %}
+      {% for product in featured_products %}
       <div class="column is-4" itemscope itemtype="https://schema.org/Product">
         <div class="box has-text-centered">
-          <h3 class="title is-4" itemprop="name">Feedbin Mini</h3>
-          <p itemprop="description">A modern, fast news feed reader with a clean interface. Perfect for keeping up with your favorite blogs and news sites.</p>
-          <a href="/products/feedbin-mini/" class="button is-info mt-4" itemprop="url">Learn More</a>
+          <h3 class="title is-4" itemprop="name">{{ product.name }}</h3>
+          <p itemprop="description">{{ product.description }}</p>
+          <a href="/products/{{ product.name | slugify }}/" class="button is-info mt-4" itemprop="url">Learn More</a>
         </div>
       </div>
-      <div class="column is-4" itemscope itemtype="https://schema.org/Product">
-        <div class="box has-text-centered">
-          <h3 class="title is-4" itemprop="name">FreshRSS</h3>
-          <p itemprop="description">Take control of your news feed with our hosted RSS reader service. No algorithms, no tracking - just the content you choose.</p>
-          <a href="/products/freshrss/" class="button is-info mt-4" itemprop="url">Learn More</a>
-        </div>
-      </div>
-    </div>
-    <div class="columns mt-3 is-centered" id="service-options">
-      <div class="column is-4" itemscope itemtype="https://schema.org/Product">
-        <div class="box has-text-centered">
-          <h3 class="title is-4" itemprop="name">Linkding</h3>
-          <p itemprop="description">A minimal, fast bookmark manager designed for self-hosting. Privacy-focused alternative to commercial bookmark services.</p>
-          <a href="/products/linkding/" class="button is-info mt-4" itemprop="url">Learn More</a>
-        </div>
-      </div>
-      <div class="column is-4" itemscope itemtype="https://schema.org/Product">
-        <div class="box has-text-centered">
-          <h3 class="title is-4" itemprop="name">Readeck</h3>
-          <p itemprop="description">A modern read-it-later serivce, comparable with Instapaper or Pocket.  A great pair with an RSS reader.</p>
-          <a href="/products/readeck/" class="button is-info mt-4" itemprop="url">Learn More</a>
-        </div>
-      </div>
-    </div>
-    <div class="columns mt-3 is-centered" id="service-options">
-      <div class="column is-4" itemscope itemtype="https://schema.org/Product">
-        <div class="box has-text-centered">
-          <h3 class="title is-4" itemprop="name">Wallabag</h3>
-          <p itemprop="description">A classic read-it-later serivce, comparable with Instapaper or Pocket.  A great pair with an RSS reader.</p>
-          <a href="/products/wallabag/" class="button is-info mt-4" itemprop="url">Learn More</a>
-        </div>
-      </div>
-    </div>
-    <div class="columns mt-3 is-centered" id="service-options">
-      <div class="column is-4" itemscope itemtype="https://schema.org/Product">
-        <div class="box has-text-centered">
-          <h3 class="title is-4" itemprop="name">Matomo Nano</h3>
-          <p itemprop="description">A modern analytics platform formerly known as Piwik, comparable with Google Analytics.  This Nano offering is perfect for a small blog, shop, or other website.</p>
-          <a href="/products/matomo-nano/" class="button is-info mt-4" itemprop="url">Learn More</a>
-        </div>
-      </div>
-      <div class="column is-4" itemscope itemtype="https://schema.org/Product">
-        <div class="box has-text-centered">
-          <h3 class="title is-4" itemprop="name">Shlink Nano</h3>
-          <p itemprop="description">A modern, self-hosted URL shortener with analytics and API. Privacy-focused alternative to commercial link shorteners.</p>
-          <a href="/products/shlink-nano/" class="button is-info mt-4" itemprop="url">Learn More</a>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 
