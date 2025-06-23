@@ -1,13 +1,13 @@
 # Site settings
-title: CloudBreak - Privacy-Focused RSS Hosting
+title: CloudBreak - Privacy-Focused Hosting
 description: Take control of your news with CloudBreak's ethical RSS hosting
 url: https://cloudbreak.app
 baseurl: ""
+
+# Build settings
+markdown: kramdown
 
 # Google Analytics
 google_analytics: G-C1RRDV39YN
 
 cancel_policy: "Cancel within 30 days and get your money back, no questions asked"
-
-# Build settings
-markdown: kramdown
