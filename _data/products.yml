@@ -1,0 +1,98 @@
+- name: Feedbin Mini
+  description: "A modern, elegant RSS reader and read-it-later service."
+  category: "rss"
+  action: "pre-order"
+  normal_price: 30
+  sale_price: 15
+  preorder_url: "https://buy.stripe.com/00gbKvfijgqybsIaEG"
+  subscribe_url:
+  faq_path: "/products/feedbin-mini/faq/"
+  scm_url: "https://github.com/feedbin/feedbin"
+
+- name: FreshRSS
+  description: "A feed reader app."
+  category: "rss"
+  action: "subscribe"
+  normal_price: 24
+  sale_price: 12
+  preorder_url:
+  subscribe_url: "https://buy.stripe.com/7sI7ufgmn0rAdAQ9AA"
+  faq_path: "/products/freshrss/faq/"
+  scm_url: "https://freshrss.org/"
+
+- name: Linkding
+  description: "A bookmark manager."
+  category: "read-it-later"
+  action: "pre-order"
+  normal_price: 24
+  sale_price: 12
+  preorder_url: "https://buy.stripe.com/14AdR97K98ZIas38c80Ba08"
+  subscribe_url:
+  faq_path:
+  scm_url: "https://github.com/sissbruecker/linkding"
+
+- name: Matomo Nano
+  description: "An analytics app."
+  category: "analytics"
+  action: "pre-order"
+  normal_price:
+  sale_price: 50
+  preorder_url: "https://buy.stripe.com/00w3cv0hHb7Q43Fbok0Ba04"
+  subscribe_url:
+  faq_path:
+  scm_url: "https://matomo.org/"
+
+- name: Miniflux
+  description: "A minimalist and opinionated feed reader."
+  category: "rss"
+  action: "join waitlist"
+  normal_price:
+  sale_price:
+  preorder_url:
+  subscribe_url:
+  faq_path:
+  scm_url: "https://miniflux.app/"
+
+- name: Readeck
+  description: "A read-it-later app."
+  category: "read-it-later"
+  action: "pre-order"
+  normal_price: 12
+  sale_price: 10
+  preorder_url: "https://buy.stripe.com/fZueVdd4t2Bk0Rt8c80Ba06"
+  subscribe_url:
+  faq_path:
+  scm_url: "https://codeberg.org/readeck/readeck"
+
+- name: Shlink Nano
+  description: "A URL shortener."
+  category: "url-shortener"
+  action: "pre-order"
+  normal_price: 6
+  sale_price: 4
+  preorder_url: "https://buy.stripe.com/5kQ4gz6G5cbUgQrfEA0Ba07"
+  subscribe_url:
+  faq_path:
+  scm_url: "https://shlink.io/"
+
+- name: Tiny Tiny RSS
+  description: "A powerful, self-hostable RSS reader with a strong community."
+  category: "rss"
+  action: "join waitlist"
+  normal_price:
+  sale_price:
+  preorder_url:
+  subscribe_url:
+  faq_path:
+  scm_url: "https://tt-rss.org/"
+
+- name: Wallabag
+  description: "A read-it-later app."
+  category: "read-it-later"
+  action: "subscribe"
+  normal_price: 12
+  sale_price: 10
+  preorder_url:
+  subscribe_url: "https://buy.stripe.com/14AdR94xX1xg57J3VS0Ba05"
+  faq_path:
+  scm_url: "https://github.com/wallabag/wallabag"
