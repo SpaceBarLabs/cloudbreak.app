@@ -1,3 +1,10 @@
+# # <development-specific-settings>
+# url: http://pairing.spacebarlabs.com:4000
+#
+# # Development Google Analytics ID (replace with your development GA ID when created)
+# google_analytics: G-2D9RYE1FZJ
+# # </development-specific-settings>
+
 # Site settings
 title: CloudBreak - Privacy-Focused Hosting
 description: Take control of your news with CloudBreak's ethical RSS hosting
