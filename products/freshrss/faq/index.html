@@ -1,9 +1,8 @@
 ---
 layout: default
-{% assign product = site.data.products | where:"key", "freshrss" | first %}
-title: "{{ product.name }} FAQ: Features, Mobile Apps & Setup | CloudBreak"
-description: "Everything you need to know about {{ product.name }} hosting. Learn about pricing, features, mobile app setup, and how to get started with our privacy-focused RSS reader."
-keywords: "{{ product.name }} FAQ, RSS reader questions, {{ product.name }} mobile apps, {{ product.name }} hosting support"
+title: "FreshRSS FAQ: Features, Mobile Apps & Setup | CloudBreak"
+description: "Everything you need to know about FreshRSS hosting. Learn about pricing, features, mobile app setup, and how to get started with our privacy-focused RSS reader."
+keywords: "FreshRSS FAQ, RSS reader questions, FreshRSS mobile apps, FreshRSS hosting support"
 head_content: |
   <script type="application/ld+json">
   {
@@ -14,19 +13,19 @@ head_content: |
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "{{ site.url }}/"
+        "item": "https://cloudbreak.app/"
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "{{ product.name }}",
-        "item": "{{ site.url }}/products/{{ product.name | slugify }}/"
+        "name": "FreshRSS",
+        "item": "https://cloudbreak.app/products/freshrss/"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "FAQ",
-        "item": "{{ site.url }}{{ page.url | relative_url }}"
+        "item": "https://cloudbreak.app/products/freshrss/faq/"
       }
     ]
   }
@@ -39,10 +38,10 @@ head_content: |
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What is {{ product.name }}?",
+        "name": "What is FreshRSS?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "{{ product.name }} is a self-hostable RSS feed aggregator that lets you follow your favorite websites and blogs in one place. We host and maintain {{ product.name }} for you, so you don't have to worry about server management or updates."
+          "text": "FreshRSS is a self-hostable RSS feed aggregator that lets you follow your favorite websites and blogs in one place. We host and maintain FreshRSS for you, so you don't have to worry about server management or updates."
         }
       },
       {
@@ -50,7 +49,7 @@ head_content: |
         "name": "How much does it cost?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Please visit our main page to for current pricing. 10% of profits are donated to the {{ product.name }} project."
+          "text": "Please visit our main page to for current pricing. 10% of profits are donated to the FreshRSS project."
         }
       },
       {
@@ -63,10 +62,10 @@ head_content: |
       },
       {
         "@type": "Question",
-        "name": "What apps do you recommend for reading {{ product.name }}?",
+        "name": "What apps do you recommend for reading FreshRSS?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "For Android users, we recommend Capy Reader. For Linux desktop users, NewsFlash is an excellent choice. Both apps work great with {{ product.name }} and offer a smooth reading experience. Any compatible app should work as expected. You can also refer to the official list of {{ product.name }} compatible apps for other platforms such as Mac, iOS, and Windows."
+          "text": "For Android users, we recommend Capy Reader. For Linux desktop users, NewsFlash is an excellent choice. Both apps work great with FreshRSS and offer a smooth reading experience. Any compatible app should work as expected. You can also refer to the official list of FreshRSS compatible apps for other platforms such as Mac, iOS, and Windows."
         }
       },
       {
@@ -74,7 +73,7 @@ head_content: |
         "name": "How do I set up mobile app access?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "To use {{ product.name }} with mobile apps, you'll need to set up an API password, which is separate from your main user password. After logging in, go to your settings and set an API password. You'll use this API password (not your regular login password) when connecting through mobile apps."
+          "text": "To use FreshRSS with mobile apps, you'll need to set up an API password, which is separate from your main user password. After logging in, go to your settings and set an API password. You'll use this API password (not your regular login password) when connecting through mobile apps."
         }
       },
       {
@@ -90,7 +89,7 @@ head_content: |
         "name": "What kind of support do you provide?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We focus on providing a reliable, high-uptime {{ product.name }} hosting service. Our support is limited to the information provided in this FAQ. While we maintain and update the {{ product.name }} installation, we do not provide technical support or tutorials for using {{ product.name }} itself - for that, please refer to the official {{ product.name }} documentation."
+          "text": "We focus on providing a reliable, high-uptime FreshRSS hosting service. Our support is limited to the information provided in this FAQ. While we maintain and update the FreshRSS installation, we do not provide technical support or tutorials for using FreshRSS itself - for that, please refer to the official FreshRSS documentation."
         }
       },
       {
@@ -98,25 +97,26 @@ head_content: |
         "name": "How do I get started?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Visit our main page to subscribe and get started with {{ product.name }} today!"
+          "text": "Visit our main page to subscribe and get started with FreshRSS today!"
         }
       }
     ]
   }
   </script>
 ---
+{% assign product = site.data.products | where:"key", "freshrss" | first %}
 <section class="section">
   <div class="container">
     <h1 class="title has-text-centered">Frequently Asked Questions</h1>
 
-    <p><a class="button is-link" href="/products/{{ product.name | slugify }}/">&larr; Back to {{ product.name }}</a></p>
+    <p><a class="button is-link" href="/products/{{ product.key }}/">&larr; Back to {{ product.name }}</a></p>
 
     <div class="content mt-6">
       <h2 class="subtitle" id="what-is-freshrss"><a href="#what-is-freshrss" class="has-text-dark">What is {{ product.name }}?</a></h2>
       <p><a href="{{ product.scm_url }}">{{ product.name }}</a> is a self-hostable RSS feed aggregator that lets you follow your favorite websites and blogs in one place. We host and maintain {{ product.name }} for you, so you don't have to worry about server management or updates.</p>
 
       <h2 class="subtitle" id="how-much-does-it-cost"><a href="#how-much-does-it-cost" class="has-text-dark">How much does it cost?</a></h2>
-      <p>Please visit our <a href="/products/{{ product.name | slugify }}/">main page</a> to for current pricing.</p>
+      <p>Please visit our <a href="/products/{{ product.key }}/">main page</a> to for current pricing.</p>
       <p>10% of profits are donated to the {{ product.name }} project.</p>
 
       <h2 class="subtitle" id="can-i-install-extensions"><a href="#can-i-install-extensions" class="has-text-dark">Can I install extensions?</a></h2>
@@ -137,7 +137,7 @@ head_content: |
       <p>We focus on providing a reliable, high-uptime {{ product.name }} hosting service. Our support is limited to the information provided in this FAQ. While we maintain and update the {{ product.name }} installation, we do not provide technical support or tutorials for using {{ product.name }} itself - for that, please refer to the <a target="_blank" href="https://freshrss.github.io/FreshRSS/en/">official {{ product.name }} documentation</a>.</p>
 
       <h2 class="subtitle" id="how-do-i-get-started"><a href="#how-do-i-get-started" class="has-text-dark">How do I get started?</a></h2>
-      <p>Visit our <a href="/products/{{ product.name | slugify }}/">main page</a> to subscribe and get started with {{ product.name }} today!</p>
+      <p>Visit our <a href="/products/{{ product.key }}/">main page</a> to subscribe and get started with {{ product.name }} today!</p>
     </div>
   </div>
 </section>

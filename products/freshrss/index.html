@@ -1,15 +1,14 @@
 ---
 layout: default
-{% assign product = site.data.products | where:"key", "freshrss" | first %}
-title: "{{ product.name }} Hosting: Fast & Private RSS Reader | 50% Off Sale"
-description: "Get professional {{ product.name }} hosting with CloudBreak. A fast, private RSS reader with no tracking. 50% off limited-time sale. 10% of profits support the {{ product.name }} project."
-keywords: "{{ product.name }} hosting, RSS news reader, private RSS hosting, open source RSS"
+title: "FreshRSS Hosting: Fast & Private RSS Reader | 50% Off Sale"
+description: "Get professional FreshRSS hosting with CloudBreak. A fast, private RSS reader with no tracking. 50% off limited-time sale. 10% of profits support the FreshRSS project."
+keywords: "FreshRSS hosting, RSS news reader, private RSS hosting, open source RSS"
 head_content: |
-  <meta property="og:title" content="{{ product.name }} Hosting: Fast & Private RSS Reader | 50% Off Sale">
-  <meta property="og:description" content="Get professional {{ product.name }} hosting with CloudBreak. A fast, private RSS reader with no tracking. 50% off limited-time sale. 10% of profits support the {{ product.name }} project.">
+  <meta property="og:title" content="FreshRSS Hosting: Fast & Private RSS Reader | 50% Off Sale">
+  <meta property="og:description" content="Get professional FreshRSS hosting with CloudBreak. A fast, private RSS reader with no tracking. 50% off limited-time sale. 10% of profits support the FreshRSS project.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="{{ site.url }}/products/freshrss/">
-  <meta property="og:image" content="{{ site.url }}/screenshot.webp">
+  <meta property="og:url" content="https://cloudbreak.app/freshrss/">
+  <meta property="og:image" content="https://cloudbreak.app/screenshot.webp">
 
   <script type="application/ld+json">
   {
@@ -20,13 +19,13 @@ head_content: |
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "{{ site.url }}/"
+        "item": "https://cloudbreak.app/"
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "{{ product.name }}",
-        "item": "{{ site.url }}/products/freshrss/"
+        "name": "FreshRSS",
+        "item": "https://cloudbreak.app/freshrss/"
       }
     ]
   }
@@ -36,30 +35,31 @@ head_content: |
   {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": "{{ product.name }} Hosting",
-    "description": "Professional hosting for {{ product.name }}, a fast and private news reader. Get 50% off with our current sale.",
+    "name": "FreshRSS Hosting",
+    "description": "Professional hosting for FreshRSS, a fast and private news reader. Get 50% off with our current sale.",
     "brand": {
       "@type": "Brand",
       "name": "CloudBreak",
-      "logo": "{{ site.url }}/logo.svg"
+      "logo": "https://cloudbreak.app/logo.svg"
     },
     "category": "Software > RSS Reader > Hosting",
     "offers": [
       {
         "@type": "Offer",
         "name": "Annual Subscription",
-        "description": "{{ product.name }} hosting billed annually",
-        "price": "{{ product.sale_price | money_without_currency }}",
+        "description": "FreshRSS hosting billed annually",
+        "price": "12.00",
         "priceCurrency": "USD",
         "priceValidUntil": "2025-12-31",
-        "url": "{{ product.subscribe_url }}",
+        "url": "https://buy.stripe.com/7sI7ufgmn0rAdAQ9AA",
         "availability": "https://schema.org/InStock"
       }
     ],
-    "image": "{{ site.url }}/screenshot.webp"
+    "image": "https://cloudbreak.app/screenshot.webp"
   }
   </script>
 ---
+{% assign product = site.data.products | where:"key", "freshrss" | first %}
 <section class="hero is-medium is-bold">
   <div class="hero-body">
     <div class="container has-text-centered">
