@@ -147,9 +147,40 @@ head_content: |
 
     <h2 class="title has-text-centered is-2 mt-6" id="our-services"><a href="#our-services" class="has-text-dark" aria-label="Our Services section">Our Services</a></h2>
 
-    <div class="columns mt-3 is-centered is-multiline" id="service-options">
-      {% assign featured_products = site.data.products | where: "featured", true %}
-      {% for product in featured_products %}
+    <h3 class="title has-text-centered is-3 mt-5">RSS Readers</h3>
+    <div class="columns mt-3 is-centered is-multiline" id="service-options-rss">
+      {% assign rss_products = site.data.products | where: "featured", true | where: "category", "rss" %}
+      {% for product in rss_products %}
+      <div class="column is-4" itemscope itemtype="https://schema.org/Product">
+        <div class="box has-text-centered">
+          <h3 class="title is-4" itemprop="name">{{ product.name }}</h3>
+          <p itemprop="description">{{ product.description }}</p>
+          <a href="/products/{{ product.name | slugify }}/" class="button is-info mt-4" itemprop="url">Learn More</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <h3 class="title has-text-centered is-3 mt-5">Read-It-Later</h3>
+    <div class="columns mt-3 is-centered is-multiline" id="service-options-read-it-later">
+      {% assign read_it_later_products = site.data.products | where: "featured", true | where: "category", "read-it-later" %}
+      {% for product in read_it_later_products %}
+      <div class="column is-4" itemscope itemtype="https://schema.org/Product">
+        <div class="box has-text-centered">
+          <h3 class="title is-4" itemprop="name">{{ product.name }}</h3>
+          <p itemprop="description">{{ product.description }}</p>
+          <a href="/products/{{ product.name | slugify }}/" class="button is-info mt-4" itemprop="url">Learn More</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <h3 class="title has-text-centered is-3 mt-5">Analytics &amp; Utilities</h3>
+    <div class="columns mt-3 is-centered is-multiline" id="service-options-analytics">
+      {% assign analytics_products = site.data.products | where: "featured", true | where: "category", "analytics" %}
+      {% assign url_shortener_products = site.data.products | where: "featured", true | where: "category", "url-shortener" %}
+      {% assign analytics_and_utilities_products = analytics_products | concat: url_shortener_products %}
+      {% for product in analytics_and_utilities_products %}
       <div class="column is-4" itemscope itemtype="https://schema.org/Product">
         <div class="box has-text-centered">
           <h3 class="title is-4" itemprop="name">{{ product.name }}</h3>
