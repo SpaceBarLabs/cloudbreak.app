@@ -4,13 +4,11 @@ title: "Alternative RSS Readers | CloudBreak"
 description: "Explore alternative RSS reader options with CloudBreak hosting. Join our waitlist for upcoming RSS reader hosting services."
 keywords: "RSS reader alternatives, RSS hosting options, Tiny Tiny RSS hosting"
 head_content: |
-  <!-- Open Graph tags -->
   <meta property="og:title" content="Alternative RSS Readers | CloudBreak">
   <meta property="og:description" content="Explore alternative RSS reader options with CloudBreak hosting. Join our waitlist for upcoming RSS reader hosting services.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://cloudbreak.app/alternatives/">
+  <meta property="og:url" content="https://cloudbreak.app/alternatives/rss/">
 
-  <!-- Schema.org structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -31,32 +29,32 @@ head_content: |
       <p class="subtitle">Explore different ways to read your news</p>
 
       <div class="content mt-6">
-        <p>While we focus on <a href="/freshrss">FreshRSS</a> and <a href="/feedbin-mini">Feedbin Mini</a> as our primary offerings, we're exploring support for other popular RSS readers based on user interest.</p>
+        <p>While we focus on <a href="/products/freshrss">FreshRSS</a> and <a href="/products/feedbin-mini">Feedbin Mini</a> as our primary offerings, we're exploring support for other popular RSS readers based on user interest.</p>
 
         <div class="box mt-6">
           <h2 class="title is-4">FreshRSS</h2>
           <p>Take control of your news feed with our hosted RSS reader service. No algorithms, no tracking - just the content you choose.</p>
-          <a href="/freshrss/" class="button is-info">Learn More</a>
+          <a href="/products/freshrss/" class="button is-info">Learn More</a>
           <a href="https://buy.stripe.com/7sI7ufgmn0rAdAQ9AA" class="button is-link">Subscribe</a>
         </div>
 
         <div class="box mt-6">
           <h2 class="title is-4">Feedbin Mini</h2>
           <p>A modern, fast RSS reader with a clean interface. Perfect for keeping up with your favorite blogs and news sites.</p>
-          <a href="/feedbin-mini/" class="button is-info">Learn More</a>
+          <a href="/products/feedbin-mini/" class="button is-info">Learn More</a>
           <a href="https://buy.stripe.com/00gbKvfijgqybsIaEG" class="button is-primary">Pre-order</a>
         </div>
 
         <div class="box mt-6">
           <h2 class="title is-4">Miniflux</h2>
           <p>A minimalist and opinionated feed reader.</p>
-          <a href="/miniflux/" class="button is-info mt-3">Learn More</a>
+          <a href="/products/miniflux/" class="button is-info mt-3">Learn More</a>
         </div>
 
         <div class="box mt-6">
           <h2 class="title is-4">Tiny Tiny RSS</h2>
           <p>A powerful, self-hostable RSS reader with a strong community.</p>
-          <a href="/tiny-tiny-rss/" class="button is-info mt-3">Learn More</a>
+          <a href="/products/tiny-tiny-rss/" class="button is-info mt-3">Learn More</a>
         </div>
       </div>
     </div>
@@ -66,7 +64,7 @@ head_content: |
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     // Track clicks to Miniflux page
-    const minifluxLink = document.querySelector('a[href="/miniflux/"]');
+    const minifluxLink = document.querySelector('a[href="/products/miniflux/"]');
     if (minifluxLink) {
       minifluxLink.addEventListener('click', function() {
         gtag('event', 'alternative_selection', {
@@ -77,7 +75,7 @@ head_content: |
     }
 
     // Track clicks to TTRSS page
-    const ttrssLink = document.querySelector('a[href="/tiny-tiny-rss/"]');
+    const ttrssLink = document.querySelector('a[href="/products/tiny-tiny-rss/"]');
     if (ttrssLink) {
       ttrssLink.addEventListener('click', function() {
         gtag('event', 'alternative_selection', {

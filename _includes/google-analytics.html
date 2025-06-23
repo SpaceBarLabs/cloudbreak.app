@@ -1,4 +1,3 @@
-<!-- Google Analytics Consent Mode -->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -22,7 +21,6 @@
     });
   }
 </script>
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -32,15 +30,15 @@
   // Determine page-specific user properties
   var userProperties = { 'visitor_type': 'new_visitor' };
   
-  {% if page.url contains 'freshrss' and page.url contains 'faq' %}
+  {% if page.url contains '/products/freshrss' and page.url contains 'faq' %}
     userProperties.service_page = 'freshrss';
     userProperties.page_type = 'faq';
-  {% elsif page.url contains 'freshrss' %}
+  {% elsif page.url contains '/products/freshrss' %}
     userProperties.service_page = 'freshrss';
-  {% elsif page.url contains 'feedbin-mini' and page.url contains 'faq' %}
+  {% elsif page.url contains '/products/feedbin-mini' and page.url contains 'faq' %}
     userProperties.service_page = 'feedbin_mini';
     userProperties.page_type = 'faq';
-  {% elsif page.url contains 'feedbin-mini' %}
+  {% elsif page.url contains '/products/feedbin-mini' %}
     userProperties.service_page = 'feedbin_mini';
   {% endif %}
 
