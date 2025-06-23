@@ -7,7 +7,18 @@ baseurl: ""
 # Build settings
 markdown: kramdown
 
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap # keep this last
+
 # Google Analytics
 google_analytics: G-C1RRDV39YN
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - scripts
+  - private
 
 cancel_policy: "Cancel within 30 days and get your money back, no questions asked"
