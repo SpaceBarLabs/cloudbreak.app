@@ -1,115 +1,117 @@
-- name: Feedbin Mini
-  description: "A modern, fast news feed reader with a clean interface. Perfect for
-    keeping up with your favorite blogs and news sites."
-  category: "rss"
-  action: "pre-order"
+---
+- key: feedbin-mini
+  name: Feedbin Mini
+  description: A modern, fast news feed reader with a clean interface. Perfect for
+    keeping up with your favorite blogs and news sites.
+  category: rss
+  action: pre-order
   normal_price: 30
   sale_price: 15
-  preorder_url: "https://buy.stripe.com/00gbKvfijgqybsIaEG"
+  preorder_url: https://buy.stripe.com/00gbKvfijgqybsIaEG
   subscribe_url:
   faq_path: "/products/feedbin-mini/faq/"
-  scm_url: "https://github.com/feedbin/feedbin"
+  scm_url: https://github.com/feedbin/feedbin
   featured: true
-
-- name: FreshRSS
-  description: "Take control of your news feed with our hosted RSS reader service.
-    No algorithms, no tracking - just the content you choose."
-  category: "rss"
-  action: "subscribe"
+- key: freshrss
+  name: FreshRSS
+  description: Take control of your news feed with our hosted RSS reader service.
+    No algorithms, no tracking - just the content you choose.
+  category: rss
+  action: subscribe
   normal_price: 24
   sale_price: 12
   preorder_url:
-  subscribe_url: "https://buy.stripe.com/7sI7ufgmn0rAdAQ9AA"
+  subscribe_url: https://buy.stripe.com/7sI7ufgmn0rAdAQ9AA
   faq_path: "/products/freshrss/faq/"
-  scm_url: "https://freshrss.org/"
+  scm_url: https://freshrss.org/
   featured: true
-
-- name: Linkding
-  description: "A minimal, fast bookmark manager designed for self-hosting. Privacy-focused
-    alternative to commercial bookmark services."
-  category: "read-it-later"
-  action: "pre-order"
+- key: linkding
+  name: Linkding
+  description: A minimal, fast bookmark manager designed for self-hosting. Privacy-focused
+    alternative to commercial bookmark services.
+  category: read-it-later
+  action: pre-order
   normal_price: 24
   sale_price: 12
-  preorder_url: "https://buy.stripe.com/14AdR97K98ZIas38c80Ba08"
+  preorder_url: https://buy.stripe.com/14AdR97K98ZIas38c80Ba08
   subscribe_url:
   faq_path:
-  scm_url: "https://github.com/sissbruecker/linkding"
+  scm_url: https://github.com/sissbruecker/linkding
   featured: true
-
-- name: Matomo Nano
-  description: "A modern analytics platform formerly known as Piwik, comparable
-    with Google Analytics.  This Nano offering is perfect for a small blog, shop,
-    or other website."
-  category: "analytics"
-  action: "pre-order"
+- key: matomo-nano
+  name: Matomo Nano
+  description: A modern analytics platform formerly known as Piwik, comparable with
+    Google Analytics.  This Nano offering is perfect for a small blog, shop, or other
+    website.
+  category: analytics
+  action: pre-order
   normal_price:
   sale_price: 50
-  preorder_url: "https://buy.stripe.com/00w3cv0hHb7Q43Fbok0Ba04"
+  preorder_url: https://buy.stripe.com/00w3cv0hHb7Q43Fbok0Ba04
   subscribe_url:
   faq_path:
-  scm_url: "https://matomo.org/"
+  scm_url: https://matomo.org/
   featured: true
-
-- name: Miniflux
-  description: "A minimalist and opinionated feed reader."
-  category: "rss"
-  action: "join waitlist"
+- key: miniflux
+  name: Miniflux
+  description: A minimalist and opinionated feed reader.
+  category: rss
+  action: join waitlist
   normal_price:
   sale_price:
   preorder_url:
   subscribe_url:
   faq_path:
-  scm_url: "https://miniflux.app/"
+  scm_url: https://miniflux.app/
   featured: false
-
-- name: Readeck
-  description: "A modern read-it-later serivce, comparable with Instapaper or Pocket.
-    \ A great pair with an RSS reader."
-  category: "read-it-later"
-  action: "pre-order"
+- key: readeck
+  name: Readeck
+  description: A modern read-it-later serivce, comparable with Instapaper or Pocket.  A
+    great pair with an RSS reader.
+  category: read-it-later
+  action: pre-order
   normal_price: 12
   sale_price: 10
-  preorder_url: "https://buy.stripe.com/fZueVdd4t2Bk0Rt8c80Ba06"
+  preorder_url: https://buy.stripe.com/fZueVdd4t2Bk0Rt8c80Ba06
   subscribe_url:
   faq_path:
-  scm_url: "https://codeberg.org/readeck/readeck"
+  scm_url: https://codeberg.org/readeck/readeck
   featured: true
-
-- name: Shlink Nano
-  description: "A modern, self-hosted URL shortener with analytics and API. Privacy-focused
-    alternative to commercial link shorteners."
-  category: "url-shortener"
-  action: "pre-order"
+- key: shlink-nano
+  name: Shlink Nano
+  description: A modern, self-hosted URL shortener with analytics and API. Privacy-focused
+    alternative to commercial link shorteners.
+  category: url-shortener
+  action: pre-order
   normal_price: 6
   sale_price: 4
-  preorder_url: "https://buy.stripe.com/5kQ4gz6G5cbUgQrfEA0Ba07"
+  preorder_url: https://buy.stripe.com/5kQ4gz6G5cbUgQrfEA0Ba07
   subscribe_url:
   faq_path:
-  scm_url: "https://shlink.io/"
+  scm_url: https://shlink.io/
   featured: true
-
-- name: Tiny Tiny RSS
-  description: "A powerful, self-hostable RSS reader with a strong community."
-  category: "rss"
-  action: "join waitlist"
+- key: tiny-tiny-rss
+  name: Tiny Tiny RSS
+  description: A powerful, self-hostable RSS reader with a strong community.
+  category: rss
+  action: join waitlist
   normal_price:
   sale_price:
   preorder_url:
   subscribe_url:
   faq_path:
-  scm_url: "https://tt-rss.org/"
+  scm_url: https://tt-rss.org/
   featured: false
-
-- name: Wallabag
-  description: "A classic read-it-later serivce, comparable with Instapaper or
-    Pocket.  A great pair with an RSS reader."
-  category: "read-it-later"
-  action: "subscribe"
+- key: wallabag
+  name: Wallabag
+  description: A classic read-it-later serivce, comparable with Instapaper or Pocket.  A
+    great pair with an RSS reader.
+  category: read-it-later
+  action: subscribe
   normal_price: 12
   sale_price: 10
   preorder_url:
-  subscribe_url: "https://buy.stripe.com/14AdR94xX1xg57J3VS0Ba05"
+  subscribe_url: https://buy.stripe.com/14AdR94xX1xg57J3VS0Ba05
   faq_path:
-  scm_url: "https://github.com/wallabag/wallabag"
+  scm_url: https://github.com/wallabag/wallabag
   featured: true
