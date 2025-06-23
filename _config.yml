@@ -22,3 +22,9 @@ exclude:
   - private
 
 cancel_policy: "Cancel within 30 days and get your money back, no questions asked"
+
+# Added by organize_redirects.sh to handle redirects
+collections:
+  redirects:
+    output: true
+    permalink: /:path
