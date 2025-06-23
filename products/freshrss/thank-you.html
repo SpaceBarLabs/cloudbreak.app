@@ -1,9 +1,10 @@
 ---
 layout: thank-you-subscribed
-title: "FreshRSS: Thank you for subscribing!"
+{% assign product = site.data.products | where:"name", "FreshRSS" | first %}
+title: "{{ product.name }}: Thank you for subscribing!"
 sitemap: false
-permalink: /freshrss/thank-you/
-service_name: FreshRSS
+permalink: /products/freshrss/thank-you/
+service_name: "{{ product.name }}"
 suggestions_text: "Consider pairing your subscription with a read-it-later app:"
 suggestions:
   - name: Wallabag
