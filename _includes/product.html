@@ -29,7 +29,7 @@
         "name": "Annual Subscription",
         "description": "{{ product.name }} hosting billed annually",
         "priceCurrency": "USD",
-        "priceValidUntil": "2025-12-31",
+        "priceValidUntil": "{{ site.time | date: '%Y' }}-12-31",
         "url": "{% if product.action == 'subscribe' %}{{ product.subscribe_url }}{% else %}{{ product.preorder_url }}{% endif %}",
         "availability": "{% if product.action == 'subscribe' %}https://schema.org/InStock{% else %}https://schema.org/PreOrder{% endif %}",
         "price": {{ price | format: '%0.2f' }}
