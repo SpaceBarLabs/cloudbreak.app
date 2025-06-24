@@ -33,12 +33,10 @@
   description: A minimal, fast bookmark manager designed for self-hosting. Privacy-focused
     alternative to commercial bookmark services.
   category: read-it-later
-  action: pre-order
+  action: subscribe
   normal_price: 24
   sale_price: 12
-  preorder_url: https://buy.stripe.com/14AdR97K98ZIas38c80Ba08
-  waitlist_url: https://docs.google.com/forms/d/e/1FAIpQLSciGalzi3fwa3lKrbWpxsESVQ9V5-6LHQEGraqb2KQp5ijvaw/viewform?usp=dialog
-  subscribe_url:
+  subscribe_url: https://buy.stripe.com/bJecN5e8x1xgfMngIE0Ba0m
   faq_path:
   scm_url: https://github.com/sissbruecker/linkding
   featured: true
