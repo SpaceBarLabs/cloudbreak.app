@@ -12,5 +12,7 @@
 <meta property="og:description" content="{{ product.description }}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-<meta property="og:image" content="{{ site.url }}/products/{{ product_key }}/screenshot.png">
+{%- if product.screenshot_url -%}
+<meta property="og:image" content="{{ site.url }}{{ product.screenshot_url }}">
+{%- endif -%}
 {%- endif -%}

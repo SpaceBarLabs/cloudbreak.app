@@ -1,40 +1,43 @@
 {%- comment -%}
-  1. Get the product 'key' from the URL.
-  2. Look up the product in `site.data.products` using that key.
-  3. If a product is found, render the entire JSON-LD script for the product.
+  This include generates the JSON-LD for a product.
+  It builds a Liquid hash object and then uses the `jsonify`
+  filter to ensure the output is always valid JSON.
 {%- endcomment -%}
+
 {%- assign path_parts = page.url | split: '/' -%}
 {%- assign product_key = path_parts[2] -%}
 {%- assign product = site.data.products | where: "key", product_key | first -%}
 
 {%- if product -%}
-{%- comment -%}Prefer sale_price, but fall back to normal_price.{%- endcomment -%}
-{%- assign price = product.sale_price | default: product.normal_price -%}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "{{ product.name }} Hosting",
-  "description": "{{ product.description }}",
-  "brand": {
-    "@type": "Brand",
-    "name": "CloudBreak",
-    "logo": "{{ site.url }}/logo.svg"
-  },
-  "category": "Software > {{ product.category | replace: '-', ' ' | capitalize }} > Hosting",
-  "offers": [
-    {
-      "@type": "Offer",
-      "name": "Annual Subscription",
-      "description": "{{ product.name }} hosting billed annually",
-      "price": "{% if price %}{{ "%.2f" | sprintf: price }}{% endif %}",
-      "priceCurrency": "USD",
-      "priceValidUntil": "2025-12-31",
-      "url": "{% if product.action == 'subscribe' %}{{ product.subscribe_url }}{% else %}{{ product.preorder_url }}{% endif %}",
-      "availability": "{% if product.action == 'subscribe' %}https://schema.org/InStock{% else %}https://schema.org/PreOrder{% endif %}"
-    }
-  ],
-  "image": "{{ site.url }}/products/{{ product_key }}/screenshot.png"
-}
-</script>
+  {%- assign price = product.sale_price | default: product.normal_price | to_float -%}
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "{{ product.name }} Hosting",
+    "description": {{ product.description | jsonify }},
+    "brand": {
+      "@type": "Brand",
+      "name": "CloudBreak",
+      "logo": "{{ site.url }}/logo.svg"
+    },
+    "category": "Software > {% if product.category == 'rss' %}RSS{% else %}{{ product.category | replace: '-', ' ' | capitalize }}{% endif %} > Hosting",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Annual Subscription",
+        "description": "{{ product.name }} hosting billed annually",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2025-12-31",
+        "url": "{% if product.action == 'subscribe' %}{{ product.subscribe_url }}{% else %}{{ product.preorder_url }}{% endif %}",
+        "availability": "{% if product.action == 'subscribe' %}https://schema.org/InStock{% else %}https://schema.org/PreOrder{% endif %}",
+        "price": {{ price | format: '%0.2f' }}
+      }
+    ]
+    {%- if product.screenshot_url -%}
+    , "image": "{{ site.url }}{{ product.screenshot_url }}"
+    {%- endif -%}
+  }
+  </script>
 {%- endif -%}
