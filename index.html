@@ -26,10 +26,13 @@ head_content: |
       <div class="columns is-vcentered">
         <div class="column is-two-thirds">
           <h1 class="title is-1">
-            Your Data, Not Theirs.
+            Take Back Control of Your Digital Life
           </h1>
           <p class="is-4 has-text-grey-light mt-4">
             CloudBreak offers simple, reliable, and privacy-respecting alternatives to Big Tech services. Reclaim your digital independence with tools that put you in control.
+          </p>
+          <p class="is-4 has-text-grey-light mt-4 has-text-weight-bold">
+            Join the  "small tech" movement.
           </p>
           <a href="#principles" class="button is-primary is-medium mt-5">Learn How</a>
         </div>
@@ -98,7 +101,7 @@ head_content: |
                                     </div>
                                     <footer class="card-footer">
                                         <a href="/products/{{ product.key }}/" class="card-footer-item has-text-weight-bold">Learn More</a>
-                                        
+
                                         {% assign action_url = product.subscribe_url | default: product.preorder_url %}
                                         {% assign action_text = "Get Started" %}
                                         {% if product.action == 'subscribe' %}
