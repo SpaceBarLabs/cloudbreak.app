@@ -47,6 +47,7 @@
   description: A modern analytics platform formerly known as Piwik, comparable with
     Google Analytics.  This Nano offering is perfect for a small blog, shop, or other
     website.
+  legal: Google Analytics is a trademark of Google LLC.
   category: analytics
   action: pre-order
   normal_price:
@@ -85,6 +86,7 @@
   name: Readeck
   description: A modern read-it-later serivce, comparable with Instapaper or Pocket.  A
     great pair with an RSS reader.
+  legal: Instapaper is a trademark of Instant Paper, Inc. Pocket is a trademark of Mozilla Corporation.
   category: read-it-later
   action: pre-order
   normal_price: 12
@@ -125,6 +127,7 @@
   name: Wallabag
   description: A classic read-it-later serivce, comparable with Instapaper or Pocket.  A
     great pair with an RSS reader.
+  legal: Instapaper is a trademark of Instant Paper, Inc. Pocket is a trademark of Mozilla Corporation.
   category: read-it-later
   action: subscribe
   normal_price: 12

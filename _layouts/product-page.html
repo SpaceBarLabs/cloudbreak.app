@@ -21,6 +21,9 @@ layout: default
             <h2 class="subtitle mt-4">an analytics app</h2>
           {% endif %}
           <p class="mb-3">{{ product.description }}</p>
+          {% if product.legal %}
+            <p class="help mb-3">{{ product.legal }}</p>
+          {% endif %}
 
           {% if product.sale_price and product.normal_price %}
             <p class="has-text-weight-bold has-text-danger">Launch Special!<br>Get {{ product.normal_price | minus: product.sale_price | times: 100.0 | divided_by: product.normal_price | round }}% OFF</p>
