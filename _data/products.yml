@@ -25,6 +25,7 @@
   subscribe_url: https://buy.stripe.com/7sI7ufgmn0rAdAQ9AA
   faq_path: "/products/freshrss/faq/"
   scm_url: https://github.com/freshrss/freshrss
+  donation_url: https://liberapay.com/FreshRSS/
   featured: true
 - key: linkding
   name: Linkding
