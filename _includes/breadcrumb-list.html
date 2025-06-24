@@ -1,3 +1,14 @@
+{%- comment -%}
+  1. Get the product 'key' from the URL (e.g., "freshrss" from "/products/freshrss/").
+  2. Look up the product in `site.data.products` using that key.
+  3. If a product is found, render the entire JSON-LD script.
+  4. If no product is found, render nothing.
+{%- endcomment -%}
+{%- assign path_parts = page.url | split: '/' -%}
+{%- assign product_key = path_parts[2] -%}
+{%- assign product = site.data.products | where: "key", product_key | first -%}
+
+{%- if product -%}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -12,9 +23,10 @@
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "{{ page.title | split: ':' | first | replace: ' Hosting', '' }}",
+      "name": "{{ product.name }}",
       "item": "{{ site.url }}{{ page.url }}"
     }
   ]
 }
 </script>
+{%- endif -%}
