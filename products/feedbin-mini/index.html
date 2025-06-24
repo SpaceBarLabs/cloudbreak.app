@@ -17,7 +17,7 @@ keywords: "Feedbin Mini hosting, RSS reader hosting, read-it-later service hosti
       <p><del>${{ product.normal_price }}</del> ${{ product.sale_price }} / year</p>
       <p><a href="{{ product.preorder_url }}" class="mt-3 button is-primary">Pre-order</a></p>
       <p class="help mb-1">{{ site.cancel_policy }}</p>
-      <p class="help mb-3">Please note that we are currently only accepting customers in the United States and Canada</p>
+      <p class="help mb-3">{{ site.customer_location_restriction }}</p>
       <p>Or get notified when we launch:</p>
       <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdA84mi74Bz1es0OXy8sbiBq6Mozqsa6mpUL7ZX1im9FRIBbQ/viewform?usp=dialog" class="m-3 button is-info">Sign up</a></p>
       <p class="m-3">Please also see our <a href="{{ product.faq_path }}">FAQ</a>.</p>

@@ -19,7 +19,7 @@ has_breadcrumb: true
           <p><del>${{ product.normal_price }}</del> <a href="{{ product.subscribe_url }}">${{ product.sale_price }} / year</a></p>
           <p><a href="{{ product.subscribe_url }}" class="m-3 button is-primary">Subscribe</a></p>
           <p class="help">10% of profits are paid to <a href="https://liberapay.com/FreshRSS/">{{ product.name }}</a></p>
-          <p class="help">Please note that we are currently only accepting customers in the United States and Canada</p>
+          <p class="help">{{ site.customer_location_restriction }}</p>
           <p class="my-3">Please also see our <a href="{{ product.faq_path }}">{{ product.name }} FAQ</a>.</p>
           <p class="my-3">Or consider an alternative RSS reader:</p>
           <p><a class="my-3 button is-info" href="/feedbin-mini/">Feedbin Mini</a></p>
