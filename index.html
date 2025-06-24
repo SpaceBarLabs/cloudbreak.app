@@ -1,297 +1,156 @@
 ---
 layout: default
 title: "Choose Small Tech Over Big Tech | CloudBreak"
-description: "Take control of your news with CloudBreak's ethical RSS hosting. Privacy-first features, full data ownership, and reliable alternatives to Google Reader and Feedly. No tracking, no algorithms - just your content."
-keywords: "RSS hosting, Feedbin hosting, FreshRSS hosting, privacy-focused RSS, open source alternatives, Google Reader alternative, Feedly alternative, self-hosted RSS, self-hostable RSS, ethical tech, RSS reader, news aggregator, content curation"
+description: "Take control of your digital life with CloudBreak's ethical, privacy-focused alternatives to big tech services. We offer reliable hosting for open-source apps."
+keywords: "RSS hosting, read-it-later, analytics, privacy-focused hosting, open source alternatives, small tech, ethical tech"
 head_content: |
   <meta property="og:title" content="Choose Small Tech Over Big Tech | CloudBreak">
   <meta property="og:description" content="Take control of your news with CloudBreak's ethical RSS hosting. Privacy-first features, full data ownership, and reliable alternatives to Google Reader and Feedly. Start today!">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ site.url }}/">
   <meta property="og:image" content="{{ site.url }}/screenshot.webp">
-  <meta property="og:site_name" content="CloudBreak">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <link rel="alternate" hreflang="en" href="{{ site.url }}/">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "CloudBreak",
-    "url": "{{ site.url }}/",
-    "logo": "{{ site.url }}/logo.svg",
-    "description": "CloudBreak offers ethical, open-source alternatives to Google Reader and Feedly. Get hosted RSS solutions with privacy-first features and full data ownership.",
-    "sameAs": [
-      "https://spacebarlabs.com/"
-    ],
-    "offers": {
-      "@type": "Offer",
-      "description": "Privacy-focused RSS hosting services",
-      "category": "Digital Services"
-    }
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "{{ site.url }}/"
-      }
-    ]
-  }
-  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "CloudBreak - Privacy-Focused RSS Hosting & Open Source Alternatives",
+    "name": "CloudBreak - Privacy-Focused Hosting & Open Source Alternatives",
     "url": "{{ site.url }}/",
-    "description": "CloudBreak offers ethical, open-source alternatives to Google Reader and Feedly. Get hosted RSS solutions with privacy-first features and full data ownership.",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "{{ site.url }}/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    },
-    "keywords": ["RSS hosting", "Feedbin", "FreshRSS", "privacy", "open source", "Google Reader alternative", "Feedly alternative"]
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "serviceType": "RSS Hosting",
-    "provider": {
-      "@type": "Organization",
-      "name": "CloudBreak"
-    },
-    "description": "Privacy-focused RSS hosting with FreshRSS and Feedbin Mini options",
-    "offers": {
-      "@type": "Offer",
-      "description": "Ethical RSS hosting services"
-    },
-    "audience": {
-      "@type": "Audience",
-      "audienceType": "Privacy-conscious internet users"
-    },
-    "serviceOutput": {
-      "@type": "Thing",
-      "name": "RSS Feed Management"
-    }
-  }
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What services does CloudBreak offer?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "CloudBreak currently offers FreshRSS and Feedbin Mini hosting services, with more options potentially coming in the future based on user requests. We also maintain a list of alternative RSS readers that you might be interested in."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Why choose CloudBreak over other services?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "CloudBreak prioritizes privacy, uses open source software, and provides reliable service with regular updates and maintenance included. We don't track your reading habits or sell your data."
-        }
-      }
-    ]
+    "description": "CloudBreak offers ethical, open-source alternatives to Google Reader and Feedly. Get hosted RSS solutions with privacy-first features and full data ownership."
   }
   </script>
 ---
-<section class="hero is-medium has-background-dark" role="banner">
+
+<section class="hero is-dark is-fullheight-with-navbar">
   <div class="hero-body">
     <div class="container">
-      <h1 class="title is-1 has-text-centered has-text-white">
-        Take Back Control of Your Digital Life
-      </h1>
-      <p class="subtitle has-text-centered is-4 mt-4 has-text-grey-light">
-        CloudBreak provides reliable, privacy-focused "small tech" alternatives to big tech services
-      </p>
-
-      <p class="has-text-centered">
-        <a href="#our-services" class="button is-link is-rounded is-size-4 mt-3">
-          Choose a Service
-        </a>
-      </p>
-    </div>
-  </div>
-</section>
-
-<section class="section" role="main">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content has-text-centered">
-          <p class="is-size-5">
-            CloudBreak offers something that big tech can't: <strong>data portability</strong>. If you don't like our service, you can take your data and go somewhere else and still use the same apps. We believe in giving you the power to choose without giving up the convenience of the cloud.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <h2 class="title has-text-centered is-2 mt-6" id="our-services"><a href="#our-services" class="has-text-dark" aria-label="Our Services section">Our Services</a></h2>
-
-    <h3 class="title has-text-centered is-3 mt-5">RSS Readers</h3>
-    <div class="columns mt-3 is-centered is-multiline" id="service-options-rss">
-      {% assign rss_products = site.data.products | where: "featured", true | where: "category", "rss" %}
-      {% for product in rss_products %}
-      <div class="column is-4" itemscope itemtype="https://schema.org/Product">
-        <div class="box has-text-centered">
-          <h3 class="title is-4" itemprop="name">{{ product.name }}</h3>
-          <p itemprop="description">{{ product.description }}</p>
-          <a href="/products/{{ product.name | slugify }}/" class="button is-info mt-4" itemprop="url">Learn More</a>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-
-    <h3 class="title has-text-centered is-3 mt-5">Read-It-Later</h3>
-    <div class="columns mt-3 is-centered is-multiline" id="service-options-read-it-later">
-      {% assign read_it_later_products = site.data.products | where: "featured", true | where: "category", "read-it-later" %}
-      {% for product in read_it_later_products %}
-      <div class="column is-4" itemscope itemtype="https://schema.org/Product">
-        <div class="box has-text-centered">
-          <h3 class="title is-4" itemprop="name">{{ product.name }}</h3>
-          <p itemprop="description">{{ product.description }}</p>
-          <a href="/products/{{ product.name | slugify }}/" class="button is-info mt-4" itemprop="url">Learn More</a>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-
-    <h3 class="title has-text-centered is-3 mt-5">Analytics &amp; Utilities</h3>
-    <div class="columns mt-3 is-centered is-multiline" id="service-options-analytics">
-      {% assign analytics_products = site.data.products | where: "featured", true | where: "category", "analytics" %}
-      {% assign url_shortener_products = site.data.products | where: "featured", true | where: "category", "url-shortener" %}
-      {% assign analytics_and_utilities_products = analytics_products | concat: url_shortener_products %}
-      {% for product in analytics_and_utilities_products %}
-      <div class="column is-4" itemscope itemtype="https://schema.org/Product">
-        <div class="box has-text-centered">
-          <h3 class="title is-4" itemprop="name">{{ product.name }}</h3>
-          <p itemprop="description">{{ product.description }}</p>
-          <a href="/products/{{ product.name | slugify }}/" class="button is-info mt-4" itemprop="url">Learn More</a>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-
-  <div class="container has-text-centered mt-6">
-    <p class="help">Google Analytics is a trademark of Google LLC.  Instapaper is a trademark of Instant Paper, Inc.  Pocket is a trademark of Mozilla Corporation.</p>
-  </div>
-
-  <div class="container mt-6 has-text-centered">
-    <p>You can request new services through our <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNEFwFRUTbWAjDvHvrh6tCMlBDGDAAsiH9OHkxveLzmpEsRA/viewform" aria-label="Feature request form">feature request form</a> or browse our <a href="/alternatives/rss/">alternative RSS readers</a>. We regularly review these requests and may add popular requests in the future.</p>
-
-    <div class="buttons is-centered mt-4">
-      <a class="button is-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeNEFwFRUTbWAjDvHvrh6tCMlBDGDAAsiH9OHkxveLzmpEsRA/viewform" aria-label="Request a new service">Request a New Service</a>
-      <a class="button is-info" href="/alternatives/rss/">Browse Alternatives</a>
-    </div>
-  </div>
-
-  <div class="container mt-6">
-    <h2 class="title has-text-centered is-3" id="faq">Frequently Asked Questions</h2>
-    <div class="content">
-      <div class="box">
-        <h3 class="title is-5">What services does CloudBreak offer?</h3>
-        <p>CloudBreak currently offers FreshRSS and Feedbin Mini hosting services, with more options potentially coming in the future based on user requests. We also maintain a list of alternative RSS readers that you might be interested in.</p>
-      </div>
-      <div class="box">
-        <h3 class="title is-5">Why choose CloudBreak over other services?</h3>
-        <p>CloudBreak prioritizes privacy, uses open source software, and provides reliable service with regular updates and maintenance included. We don't track your reading habits or sell your data.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section has-background-light" role="complementary">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content has-text-centered" itemscope itemtype="https://schema.org/ItemList">
-          <h2 class="title is-3" itemprop="name">Why Choose CloudBreak?</h2>
-          <div class="columns">
-            <div class="column" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-              <meta itemprop="position" content="1">
-              <h4 class="title is-5" itemprop="name">Privacy First</h4>
-              <p itemprop="description">Your data belongs to you. We don't track, analyze, or sell your information.</p>
-            </div>
-            <div class="column" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-              <meta itemprop="position" content="2">
-              <h4 class="title is-5" itemprop="name">Open Source</h4>
-              <p itemprop="description">We use and support trusted open source software, giving back to the community.</p>
-            </div>
-            <div class="column" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-              <meta itemprop="position" content="3">
-              <h4 class="title is-5" itemprop="name">Reliable Service</h4>
-              <p itemprop="description">Professional hosting with regular updates and maintenance included.</p>
-            </div>
-          </div>
+      <div class="columns is-vcentered">
+        <div class="column is-two-thirds">
+          <h1 class="title is-1">
+            Your Data, Not Theirs.
+          </h1>
+          <h2 class="subtitle is-4 has-text-grey-light">
+            CloudBreak offers simple, reliable, and privacy-respecting alternatives to Big Tech services. Reclaim your digital independence with tools that put you in control.
+          </h2>
+          <a href="#principles" class="button is-primary is-medium">Learn How</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Service selection tracking
-    const serviceButtons = document.querySelectorAll('a[href^="/products/"]');
-    serviceButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        gtag('event', 'service_selection', {
-          'service_name': this.closest('.box').querySelector('h3').innerText,
-          'location': 'services_section'
-        });
-      });
-    });
+<section id="principles" class="section">
+    <div class="container">
+        <div class="tile is-ancestor has-text-centered">
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <p class="title is-4">Privacy First</p>
+                    <div class="content">
+                        Your data belongs to you. We don't track your activity, analyze your content, or sell your information. Period.
+                    </div>
+                </article>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <p class="title is-4">Open Source</p>
+                    <div class="content">
+                        We build on and contribute to trusted open-source software. No black boxes, no vendor lock-in.
+                    </div>
+                </article>
+            </div>
+            <div class="tile is-parent">
+                <article class="tile is-child box">
+                    <p class="title is-4">Data Portability</p>
+                    <div class="content">
+                        If you're not happy, you can take your data and go. We make it easy to migrate, because your freedom to choose matters.
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
 
-    // FAQ engagement tracking
-    const faqBoxes = document.querySelectorAll('#faq .box');
-    faqBoxes.forEach(box => {
-      box.addEventListener('click', function() {
-        gtag('event', 'faq_engagement', {
-          'faq_question': this.querySelector('h3').innerText
-        });
-      });
-    });
+<section id="services" class="section has-background-light">
+    <div class="container">
+        <div class="has-text-centered mb-6">
+            <h2 class="title is-2">Our Services</h2>
+            <p class="subtitle is-5 has-text-grey">Professionally hosted open-source applications, maintained and updated for you.</p>
+        </div>
 
-    // Request service button and alternatives link tracking
-    const requestButtons = document.querySelectorAll('a[href*="docs.google.com/forms"]');
-    const alternativesButtons = document.querySelectorAll('a[href="/alternatives/rss/"]');
+        {% assign categories = "rss,read-it-later,analytics,url-shortener" | split: "," %}
+        {% for category in categories %}
+            {% assign products = site.data.products | where: "category", category | where: "featured", true %}
+            {% if products.size > 0 %}
+                <div class="mb-6">
+                    <h3 class="title is-3 has-text-centered">
+                        {% if category == 'rss' %}RSS Readers
+                        {% elsif category == 'read-it-later' %}Read-It-Later & Bookmarking
+                        {% elsif category == 'analytics' %}Analytics
+                        {% elsif category == 'url-shortener' %}URL Shorteners
+                        {% endif %}
+                    </h3>
+                    <div class="columns is-centered is-multiline mt-4">
+                        {% for product in products %}
+                            <div class="column is-one-third">
+                                <div class="card product-card">
+                                    <div class="card-content has-text-centered">
+                                        <p class="title is-4">{{ product.name }}</p>
+                                        <p class="subtitle is-6">{{ product.description }}</p>
+                                    </div>
+                                    <footer class="card-footer">
+                                        <a href="/products/{{ product.key }}/" class="card-footer-item has-text-weight-bold">Learn More</a>
+                                        
+                                        {% assign action_url = product.subscribe_url | default: product.preorder_url %}
+                                        {% assign action_text = "Get Started" %}
+                                        {% if product.action == 'subscribe' %}
+                                          {% assign action_text = "Subscribe" %}
+                                        {% elsif product.action == 'pre-order' %}
+                                          {% assign action_text = "Pre-Order" %}
+                                        {% elsif product.action == 'join waitlist' %}
+                                          {% assign action_text = "Join Waitlist" %}
+                                          {% assign action_url = "/products/" | append: product.key | append: "/" %}
+                                        {% endif %}
 
-    requestButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        gtag('event', 'service_request', {
-          'action': 'form_click',
-          'location': this.classList.contains('button') ? 'button' : 'text_link'
-        });
-      });
-    });
+                                        <a href="{{ action_url }}" class="card-footer-item has-text-weight-bold has-text-white has-background-grey-dark">
+                                            <span>{{ action_text }}</span>
+                                            <span class="icon is-small"><i class="fas fa-arrow-right"></i></span>
+                                        </a>
+                                    </footer>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
 
-    alternativesButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        gtag('event', 'navigation', {
-          'destination': 'alternatives_page',
-          'location': this.classList.contains('button') ? 'button' : 'text_link'
-        });
-      });
-    });
-  });
-</script>
+<section class="section">
+    <div class="container">
+        <div class="columns is-vcentered">
+            <div class="column is-7">
+                <h3 class="title is-3">Frequently Asked Questions</h3>
+                <div class="content">
+                    <div class="box">
+                        <p><strong>What is CloudBreak?</strong></p>
+                        <p>We provide managed hosting for a curated set of open-source applications, so you can enjoy the benefits of great software without the hassle of running your own server. We handle installation, updates, and maintenance.</p>
+                    </div>
+                    <div class="box">
+                        <p><strong>Why choose CloudBreak over a free service?</strong></p>
+                        <p>When a service is free, *you* are often the product. Our business model is simple: you pay a small fee for a great service. This allows us to be sustainable while protecting your privacy, not exploiting it.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-4 is-offset-1">
+                 <div class="box has-text-centered has-background-light">
+                    <h3 class="title is-4">Don't see your favorite app?</h3>
+                    <p>We're always looking for new services to offer. Let us know what you'd like to see next!</p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeNEFwFRUTbWAjDvHvrh6tCMlBDGDAAsiH9OHkxveLzmpEsRA/viewform" class="button is-primary mt-4">Request a Service</a>
+                </div>
+            </div>
+        </div>
+        <div class="content has-text-centered is-size-7 mt-6">
+            <p>Google Analytics is a trademark of Google LLC. Instapaper is a trademark of Instant Paper, Inc. Pocket is a trademark of Mozilla Corporation.</p>
+        </div>
+    </div>
+</section>

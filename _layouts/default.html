@@ -1,45 +1,60 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
-  <head>
+<html lang="en" class="has-navbar-fixed-top">
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#3273dc">
-    <meta name="robots" content="index, follow">
-    <meta name="revisit-after" content="7 days">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    {% if site.google_analytics %}
-    {% include google-analytics.html %}
-    {% endif %}
-    <title>{{ page.title }}</title>
-    <meta name="description" content="{{ page.description }}">
-    <meta name="keywords" content="{{ page.keywords }}">
+    <title>{{ page.title | escape }}</title>
+    <meta name="description" content="{{ page.description | escape }}">
+    <meta name="keywords" content="{{ page.keywords | escape }}">
     <meta name="author" content="Space Bar Labs">
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
     <link rel="stylesheet" href="https://unpkg.com/bulmaswatch/lux/bulmaswatch.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
-      .screenshot-link {
-        display: block;
-        max-width: 100%;
-      }
-      .screenshot-link img {
-        max-width: 100%;
-        height: auto;
-      }
-      /* Improve accessibility and SEO with focus styles */
-      a:focus, button:focus {
-        outline: 2px solid #3273dc;
-        outline-offset: 2px;
-      }
-      /* Add smooth scrolling for better UX */
       html {
         scroll-behavior: smooth;
+        background-color: #f7f7f7;
       }
-      {% if page.custom_css %}{{ page.custom_css }}{% endif %}
+      .navbar {
+        border-bottom: 1px solid #dbdbdb;
+      }
+      .footer {
+        background-color: #363636;
+        color: #fff;
+      }
+      .footer a {
+        color: #3273dc;
+      }
+      .footer a:hover {
+        color: #fff;
+      }
+      .logo-text {
+        font-weight: bold;
+        margin-left: 0.5rem;
+      }
+      /* Ensure cards in a row are the same height */
+      .product-card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .product-card .card-footer {
+        margin-top: auto; /* Pushes footer to the bottom */
+      }
     </style>
+
+    {% if site.google_analytics %}
+      {% include google-analytics.html %}
+    {% endif %}
     {{ page.head_content }}
 
     {% if page.has_breadcrumb %}
@@ -47,9 +62,9 @@
       {% include breadcrumb-list.html %}
       {% include product.html %}
     {% endif %}
-  </head>
-  <body>
-    <!-- Consent Banner -->
+</head>
+<body>
+
     <div id="consent-banner" class="notification is-info is-light" style="display: none; position: fixed; bottom: 0; width: 100%; z-index: 100; margin: 0; border-radius: 0;">
       <div class="container">
         <div class="columns is-vcentered">
@@ -63,64 +78,53 @@
         </div>
       </div>
     </div>
-
+    <nav class="navbar is-fixed-top is-white" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    <img src="/logo.svg" alt="CloudBreak Logo">
+                    <span class="logo-text">CloudBreak</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        {{ content }}
+    </main>
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p>
+          <a href="https://spacebarlabs.com/?utm_medium=referral&utm_source=cloudbreak.app&rby=cloudbreak.app">
+            <img src="/images/space-bar-labs-logo.svg" alt="Space Bar Labs Logo" style="height: 40px;">
+          </a>
+        </p>
+        <p>
+          <strong>CloudBreak</strong> by <a href="https://spacebarlabs.com/">Space Bar Labs</a>.
+        </p>
+        <p class="is-size-7">
+          &copy; space bar labs 2025 | <a href="https://spacebarlabs.com/privacy-policy/">Privacy Policy</a> | <a href="https://spacebarlabs.com/terms-of-service/">Terms of Service</a>
+        </p>
+      </div>
+    </footer>
     <script>
-      // Show banner if consent not already set
       document.addEventListener('DOMContentLoaded', function() {
         if (!localStorage.getItem('analytics_consent')) {
           document.getElementById('consent-banner').style.display = 'block';
         }
       });
-
       function acceptConsent() {
         localStorage.setItem('analytics_consent', 'granted');
-        updateConsent({
-          'analytics_storage': 'granted'
-        });
+        updateConsent({ 'analytics_storage': 'granted' });
         document.getElementById('consent-banner').style.display = 'none';
-        gtag('event', 'consent_update', {
-          'status': 'accepted'
-        });
       }
-
       function rejectConsent() {
         localStorage.setItem('analytics_consent', 'denied');
         document.getElementById('consent-banner').style.display = 'none';
-        gtag('event', 'consent_update', {
-          'status': 'rejected'
-        });
       }
     </script>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PM2BGK4N" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-    <nav class="navbar">
-      <div class="container">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="/">
-            <img src="/logo.svg" alt="CloudBreak">
-            <span class="logo-text has-text-weight-bold">CloudBreak</span>
-          </a>
-        </div>
-      </div>
-    </nav>
-
-    {{ content }}
-
-    <footer class="footer">
-      <div class="content has-text-centered is-size-7">
-        <a href="https://spacebarlabs.com/?utm_medium=referral&utm_source=cloudbreak.app&rby=cloudbreak.app"><img src="/images/space-bar-labs-logo.svg" alt="Space Bar Labs Logo"></a><br>
-        <span>&copy; space bar labs 2025</span><br>
-        <span><a href="https://spacebarlabs.com/privacy-policy/">Privacy Policy</a> | <a href="https://spacebarlabs.com/terms-of-service/">Terms of Service</a></span>
-      </div>
-    </footer>
-
-    {%- assign path_parts = page.url | split: '/' -%}
-    {%- if path_parts[1] == 'products' and path_parts[2] -%}
+    {% if page.url contains '/products/' %}
       {% include product-page-analytics.html %}
-    {%- endif -%}
-
+    {% endif %}
     {{ page.body_scripts }}
-  </body>
+</body>
 </html>
