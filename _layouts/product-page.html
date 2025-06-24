@@ -1,0 +1,67 @@
+---
+layout: default
+---
+{%- assign path_parts = page.url | split: '/' -%}
+{%- assign product_key = path_parts[2] -%}
+{%- assign product = site.data.products | where: "key", product_key | first -%}
+
+<section class="hero is-medium is-bold">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <h1 class="title">{{ product.name }}</h1>
+          {% if product.category == "rss" %}
+            <h2 class="subtitle mt-4">a feed reader app</h2>
+          {% elsif product.category == "read-it-later" %}
+             <h2 class="subtitle mt-4">a read-it-later app</h2>
+          {% elsif product.category == "url-shortener" %}
+             <h2 class="subtitle mt-4">a URL shortener</h2>
+          {% elsif product.category == "analytics" %}
+            <h2 class="subtitle mt-4">an analytics app</h2>
+          {% endif %}
+          <p class="mb-3">{{ product.description }}</p>
+
+          {% if product.sale_price and product.normal_price %}
+            <p class="has-text-weight-bold has-text-danger">Launch Special!<br>Get {{ product.normal_price | minus: product.sale_price | times: 100.0 | divided_by: product.normal_price | round }}% OFF</p>
+            <p><del>${{ product.normal_price }}</del> ${{ product.sale_price }} / year</p>
+          {% elsif product.normal_price %}
+            <p>${{ product.normal_price }} / year</p>
+          {% elsif product.sale_price %}
+             <p>${{ product.sale_price }} / year</p>
+          {% endif %}
+
+          {% assign action_url = product.subscribe_url | default: product.preorder_url %}
+          {% if product.action == 'join waitlist' %}
+            {% assign action_url = "https://docs.google.com/forms/d/e/1FAIpQLSeNEFwFRUTbWAjDvHvrh6tCMlBDGDAAsiH9OHkxveLzmpEsRA/viewform" %}
+          {% endif %}
+          <p><a href="{{ action_url }}" class="m-3 button is-primary">{{ product.action | capitalize }}</a></p>
+
+          {% if product.donation_url %}
+            <p class="help">10% of profits are paid to <a href="{{ product.donation_url }}">{{ product.name }}</a></p>
+          {% endif %}
+          <p class="help">{{ site.cancel_policy }}</p>
+          <p class="help mb-3">{{ site.customer_location_restriction }}</p>
+
+          {% if product.faq_path %}
+            <p class="my-3">Please also see our <a href="{{ product.faq_path }}">{{ product.name }} FAQ</a>.</p>
+          {% endif %}
+
+          <p class="my-3">Or consider our other services:</p>
+          <p><a class="my-3 button is-info" href="/">All Products</a></p>
+        </div>
+        <div class="column">
+          {% if product.screenshot_url %}
+          <a href="{{ product.screenshot_url }}" target="_blank" class="screenshot-link">
+            <img src="{{ product.screenshot_url }}"
+                 alt="{{ product.name }} screenshot"
+                 class="image m-6"
+                 loading="lazy"
+                 decoding="async">
+          </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
