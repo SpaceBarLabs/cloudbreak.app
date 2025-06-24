@@ -21,7 +21,7 @@
   normal_price: 24
   sale_price: 12
   preorder_url:
-  screenshot_url: /products/freshrss/screenshot.png
+  screenshot_url: /products/freshrss/screenshot.webp
   subscribe_url: https://buy.stripe.com/7sI7ufgmn0rAdAQ9AA
   faq_path: "/products/freshrss/faq/"
   scm_url: https://github.com/freshrss/freshrss
