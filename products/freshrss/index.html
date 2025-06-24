@@ -37,27 +37,3 @@ has_breadcrumb: true
   </div>
 </section>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Subscription button tracking
-    const subscribeButtons = document.querySelectorAll('a[href*="buy.stripe.com"]');
-    subscribeButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        gtag('event', 'subscription_click', {
-          'service': 'freshrss',
-          'plan': this.innerText.includes('year') ? 'annual' : 'monthly'
-        });
-      });
-    });
-
-    // FAQ link tracking
-    const faqLink = document.querySelector('a[href="{{ product.faq_path }}"]');
-    if (faqLink) {
-      faqLink.addEventListener('click', function() {
-        gtag('event', 'navigation', {
-          'destination': 'freshrss_faq'
-        });
-      });
-    }
-  });
-</script>

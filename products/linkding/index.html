@@ -44,28 +44,3 @@ keywords: "Linkding hosting, bookmark manager hosting, self-hosted bookmarks, pr
   </div>
 </section>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Sign up button tracking
-    const signupButton = document.querySelector('a[href*="docs.google.com/forms"]');
-    if (signupButton) {
-      signupButton.addEventListener('click', function() {
-        gtag('event', 'signup_notification', {
-          'service': 'linkding'
-        });
-      });
-    }
-
-    // Cross-service navigation tracking
-    const serviceButtons = document.querySelectorAll('a[href^="/"][href$="/"]');
-    serviceButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        const serviceName = this.getAttribute('href').replace(/\//g, '') || 'unknown';
-        gtag('event', 'cross_service_navigation', {
-          'from_service': 'linkding',
-          'to_service': serviceName
-        });
-      });
-    });
-  });
-</script>

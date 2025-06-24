@@ -32,36 +32,3 @@ keywords: "Feedbin Mini hosting, RSS reader hosting, read-it-later service hosti
   </div>
 </section>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Pre-order button tracking
-    const preorderButton = document.querySelector('a[href*="buy.stripe.com"]');
-    if (preorderButton) {
-      preorderButton.addEventListener('click', function() {
-        gtag('event', 'preorder_click', {
-          'service': '{{ product.key }}'
-        });
-      });
-    }
-
-    // Sign up button tracking
-    const signupButton = document.querySelector('a[href*="docs.google.com/forms"]');
-    if (signupButton) {
-      signupButton.addEventListener('click', function() {
-        gtag('event', 'signup_notification', {
-          'service': '{{ product.key }}'
-        });
-      });
-    }
-
-    // FAQ link tracking
-    const faqLink = document.querySelector('a[href="{{ product.faq_path }}"]');
-    if (faqLink) {
-      faqLink.addEventListener('click', function() {
-        gtag('event', 'navigation', {
-          'destination': '{{ product.key }}_faq'
-        });
-      });
-    }
-  });
-</script>

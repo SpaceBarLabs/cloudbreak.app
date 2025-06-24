@@ -26,39 +26,3 @@ keywords: "Tiny Tiny RSS hosting, TTRSS hosting, self hostable RSS reader, self 
   </div>
 </section>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Project link tracking
-    const projectLink = document.querySelector('a[href="https://tt-rss.org/"]');
-    if (projectLink) {
-      projectLink.addEventListener('click', function() {
-        gtag('event', 'external_link', {
-          'destination': 'tt_rss_project',
-          'location': 'ttrss_page'
-        });
-      });
-    }
-
-    // Waitlist signup tracking
-    const waitlistButton = document.querySelector('a[href*="docs.google.com/forms"]');
-    if (waitlistButton) {
-      waitlistButton.addEventListener('click', function() {
-        gtag('event', 'waitlist_signup', {
-          'service': 'tiny_tiny_rss',
-          'location': 'ttrss_page'
-        });
-      });
-    }
-
-    // Alternative service selection tracking
-    const serviceButtons = document.querySelectorAll('a[href="/freshrss/"], a[href="/feedbin-mini/"]');
-    serviceButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        gtag('event', 'service_selection', {
-          'from_page': 'tiny_tiny_rss',
-          'service': this.href.includes('freshrss') ? 'freshrss' : 'feedbin_mini'
-        });
-      });
-    });
-  });
-</script>

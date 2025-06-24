@@ -24,26 +24,3 @@ keywords: "Matomo hosting, analytics hosting, Matomo nano, affordable analytics 
   </div>
 </section>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Pre-order button tracking
-    const preorderButton = document.querySelector('a[href*="buy.stripe.com"]');
-    if (preorderButton) {
-      preorderButton.addEventListener('click', function() {
-        gtag('event', 'preorder_click', {
-          'service': 'matomo_nano'
-        });
-      });
-    }
-
-    // Sign up button tracking
-    const signupButton = document.querySelector('a[href*="docs.google.com/forms"]');
-    if (signupButton) {
-      signupButton.addEventListener('click', function() {
-        gtag('event', 'signup_notification', {
-          'service': 'matomo_nano'
-        });
-      });
-    }
-  });
-</script>

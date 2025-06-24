@@ -41,36 +41,3 @@ keywords: "Wallabag hosting, read-it-later hosting, Wallabag, affordable read-it
   </div>
 </section>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // subscribe button tracking
-    const subscribeButton = document.querySelector('a[href*="buy.stripe.com"]');
-    if (subscribeButton) {
-      subscribeButton.addEventListener('click', function() {
-        gtag('event', 'subscribe_click', {
-          'service': 'wallabag',
-        });
-      });
-    }
-
-    // Sign up button tracking
-    const signupButton = document.querySelector('a[href*="docs.google.com/forms"]');
-    if (signupButton) {
-      signupButton.addEventListener('click', function() {
-        gtag('event', 'signup_notification', {
-          'service': 'wallabag'
-        });
-      });
-    }
-
-    // FAQ link tracking
-    // const faqLink = document.querySelector('a[href="/feedbin-mini/faq/"]');
-    // if (faqLink) {
-    //   faqLink.addEventListener('click', function() {
-    //     gtag('event', 'navigation', {
-    //       'destination': 'feedbin_mini_faq'
-    //     });
-    //   });
-    // }
-  });
-</script>

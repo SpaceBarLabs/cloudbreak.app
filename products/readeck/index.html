@@ -34,36 +34,3 @@ keywords: "Readeck hosting, read-it-later hosting, Readeck, affordable read-it-l
   </div>
 </section>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Pre-order button tracking
-    const preorderButton = document.querySelector('a[href*="buy.stripe.com"]');
-    if (preorderButton) {
-      preorderButton.addEventListener('click', function() {
-        gtag('event', 'preorder_click', {
-          'service': 'readeck',
-        });
-      });
-    }
-
-    // Sign up button tracking
-    const signupButton = document.querySelector('a[href*="docs.google.com/forms"]');
-    if (signupButton) {
-      signupButton.addEventListener('click', function() {
-        gtag('event', 'signup_notification', {
-          'service': 'readeck'
-        });
-      });
-    }
-
-    // FAQ link tracking
-    // const faqLink = document.querySelector('a[href="/feedbin-mini/faq/"]');
-    // if (faqLink) {
-    //   faqLink.addEventListener('click', function() {
-    //     gtag('event', 'navigation', {
-    //       'destination': 'feedbin_mini_faq'
-    //     });
-    //   });
-    // }
-  });
-</script>

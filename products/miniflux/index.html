@@ -26,39 +26,3 @@ keywords: "Miniflux hosting, RSS hosting, self hostable RSS reader, self hosted 
   </div>
 </section>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Project link tracking
-    const projectLink = document.querySelector('a[href="https://miniflux.app/"]');
-    if (projectLink) {
-      projectLink.addEventListener('click', function() {
-        gtag('event', 'external_link', {
-          'destination': 'miniflux_project',
-          'location': 'miniflux_page'
-        });
-      });
-    }
-
-    // Waitlist signup tracking
-    const waitlistButton = document.querySelector('a[href*="docs.google.com/forms"]');
-    if (waitlistButton) {
-      waitlistButton.addEventListener('click', function() {
-        gtag('event', 'waitlist_signup', {
-          'service': 'miniflux',
-          'location': 'miniflux_page'
-        });
-      });
-    }
-
-    // Alternative service selection tracking
-    const serviceButtons = document.querySelectorAll('a[href="/freshrss/"], a[href="/feedbin-mini/"]');
-    serviceButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        gtag('event', 'service_selection', {
-          'from_page': 'miniflux',
-          'service': this.href.includes('freshrss') ? 'freshrss' : 'feedbin_mini'
-        });
-      });
-    });
-  });
-</script>

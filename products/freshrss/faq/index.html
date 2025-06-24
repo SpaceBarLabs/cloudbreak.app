@@ -142,27 +142,3 @@ head_content: |
   </div>
 </section>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // FAQ question tracking
-    const faqHeadings = document.querySelectorAll('h2.subtitle');
-    faqHeadings.forEach(heading => {
-      heading.addEventListener('click', function() {
-        gtag('event', 'faq_question_view', {
-          'service': 'freshrss',
-          'question': this.innerText
-        });
-      });
-    });
-
-    // Feature request button tracking
-    const requestButton = document.querySelector('a[href*="docs.google.com/forms"]');
-    if (requestButton) {
-      requestButton.addEventListener('click', function() {
-        gtag('event', 'feature_request', {
-          'service': 'freshrss'
-        });
-      });
-    }
-  });
-</script>
