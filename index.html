@@ -7,21 +7,21 @@ head_content: |
   <meta property="og:title" content="Choose Small Tech Over Big Tech | CloudBreak">
   <meta property="og:description" content="Take control of your news with CloudBreak's ethical RSS hosting. Privacy-first features, full data ownership, and reliable alternatives to Google Reader and Feedly. Start today!">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://cloudbreak.app/">
-  <meta property="og:image" content="https://cloudbreak.app/screenshot.webp">
+  <meta property="og:url" content="{{ site.url }}/">
+  <meta property="og:image" content="{{ site.url }}/screenshot.webp">
   <meta property="og:site_name" content="CloudBreak">
   <meta property="og:locale" content="en_US">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <link rel="alternate" hreflang="en" href="https://cloudbreak.app/">
+  <link rel="alternate" hreflang="en" href="{{ site.url }}/">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "CloudBreak",
-    "url": "https://cloudbreak.app/",
-    "logo": "https://cloudbreak.app/logo.svg",
+    "url": "{{ site.url }}/",
+    "logo": "{{ site.url }}/logo.svg",
     "description": "CloudBreak offers ethical, open-source alternatives to Google Reader and Feedly. Get hosted RSS solutions with privacy-first features and full data ownership.",
     "sameAs": [
       "https://spacebarlabs.com/"
@@ -43,7 +43,7 @@ head_content: |
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://cloudbreak.app/"
+        "item": "{{ site.url }}/"
       }
     ]
   }
@@ -53,11 +53,11 @@ head_content: |
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "CloudBreak - Privacy-Focused RSS Hosting & Open Source Alternatives",
-    "url": "https://cloudbreak.app/",
+    "url": "{{ site.url }}/",
     "description": "CloudBreak offers ethical, open-source alternatives to Google Reader and Feedly. Get hosted RSS solutions with privacy-first features and full data ownership.",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://cloudbreak.app/search?q={search_term_string}",
+      "target": "{{ site.url }}/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     },
     "keywords": ["RSS hosting", "Feedbin", "FreshRSS", "privacy", "open source", "Google Reader alternative", "Feedly alternative"]
