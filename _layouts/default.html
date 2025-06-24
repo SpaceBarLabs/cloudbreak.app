@@ -28,14 +28,15 @@
         border-bottom: 1px solid #dbdbdb;
       }
       .footer {
-        background-color: #363636;
-        color: #fff;
+        /* UPDATED: Changed background to white and text to dark gray */
+        background-color: #ffffff;
+        color: #363636;
       }
       .footer a {
         color: #3273dc;
       }
       .footer a:hover {
-        color: #fff;
+        text-decoration: underline;
       }
       .logo-text {
         font-weight: bold;
@@ -88,9 +89,11 @@
             </div>
         </div>
     </nav>
+
     <main>
         {{ content }}
     </main>
+
     <footer class="footer">
       <div class="content has-text-centered">
         <p>
@@ -106,6 +109,7 @@
         </p>
       </div>
     </footer>
+
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         if (!localStorage.getItem('analytics_consent')) {
@@ -122,9 +126,11 @@
         document.getElementById('consent-banner').style.display = 'none';
       }
     </script>
+    
     {% if page.url contains '/products/' %}
       {% include product-page-analytics.html %}
     {% endif %}
+
     {{ page.body_scripts }}
 </body>
 </html>
