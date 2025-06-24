@@ -29,7 +29,7 @@ exclude:
   - private
 
 cancel_policy: "Cancel within 30 days and get your money back, no questions asked"
-customer_location_restriction: "Please note that we are currently only accepting customers in the United States and Canada"
+customer_location_restriction: "Please note that we are currently only accepting customers in the 🇺🇸&nbsp;United States and 🇨🇦&nbsp;Canada"
 
 # Added by organize_redirects.sh to handle redirects
 collections:
