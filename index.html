@@ -28,10 +28,10 @@ head_content: |
           <h1 class="title is-1">
             Your Data, Not Theirs.
           </h1>
-          <h2 class="subtitle is-4 has-text-grey-light">
+          <p class="is-4 has-text-grey-light mt-4">
             CloudBreak offers simple, reliable, and privacy-respecting alternatives to Big Tech services. Reclaim your digital independence with tools that put you in control.
-          </h2>
-          <a href="#principles" class="button is-primary is-medium">Learn How</a>
+          </p>
+          <a href="#principles" class="button is-primary is-medium mt-5">Learn How</a>
         </div>
       </div>
     </div>
@@ -73,7 +73,7 @@ head_content: |
     <div class="container">
         <div class="has-text-centered mb-6">
             <h2 class="title is-2">Our Services</h2>
-            <p class="subtitle is-5 has-text-grey">Professionally hosted open-source applications, maintained and updated for you.</p>
+            <p class="is-5 has-text-grey">Professionally hosted open-source applications, maintained and updated for you.</p>
         </div>
 
         {% assign categories = "rss,read-it-later,analytics,url-shortener" | split: "," %}
@@ -94,7 +94,7 @@ head_content: |
                                 <div class="card product-card">
                                     <div class="card-content has-text-centered">
                                         <p class="title is-4">{{ product.name }}</p>
-                                        <p class="subtitle is-6">{{ product.description }}</p>
+                                        <p class="is-6">{{ product.description }}</p>
                                     </div>
                                     <footer class="card-footer">
                                         <a href="/products/{{ product.key }}/" class="card-footer-item has-text-weight-bold">Learn More</a>
