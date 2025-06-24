@@ -115,6 +115,12 @@
         <span><a href="https://spacebarlabs.com/privacy-policy/">Privacy Policy</a> | <a href="https://spacebarlabs.com/terms-of-service/">Terms of Service</a></span>
       </div>
     </footer>
+
+    {%- assign path_parts = page.url | split: '/' -%}
+    {%- if path_parts[1] == 'products' and path_parts[2] -%}
+      {% include product-page-analytics.html %}
+    {%- endif -%}
+
     {{ page.body_scripts }}
   </body>
 </html>

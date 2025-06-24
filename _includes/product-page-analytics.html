@@ -1,0 +1,56 @@
+{% comment %}
+  This script is included on product pages to track user interactions.
+  It relies on the 'product' object being available, which is derived from the page URL.
+{% endcomment %}
+
+{%- assign path_parts = page.url | split: '/' -%}
+{%- assign product_key = path_parts[2] -%}
+{%- assign product = site.data.products | where: "key", product_key | first -%}
+
+{% if product %}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const serviceName = '{{ product.key }}';
+
+    // Track clicks on subscription or pre-order buttons (Stripe)
+    document.querySelectorAll('a[href*="buy.stripe.com"]').forEach(button => {
+      button.addEventListener('click', function() {
+        const productAction = '{{ product.action }}';
+        let eventName = 'stripe_click'; // Fallback event name
+        if (productAction === 'subscribe') {
+          eventName = 'subscription_click';
+        } else if (productAction === 'pre-order') {
+          eventName = 'preorder_click';
+        }
+
+        const planType = this.innerText.toLowerCase().includes('year') ? 'annual' : 'monthly';
+
+        gtag('event', eventName, {
+          'service': serviceName,
+          'plan': planType
+        });
+      });
+    });
+
+    // Track clicks on "Sign up for notification" links (Google Forms)
+    document.querySelectorAll('a[href*="docs.google.com/forms"]').forEach(button => {
+      button.addEventListener('click', function() {
+        gtag('event', 'signup_notification', {
+          'service': serviceName
+        });
+      });
+    });
+
+    // Track clicks on FAQ links
+    const faqLink = document.querySelector('a[href*="faq"]');
+    if (faqLink) {
+      faqLink.addEventListener('click', function() {
+        gtag('event', 'navigation', {
+          'from_page': serviceName,
+          'destination': serviceName + '_faq'
+        });
+      });
+    }
+  });
+</script>
+{% endif %}
