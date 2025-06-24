@@ -14,20 +14,20 @@ has_breadcrumb: true
         <div class="column">
           <h1 class="title">{{ product.name }}</h1>
           <h2 class="subtitle mt-4">a feed reader app</h2>
-          <p class="m-3">Sign up for our <a href="{{ product.scm_url }}">{{ product.name }}</a>, a news reader.</p>
+          <p class="mb-3">Sign up for our <a href="{{ product.scm_url }}">{{ product.name }}</a>, a news reader.</p>
           <p class="has-text-weight-bold has-text-danger">Sale ending soon!  GET 50% OFF</p>
           <p><del>${{ product.normal_price }}</del> <a href="{{ product.subscribe_url }}">${{ product.sale_price }} / year</a></p>
+          <p><a href="{{ product.subscribe_url }}" class="m-3 button is-primary">Subscribe</a></p>
           <p class="help">10% of profits are paid to <a href="https://liberapay.com/FreshRSS/">{{ product.name }}</a></p>
-          <p><a href="{{ product.subscribe_url }}" class="m-3 button is-link">Subscribe</a></p>
           <p class="help">Please note that we are currently only accepting customers in the United States and Canada</p>
-          <p class="m-3">Or consider an alternative RSS reader:</p>
-          <p><a class="m-3 button is-info" href="/feedbin-mini/">Feedbin Mini</a></p>
-          <p class="m-3">Need to replace Pocket now that it's <a href="https://support.mozilla.org/en-US/kb/future-of-pocket">shutting down</a>?  Try a read-it-later app:</p>
+          <p class="my-3">Please also see our <a href="{{ product.faq_path }}">{{ product.name }} FAQ</a>.</p>
+          <p class="my-3">Or consider an alternative RSS reader:</p>
+          <p><a class="my-3 button is-info" href="/feedbin-mini/">Feedbin Mini</a></p>
+          <p class="my-3">Need to replace Pocket now that it's <a href="https://support.mozilla.org/en-US/kb/future-of-pocket">shutting down</a>?  Try a read-it-later app:</p>
           <p>
-            <a class="m-3 button is-info" href="/readeck/">Readeck</a>
-            <a class="m-3 button is-info" href="/wallabag/">Wallabag</a>
+            <a class="my-3 button is-info" href="/readeck/">Readeck</a>
+            <a class="my-3 button is-info" href="/wallabag/">Wallabag</a>
           </p>
-          <p class="m-3">Please also see our <a href="{{ product.faq_path }}">{{ product.name }} FAQ</a>.</p>
         </div>
         <div class="column">
           <a href="/products/freshrss/screenshot.png" target="_blank" class="screenshot-link">
