@@ -1,0 +1,16 @@
+{%- comment -%}
+  1. Get the product 'key' from the URL.
+  2. Look up the product in `site.data.products` using that key.
+  3. If a product is found, render the Open Graph meta tags using its data.
+{%- endcomment -%}
+{%- assign path_parts = page.url | split: '/' -%}
+{%- assign product_key = path_parts[2] -%}
+{%- assign product = site.data.products | where: "key", product_key | first -%}
+
+{%- if product -%}
+<meta property="og:title" content="{{ product.name }} Hosting">
+<meta property="og:description" content="{{ product.description }}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ site.url }}/products/{{ product_key }}/screenshot.png">
+{%- endif -%}

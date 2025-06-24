@@ -42,6 +42,7 @@
     </style>
     {{ page.head_content }}
     {% if page.has_breadcrumb %}
+      {% include open-graph.html %}
       {% include breadcrumb-list.html %}
       {% include product.html %}
     {% endif %}
