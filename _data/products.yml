@@ -24,7 +24,7 @@
   screenshot_url: /products/freshrss/screenshot.png
   subscribe_url: https://buy.stripe.com/7sI7ufgmn0rAdAQ9AA
   faq_path: "/products/freshrss/faq/"
-  scm_url: https://freshrss.org/
+  scm_url: https://github.com/freshrss/freshrss
   featured: true
 - key: linkding
   name: Linkding
@@ -51,7 +51,7 @@
   preorder_url: https://buy.stripe.com/00w3cv0hHb7Q43Fbok0Ba04
   subscribe_url:
   faq_path:
-  scm_url: https://matomo.org/
+  scm_url: https://github.com/matomo-org/matomo
   featured: true
 - key: miniflux
   name: Miniflux
@@ -63,7 +63,7 @@
   preorder_url:
   subscribe_url:
   faq_path:
-  scm_url: https://miniflux.app/
+  scm_url: https://github.com/miniflux/v2
   featured: false
 - key: omnivore
   name: Omnivore
@@ -101,7 +101,7 @@
   preorder_url: https://buy.stripe.com/5kQ4gz6G5cbUgQrfEA0Ba07
   subscribe_url:
   faq_path:
-  scm_url: https://shlink.io/
+  scm_url: https://github.com/shlinkio/shlink
   featured: true
 - key: tiny-tiny-rss
   name: Tiny Tiny RSS
@@ -113,7 +113,7 @@
   preorder_url:
   subscribe_url:
   faq_path:
-  scm_url: https://tt-rss.org/
+  scm_url: https://gitlab.tt-rss.org/tt-rss/tt-rss
   featured: false
 - key: wallabag
   name: Wallabag
