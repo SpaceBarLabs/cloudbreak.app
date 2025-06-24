@@ -8,6 +8,7 @@
   normal_price: 30
   sale_price: 15
   preorder_url: https://buy.stripe.com/00gbKvfijgqybsIaEG
+  waitlist_url: https://docs.google.com/forms/d/e/1FAIpQLSdA84mi74Bz1es0OXy8sbiBq6Mozqsa6mpUL7ZX1im9FRIBbQ/viewform?usp=dialog
   subscribe_url:
   faq_path: "/products/feedbin-mini/faq/"
   scm_url: https://github.com/feedbin/feedbin
@@ -36,6 +37,7 @@
   normal_price: 24
   sale_price: 12
   preorder_url: https://buy.stripe.com/14AdR97K98ZIas38c80Ba08
+  waitlist_url: https://docs.google.com/forms/d/e/1FAIpQLSciGalzi3fwa3lKrbWpxsESVQ9V5-6LHQEGraqb2KQp5ijvaw/viewform?usp=dialog
   subscribe_url:
   faq_path:
   scm_url: https://github.com/sissbruecker/linkding
@@ -50,6 +52,7 @@
   normal_price:
   sale_price: 50
   preorder_url: https://buy.stripe.com/00w3cv0hHb7Q43Fbok0Ba04
+  waitlist_url: https://docs.google.com/forms/d/e/1FAIpQLSf0jKoaF23HOziTJwCr4PPqjYCsqa-yKsv1D4LgKTBSKMSd_A/viewform?usp=dialog
   subscribe_url:
   faq_path:
   scm_url: https://github.com/matomo-org/matomo
@@ -87,6 +90,7 @@
   normal_price: 12
   sale_price: 10
   preorder_url: https://buy.stripe.com/fZueVdd4t2Bk0Rt8c80Ba06
+  waitlist_url: https://docs.google.com/forms/d/e/1FAIpQLSf8t0L90DVXWo36s-adLnJyj98vsdoRdfESTSpQeP_ke1z_Zw/viewform?usp=header
   subscribe_url:
   faq_path:
   scm_url: https://codeberg.org/readeck/readeck
@@ -100,6 +104,7 @@
   normal_price: 6
   sale_price: 4
   preorder_url: https://buy.stripe.com/5kQ4gz6G5cbUgQrfEA0Ba07
+  waitlist_url: https://docs.google.com/forms/d/e/1FAIpQLScBPNy65pmyfWCtr9UYrG3B2YXymMwgNFEuzXVHNre3efy1TA/viewform?usp=header
   subscribe_url:
   faq_path:
   scm_url: https://github.com/shlinkio/shlink

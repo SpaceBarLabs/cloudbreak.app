@@ -32,9 +32,6 @@ layout: default
           {% endif %}
 
           {% assign action_url = product.subscribe_url | default: product.preorder_url %}
-          {% if product.action == 'join waitlist' %}
-            {% assign action_url = "https://docs.google.com/forms/d/e/1FAIpQLSeNEFwFRUTbWAjDvHvrh6tCMlBDGDAAsiH9OHkxveLzmpEsRA/viewform" %}
-          {% endif %}
           <p><a href="{{ action_url }}" class="m-3 button is-primary">{{ product.action | capitalize }}</a></p>
 
           {% if product.donation_url %}
@@ -43,12 +40,18 @@ layout: default
           <p class="help">{{ site.cancel_policy }}</p>
           <p class="help mb-3">{{ site.customer_location_restriction }}</p>
 
+          {% if product.waitlist_url %}
+            {% assign action_url = "https://docs.google.com/forms/d/e/1FAIpQLSeNEFwFRUTbWAjDvHvrh6tCMlBDGDAAsiH9OHkxveLzmpEsRA/viewform" %}
+            <p>Get notified when we launch:</p>
+            <p><a href="{{ product.waitlist_url }}" class="m-3 button is-link">Join the Waitlist</a></p>
+          {% endif %}
+
           {% if product.faq_path %}
             <p class="my-3">Please also see our <a href="{{ product.faq_path }}">{{ product.name }} FAQ</a>.</p>
           {% endif %}
 
-          <p class="my-3">Or consider our other services:</p>
-          <p><a class="my-3 button is-info" href="/">All Products</a></p>
+          <p class="my-3">And consider our other services:</p>
+          <p><a class="m-3 button is-info" href="/">All Products</a></p>
         </div>
         <div class="column">
           {% if product.screenshot_url %}
