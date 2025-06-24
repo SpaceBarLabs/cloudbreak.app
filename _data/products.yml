@@ -65,6 +65,18 @@
   faq_path:
   scm_url: https://miniflux.app/
   featured: false
+- key: omnivore
+  name: Omnivore
+  description: A complete, open source read-it-later solution for serious readers. Omnivore offers advanced features like newsletter subscriptions, PDF support, and powerful organization tools.
+  category: read-it-later
+  action: join waitlist
+  normal_price:
+  sale_price:
+  preorder_url:
+  subscribe_url:
+  faq_path:
+  scm_url: https://github.com/omnivore-app/omnivore
+  featured: false
 - key: readeck
   name: Readeck
   description: A modern read-it-later serivce, comparable with Instapaper or Pocket.  A
