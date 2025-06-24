@@ -304,6 +304,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages (~> 232)
+  nokogiri
 
 BUNDLED WITH
    2.6.3
