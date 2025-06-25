@@ -82,16 +82,14 @@
   featured: false
 - key: readeck
   name: Readeck
-  description: A modern read-it-later serivce, comparable with Instapaper or Pocket.  A
-    great pair with an RSS reader.
+  description: A modern bookmark manager and read-it-later app, comparable with
+    Instapaper or Pocket.  A great pair with an RSS reader.
   legal: Instapaper is a trademark of Instant Paper, Inc. Pocket is a trademark of Mozilla Corporation.
   category: read-it-later
-  action: pre-order
-  normal_price: 12
-  sale_price: 10
-  preorder_url: https://buy.stripe.com/fZueVdd4t2Bk0Rt8c80Ba06
-  waitlist_url: https://docs.google.com/forms/d/e/1FAIpQLSf8t0L90DVXWo36s-adLnJyj98vsdoRdfESTSpQeP_ke1z_Zw/viewform?usp=header
-  subscribe_url:
+  action: subscribe
+  normal_price: 24
+  sale_price: 12
+  subscribe_url: https://buy.stripe.com/14A7sL9Sha3MdEf8c80Ba0n
   faq_path:
   scm_url: https://codeberg.org/readeck/readeck
   featured: true
