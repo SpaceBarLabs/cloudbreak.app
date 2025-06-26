@@ -20,6 +20,18 @@ layout: default
           {% elsif product.category == "analytics" %}
             <h2 class="subtitle mt-4">an analytics app</h2>
           {% endif %}
+
+          {% if product.scm_url %}
+            <p class="my-3">
+              <a href="{{ product.scm_url }}" class="button is-small" target="_blank">
+                <span class="icon">
+                  <i class="fas fa-code-branch"></i>
+                </span>
+                <span>Source Code</span>
+              </a>
+            </p>
+          {% endif %}
+
           <p class="mb-3">{{ product.description }}</p>
           {% if product.legal %}
             <p class="help mb-3">{{ product.legal }}</p>
