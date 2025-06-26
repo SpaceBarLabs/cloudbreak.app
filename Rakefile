@@ -5,5 +5,6 @@ task :test do
   puts "Building site..."
   system "bundle exec jekyll build"
   puts "Checking for broken links..."
+
   HTMLProofer.check_directory("./_site").run
 end

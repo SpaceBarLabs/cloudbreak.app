@@ -65,6 +65,7 @@
   sale_price:
   preorder_url:
   subscribe_url:
+  waitlist_url: https://docs.google.com/forms/d/e/1FAIpQLSeNEFwFRUTbWAjDvHvrh6tCMlBDGDAAsiH9OHkxveLzmpEsRA/viewform?usp=header
   faq_path:
   scm_url: https://github.com/miniflux/v2
   featured: false
@@ -116,6 +117,7 @@
   sale_price:
   preorder_url:
   subscribe_url:
+  waitlist_url: https://docs.google.com/forms/d/e/1FAIpQLSeNEFwFRUTbWAjDvHvrh6tCMlBDGDAAsiH9OHkxveLzmpEsRA/viewform?usp=header
   faq_path:
   scm_url: https://gitlab.tt-rss.org/tt-rss/tt-rss
   featured: false
