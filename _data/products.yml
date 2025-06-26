@@ -135,3 +135,17 @@
   faq_path:
   scm_url: https://github.com/wallabag/wallabag
   featured: true
+- key: karakeep
+  name: Karakeep
+  description: A classic read-it-later serivce, comparable with Instapaper or Pocket.  A
+    great pair with an RSS reader.
+  legal: Instapaper is a trademark of Instant Paper, Inc. Pocket is a trademark of Mozilla Corporation.
+  category: read-it-later
+  action: subscribe
+  normal_price: 24
+  sale_price: 12
+  preorder_url:
+  subscribe_url: https://buy.stripe.com/cNi5kD5C15Nw57Jbok0Ba0o
+  faq_path:
+  scm_url: https://github.com/karakeep-app/karakeep
+  featured: true
