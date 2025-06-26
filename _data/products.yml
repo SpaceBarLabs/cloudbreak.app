@@ -139,6 +139,17 @@
   faq_path:
   scm_url: https://gitlab.tt-rss.org/tt-rss/tt-rss
   featured: false
+- key: shiori
+  name: Shiori
+  description: A simple and fast bookmark manager designed for self-hosting. Privacy-focused alternative to commercial bookmark services.
+  category: read-it-later
+  action: subscribe
+  normal_price: 24
+  sale_price: 12
+  subscribe_url: https://buy.stripe.com/5kQ4gzc0p3Fo7fReAw0Ba0p
+  faq_path:
+  scm_url: https://github.com/go-shiori/shiori
+  featured: true
 - key: wallabag
   name: Wallabag
   description: A classic read-it-later serivce, comparable with Instapaper or Pocket.  A
