@@ -22,11 +22,26 @@
   normal_price: 24
   sale_price: 12
   preorder_url:
-  screenshot_url: /products/freshrss/screenshot.webp
+  screenshot_url: "/products/freshrss/screenshot.webp"
   subscribe_url: https://buy.stripe.com/7sI7ufgmn0rAdAQ9AA
   faq_path: "/products/freshrss/faq/"
   scm_url: https://github.com/freshrss/freshrss
   donation_url: https://liberapay.com/FreshRSS/
+  featured: true
+- key: karakeep
+  name: Karakeep
+  description: A classic read-it-later serivce, comparable with Instapaper or Pocket.  A
+    great pair with an RSS reader.
+  legal: Instapaper is a trademark of Instant Paper, Inc. Pocket is a trademark of
+    Mozilla Corporation.
+  category: read-it-later
+  action: subscribe
+  normal_price: 24
+  sale_price: 12
+  preorder_url:
+  subscribe_url: https://buy.stripe.com/cNi5kD5C15Nw57Jbok0Ba0o
+  faq_path:
+  scm_url: https://github.com/karakeep-app/karakeep
   featured: true
 - key: linkding
   name: Linkding
@@ -71,7 +86,9 @@
   featured: false
 - key: omnivore
   name: Omnivore
-  description: A complete, open source read-it-later solution for serious readers. Omnivore offers advanced features like newsletter subscriptions, PDF support, and powerful organization tools.
+  description: A complete, open source read-it-later solution for serious readers.
+    Omnivore offers advanced features like newsletter subscriptions, PDF support,
+    and powerful organization tools.
   category: read-it-later
   action: join waitlist
   normal_price:
@@ -83,9 +100,10 @@
   featured: false
 - key: readeck
   name: Readeck
-  description: A modern bookmark manager and read-it-later app, comparable with
-    Instapaper or Pocket.  A great pair with an RSS reader.
-  legal: Instapaper is a trademark of Instant Paper, Inc. Pocket is a trademark of Mozilla Corporation.
+  description: A modern bookmark manager and read-it-later app, comparable with Instapaper
+    or Pocket.  A great pair with an RSS reader.
+  legal: Instapaper is a trademark of Instant Paper, Inc. Pocket is a trademark of
+    Mozilla Corporation.
   category: read-it-later
   action: subscribe
   normal_price: 24
@@ -125,7 +143,8 @@
   name: Wallabag
   description: A classic read-it-later serivce, comparable with Instapaper or Pocket.  A
     great pair with an RSS reader.
-  legal: Instapaper is a trademark of Instant Paper, Inc. Pocket is a trademark of Mozilla Corporation.
+  legal: Instapaper is a trademark of Instant Paper, Inc. Pocket is a trademark of
+    Mozilla Corporation.
   category: read-it-later
   action: subscribe
   normal_price: 12
@@ -134,18 +153,4 @@
   subscribe_url: https://buy.stripe.com/14AdR94xX1xg57J3VS0Ba05
   faq_path:
   scm_url: https://github.com/wallabag/wallabag
-  featured: true
-- key: karakeep
-  name: Karakeep
-  description: A classic read-it-later serivce, comparable with Instapaper or Pocket.  A
-    great pair with an RSS reader.
-  legal: Instapaper is a trademark of Instant Paper, Inc. Pocket is a trademark of Mozilla Corporation.
-  category: read-it-later
-  action: subscribe
-  normal_price: 24
-  sale_price: 12
-  preorder_url:
-  subscribe_url: https://buy.stripe.com/cNi5kD5C15Nw57Jbok0Ba0o
-  faq_path:
-  scm_url: https://github.com/karakeep-app/karakeep
   featured: true
