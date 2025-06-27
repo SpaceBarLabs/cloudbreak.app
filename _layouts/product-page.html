@@ -51,7 +51,7 @@ layout: default
             <p><a href="{{ action_url }}" class="m-3 button is-primary">{{ product.action | capitalize }}</a></p>
 
             {% if product.donation_url %}
-              <p class="help">10% of profits are paid to <a href="{{ product.donation_url }}">{{ product.name }}</a></p>
+              <p class="help">10% of profits for this service are paid to <a href="{{ product.donation_url }}">{{ product.name }}</a></p>
             {% endif %}
             <p class="help">{{ site.cancel_policy }}</p>
             <p class="help mb-3">{{ site.customer_location_restriction }}</p>
