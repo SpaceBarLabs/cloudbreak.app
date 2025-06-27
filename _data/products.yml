@@ -36,8 +36,8 @@
     Mozilla Corporation.
   category: read-it-later
   action: subscribe
-  normal_price: 24
-  sale_price: 12
+  normal_price: 40
+  sale_price: 20
   preorder_url:
   subscribe_url: https://buy.stripe.com/cNi5kD5C15Nw57Jbok0Ba0o
   faq_path:
