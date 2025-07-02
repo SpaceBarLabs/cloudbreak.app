@@ -31,9 +31,12 @@
             color: #000;
             text-transform: uppercase;
             letter-spacing: 2px;
+            display: inline-flex;
+            align-items: center;
         }
-        .logo .fa-cloud {
-            margin-right: 8px;
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
         }
         .promo-title {
             font-size: 1.8rem;
@@ -138,21 +141,21 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1 class="logo"><i class="fa-solid fa-cloud"></i> CloudBreak</h1>
+            <h1 class="logo"><img src="/logo.svg" alt="CloudBreak Logo"> CloudBreak</h1>
             <h2 class="promo-title">Refactor Your Digital Workflow</h2>
             <p class="promo-subtitle">Your digital life, now with an open foundation.  Migrate your data today.</p>
         </div>
 
         <div class="products">
             <div class="product">
-                <div class="product-icon"><i class="fa-solid fa-satellite-dish"></i></div>
-                <h3>News</h3>
-                <p>Your personal cosmos of content. An algorithm-free, chronological feed of your favorite sites.</p>
+                <div class="product-icon"><i class="fa-solid fa-rss"></i></div>
+                <h3>FreshRSS</h3>
+                <p>Take control of your news feed with our hosted RSS reader service. No algorithms, no tracking - just the content you choose.</p>
             </div>
             <div class="product">
                 <div class="product-icon"><i class="fa-solid fa-book-bookmark"></i></div>
-                <h3>Folio</h3>
-                <p>Your space for focused reading. Save articles for focused, distraction-free enjoyment offline.</p>
+                <h3>Wallabag</h3>
+                <p>A classic read-it-later serivce, comparable with Instapaper or Pocket. A great pair with an RSS reader.</p>
             </div>
         </div>
 
