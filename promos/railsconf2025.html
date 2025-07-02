@@ -35,8 +35,10 @@
             align-items: center;
         }
         .logo img {
-            height: 60px;
+            height: 50px;
             margin-right: 10px;
+            position: relative;
+            top: -5px;
         }
         .promo-title {
             font-size: 1.8rem;
@@ -54,11 +56,11 @@
             justify-content: center;
             margin-top: 20px;
         }
-        .product {
+        .product-category {
             border: 1px solid #ccc;
             border-radius: 8px;
             padding: 15px;
-            width: calc(33.333% - 35px);
+            width: calc(50% - 35px);
             box-sizing: border-box;
             text-align: center;
         }
@@ -67,12 +69,21 @@
             color: #000;
             margin-bottom: 10px;
         }
-        .product h3 {
+        .product-category h3 {
             font-size: 1.3rem;
             font-weight: 700;
             margin-bottom: 8px;
             color: #000;
             text-transform: uppercase;
+        }
+        .product-category ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .product-category li {
+            font-size: 1rem;
+            color: #333;
         }
         .coupon-section {
             border: 3px dashed #000;
@@ -142,41 +153,38 @@
         </div>
 
         <div class="products">
-            <div class="product">
+            <div class="product-category">
                 <div class="product-icon"><i class="fa-solid fa-rss"></i></div>
-                <h3>Feedbin Mini</h3>
+                <h3>RSS Readers</h3>
+                <ul>
+                    <li>Feedbin Mini</li>
+                    <li>FreshRSS</li>
+                </ul>
             </div>
-            <div class="product">
-                <div class="product-icon"><i class="fa-solid fa-rss"></i></div>
-                <h3>FreshRSS</h3>
-            </div>
-            <div class="product">
+            <div class="product-category">
                 <div class="product-icon"><i class="fa-solid fa-book-bookmark"></i></div>
-                <h3>Karakeep</h3>
+                <h3>Read-It-Later</h3>
+                <ul>
+                    <li>Karakeep</li>
+                    <li>Linkding</li>
+                    <li>Readeck</li>
+                    <li>Shiori</li>
+                    <li>Wallabag</li>
+                </ul>
             </div>
-            <div class="product">
-                <div class="product-icon"><i class="fa-solid fa-link"></i></div>
-                <h3>Linkding</h3>
-            </div>
-            <div class="product">
+            <div class="product-category">
                 <div class="product-icon"><i class="fa-solid fa-chart-pie"></i></div>
-                <h3>Matomo Nano</h3>
+                <h3>Analytics</h3>
+                <ul>
+                    <li>Matomo Nano</li>
+                </ul>
             </div>
-            <div class="product">
-                <div class="product-icon"><i class="fa-solid fa-book-open"></i></div>
-                <h3>Readeck</h3>
-            </div>
-            <div class="product">
-                <div class="product-icon"><i class="fa-solid fa-bookmark"></i></div>
-                <h3>Shiori</h3>
-            </div>
-            <div class="product">
+            <div class="product-category">
                 <div class="product-icon"><i class="fa-solid fa-link"></i></div>
-                <h3>Shlink Nano</h3>
-            </div>
-            <div class="product">
-                <div class="product-icon"><i class="fa-solid fa-book-bookmark"></i></div>
-                <h3>Wallabag</h3>
+                <h3>URL Shorteners</h3>
+                <ul>
+                    <li>Shlink Nano</li>
+                </ul>
             </div>
         </div>
 
