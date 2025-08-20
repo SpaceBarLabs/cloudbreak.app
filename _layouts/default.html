@@ -53,6 +53,25 @@
       .product-card .card-footer {
         margin-top: auto; /* Pushes footer to the bottom */
       }
+      /* Mobile hamburger menu styling */
+      .navbar-burger {
+        background-color: white;
+        color: #363636;
+      }
+      .navbar-burger:hover {
+        background-color: #fafafa;
+      }
+      /* Mobile menu dropdown styling */
+      .navbar-menu {
+        background-color: white !important;
+      }
+      .navbar-menu .navbar-item {
+        color: #363636 !important;
+      }
+      .navbar-menu .navbar-item:hover {
+        background-color: #fafafa !important;
+        color: #363636 !important;
+      }
     </style>
 
     {% if site.google_analytics %}
@@ -88,6 +107,20 @@
                     <img src="/logo.svg" alt="CloudBreak Logo">
                     <span class="logo-text">CloudBreak</span>
                 </a>
+                
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="/support/">
+                        Support
+                    </a>
+                </div>
             </div>
         </div>
     </nav>
@@ -107,7 +140,7 @@
           &copy; {{ site.time | date: '%Y' }} Space Bar Labs, LLC
         </p>
         <p class="is-size-7">
-          <a href="https://github.com/SpaceBarLabs/cloudbreak-forum">Community Forum</a> | <a href="https://buy.stripe.com/00w5kDfcB0tcbw7bok0Ba0q">Support Us</a>
+          <a href="https://github.com/SpaceBarLabs/cloudbreak-forum">Community Forum</a> | <a href="https://buy.stripe.com/00w5kDfcB0tcbw7bok0Ba0q">Tip Jar</a>
         </p>
         <p class="is-size-7">
           <a href="https://spacebarlabs.com/privacy-policy/">Privacy Policy</a> | <a href="https://spacebarlabs.com/terms-of-service/">Terms of Service</a>
@@ -119,6 +152,19 @@
       document.addEventListener('DOMContentLoaded', function() {
         if (!localStorage.getItem('analytics_consent')) {
           document.getElementById('consent-banner').style.display = 'block';
+        }
+        
+        // Mobile menu burger functionality
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        if ($navbarBurgers.length > 0) {
+          $navbarBurgers.forEach(el => {
+            el.addEventListener('click', () => {
+              const target = el.dataset.target;
+              const $target = document.getElementById(target);
+              el.classList.toggle('is-active');
+              $target.classList.toggle('is-active');
+            });
+          });
         }
       });
       function acceptConsent() {
